@@ -1,6 +1,5 @@
-import { readFileSync } from "fs";
-import { join } from "path";
-import { Transaction } from "../src/schema";
+import { readFileSync, writeFileSync } from "fs";
+import { Transaction, ExpenseCategory } from "../src/schema";
 
 const unique = <T>(a: T[]) => Array.from(new Set(a));
 
@@ -44,36 +43,27 @@ function getDateByReceiptId(id: string): Date {
 function remapTransactions(): Transaction[] {
     return ITEM.results.bindings.map(item => {
         const id = item.product.value;
-        const category = getCategoryByProductId(id);
+        const _category_id = getCategoryByProductId(id);
         const date = getDateByReceiptId(item.receipt.value);
         const _category_label = LUT_PRODUCTID_PRODUCT.get(id).category_label.value;
         return {
             id: item.item.value,
             amount: +item.subtotal.value,
             date,
+            category: ExpenseCategory.GROCERIES,
             receiptId: item.receipt.value,
-            category,
-            _category_label,
             balance: -1,
+            _mcp: true,
+            _category_id,
+            _category_label,
         };
     });
 }
 
-const transactions = remapTransactions();
-
-function getTransactions(): list {
-    return transactions;
-    /*
-    return TRANSACTION.results.bindings.map(t => {
-        return {
-            id: t.transaction.value,
-            date: new Date(t.date.value),
-            amount: +t.amount.value,
-            receiptId: t.receipt.value,
-        }
-    });
-    */
+function graphdbExport() {
+    const transactions = remapTransactions();
+    const str = JSON.stringify(transactions, null, 4);
+    writeFileSync("./export.json", str);
 }
 
-// console.log(getTransactions());
-// console.log(JSON.stringify(_labels));
+graphdbExport();

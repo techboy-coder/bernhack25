@@ -1,7 +1,11 @@
 import { z } from "zod";
 
 // Basic schema types
-const UUIDSchema = z.string().uuid();
+const UUIDSchema = z.union([
+    z.string().uuid(),
+    z.string()
+        .regex(new RegExp("^https://static.rwpz.net/spendcast/.*$")),
+]);
 const DateSchema = z.string().datetime();
 const CoordinatesSchema = z.object({
   latitude: z.number().min(45.8).max(47.8), // Switzerland latitude range
