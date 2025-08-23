@@ -6,8 +6,6 @@
 		CardHeader,
 		CardTitle
 	} from '$lib/components/ui/card';
-	import { Badge } from '$lib/components/ui/badge';
-	import { Separator } from '$lib/components/ui/separator';
 
 	interface Transaction {
 		id: string;
@@ -65,7 +63,7 @@
 </script>
 
 <!-- Transaction Statistics Cards -->
-<div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+<div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 	<!-- Total Transactions -->
 	<Card>
 		<CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -112,22 +110,6 @@
 		</CardContent>
 	</Card>
 
-	<!-- Net Amount -->
-	<Card>
-		<CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
-			<CardTitle class="text-sm font-medium">Net Amount (All Time)</CardTitle>
-			<div class="text-2xl">📈</div>
-		</CardHeader>
-		<CardContent>
-			<div class="text-2xl font-bold {getBalanceColorClass(netTransactionAmount)}">
-				{formatCurrency(netTransactionAmount, accountCurrency)}
-			</div>
-			<p class="text-xs text-muted-foreground">
-				Total income minus expenses since account creation
-			</p>
-		</CardContent>
-	</Card>
-
 	<!-- Current Balance -->
 	<Card>
 		<CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -135,11 +117,11 @@
 			<div class="text-2xl">🏦</div>
 		</CardHeader>
 		<CardContent>
-			<div class="text-2xl font-bold {getBalanceColorClass(currentBalance)}">
-				{formatCurrency(currentBalance, accountCurrency)}
+			<div class="text-2xl font-bold {getBalanceColorClass(netTransactionAmount)}">
+				{formatCurrency(netTransactionAmount, accountCurrency)}
 			</div>
 			<p class="text-xs text-muted-foreground">
-				{currentBalance >= 0 ? 'Positive' : 'Negative'} balance
+				{netTransactionAmount >= 0 ? 'Positive' : 'Negative'} balance
 			</p>
 		</CardContent>
 	</Card>
