@@ -52,14 +52,18 @@
 			<Sidebar.GroupContent>
 				<Sidebar.Menu>
 					{#each navigationItems as item}
-						<Sidebar.MenuItem>
-							<Sidebar.MenuButton isActive={$page.url.pathname === item.url}>
-								<a href={item.url} class="flex items-center gap-2">
-									<svelte:component this={item.icon} class="w-4 h-4" />
-									<span>{item.title}</span>
-								</a>
-							</Sidebar.MenuButton>
-						</Sidebar.MenuItem>
+						<a href={item.url}>
+							<Sidebar.MenuItem>
+								<Sidebar.MenuButton isActive={$page.url.pathname === item.url}>
+									<span class="flex items-center gap-2">
+										{#if item.icon}
+											<item.icon class="w-4 h-4" />
+										{/if}
+										<span>{item.title}</span>
+									</span>
+								</Sidebar.MenuButton>
+							</Sidebar.MenuItem>
+						</a>
 					{/each}
 				</Sidebar.Menu>
 			</Sidebar.GroupContent>
