@@ -95,6 +95,10 @@
 		if (value.trim() && !disabled) {
 			onSend?.(value.trim());
 			value = '';
+			// Reset textarea height to minimum after sending
+			if (textareaRef) {
+				textareaRef.style.height = '30px';
+			}
 		}
 	}
 
