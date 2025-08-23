@@ -1,7 +1,6 @@
 import { hc } from 'hono/client';
 import type { ApiRoutes } from '../../../backend/src/index';
-import type { SavingsGoal } from '../../../backend/src/goalsData';
-import type { SavingsProfile } from '../../../backend/src/schema';
+import type { SavingsProfile, RecurrentPayment } from '../../../backend/src/schema';
 
 // Define transaction filter type based on backend implementation
 interface TransactionFilter {
@@ -113,7 +112,7 @@ export const createSavingsProfile = async (profileData: {
 // Savings Goals API Functions
 
 // Get all savings goals
-export const getSavingsGoals = async (): Promise<SavingsGoal[]> => {
+export const getSavingsGoals = async (): Promise<SavingsProfile[]> => {
 	const response = await api['savings-goals'].$get();
 	if (!response.ok) {
 		throw new Error('Failed to fetch savings goals');
@@ -122,7 +121,7 @@ export const getSavingsGoals = async (): Promise<SavingsGoal[]> => {
 };
 
 // Get a specific savings goal by ID
-export const getSavingsGoal = async (goalId: string): Promise<SavingsGoal> => {
+export const getSavingsGoal = async (goalId: string): Promise<SavingsProfile> => {
 	const response = await api['savings-goals'][':goalId'].$get({
 		param: { goalId }
 	});
@@ -140,7 +139,7 @@ export const createSavingsGoal = async (goalData: {
 	category: string;
 	targetDate?: string;
 	startDate?: string;
-}): Promise<SavingsGoal> => {
+}): Promise<SavingsProfile> => {
 	const response = await api['savings-goals'].$post({
 		json: goalData
 	});
@@ -153,8 +152,8 @@ export const createSavingsGoal = async (goalData: {
 // Update an existing savings goal
 export const updateSavingsGoal = async (
 	goalId: string,
-	updatedData: Partial<Omit<SavingsGoal, 'id'>>
-): Promise<SavingsGoal> => {
+	updatedData: Partial<Omit<SavingsProfile, 'id'>>
+): Promise<SavingsProfile> => {
 	const response = await (api['savings-goals'][':goalId'] as any).$put({
 		param: { goalId },
 		json: updatedData
@@ -172,6 +171,87 @@ export const deleteSavingsGoal = async (goalId: string): Promise<{ success: bool
 	});
 	if (!response.ok) {
 		throw new Error('Failed to delete savings goal');
+	}
+	return await response.json();
+};
+
+// Recurrent Payments API Functions
+
+// Get all recurrent payments
+export const getRecurrentPayments = async (): Promise<RecurrentPayment[]> => {
+	const response = await api['recurrent-payments'].$get();
+	if (!response.ok) {
+		throw new Error('Failed to fetch recurrent payments');
+	}
+	return await response.json();
+};
+
+// Get a specific recurrent payment by ID
+export const getRecurrentPayment = async (paymentId: string): Promise<RecurrentPayment> => {
+	const response = await api['recurrent-payments'][':paymentId'].$get({
+		param: { paymentId }
+	});
+	if (!response.ok) {
+		throw new Error('Failed to fetch recurrent payment');
+	}
+	return await response.json();
+};
+
+// Get recurrent payments for a specific account
+export const getRecurrentPaymentsByAccount = async (
+	accountId: string
+): Promise<RecurrentPayment[]> => {
+	const response = await api['bank-accounts'][':accountId']['recurrent-payments'].$get({
+		param: { accountId }
+	});
+	if (!response.ok) {
+		throw new Error('Failed to fetch recurrent payments for account');
+	}
+	return await response.json();
+};
+
+// Create a new recurrent payment
+export const createRecurrentPayment = async (paymentData: {
+	amount: number;
+	name: string;
+	category: string;
+	frequency: 'weekly' | 'monthly' | 'quarterly' | 'yearly';
+	startDate: string;
+	endDate?: string;
+	autoPay?: boolean;
+	savingsProfile?: string;
+}): Promise<RecurrentPayment> => {
+	const response = await api['recurrent-payments'].$post({
+		json: paymentData
+	});
+	if (!response.ok) {
+		throw new Error('Failed to create recurrent payment');
+	}
+	return await response.json();
+};
+
+// Update an existing recurrent payment
+export const updateRecurrentPayment = async (
+	paymentId: string,
+	updatedData: Partial<Omit<RecurrentPayment, 'id'>>
+): Promise<RecurrentPayment> => {
+	const response = await (api['recurrent-payments'][':paymentId'] as any).$put({
+		param: { paymentId },
+		json: updatedData
+	});
+	if (!response.ok) {
+		throw new Error('Failed to update recurrent payment');
+	}
+	return await response.json();
+};
+
+// Delete a recurrent payment
+export const deleteRecurrentPayment = async (paymentId: string): Promise<{ success: boolean }> => {
+	const response = await api['recurrent-payments'][':paymentId'].$delete({
+		param: { paymentId }
+	});
+	if (!response.ok) {
+		throw new Error('Failed to delete recurrent payment');
 	}
 	return await response.json();
 };

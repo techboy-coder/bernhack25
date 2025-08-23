@@ -8,3 +8,11 @@ export {
   listSavingsProfile,
   createSavingsProfile,
 } from "./listSavingsProfile";
+export {
+  listRecurrentPayments,
+  listRecurrentPaymentsByAccount,
+  createRecurrentPaymentEntry,
+  getRecurrentPayment,
+  updateRecurrentPaymentEntry,
+  deleteRecurrentPaymentEntry,
+} from "./listRecurrentPayments";

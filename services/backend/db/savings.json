@@ -1,20 +1,18 @@
 [
   {
-    "id": "738c2666-06e0-499c-af55-db6876322dad",
-    "name": "Emergency Fund",
-    "targetAmount": 2000,
-    "currentAmount": 100,
-    "category": "Emergency",
-    "targetDate": "2025-09-26",
-    "startDate": "2025-08-23T10:10:12.340Z"
+    "id": "0382f84a-d7c5-4966-8e4c-c846fcc77fd8",
+    "name": "heyy",
+    "targetAmount": 100,
+    "currentAmount": 90,
+    "category": "Home",
+    "startDate": "2025-08-23T14:20:14.240Z"
   },
   {
-    "id": "13ebdf50-6da1-4660-b67b-1a659c51e8b3",
-    "name": "Vacation to LA",
-    "targetAmount": 3000,
-    "currentAmount": 500,
-    "category": "Travel",
-    "targetDate": "2025-11-20",
-    "startDate": "2025-08-23T10:11:12.375Z"
+    "id": "946d4eb6-b1e3-46f7-a7c6-f9939a1ee717",
+    "name": "Rainy Day",
+    "targetAmount": 1000,
+    "currentAmount": 10,
+    "category": "Emergency",
+    "startDate": "2025-08-23T14:20:29.890Z"
   }
 ]

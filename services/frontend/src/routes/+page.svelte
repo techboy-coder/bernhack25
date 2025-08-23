@@ -62,7 +62,7 @@
 </svelte:head>
 
 <div
-	class="dark h-screen bg-gradient-to-br from-background via-background to-primary/10 p-4 overflow-hidden"
+	class="dark h-screen bg-gradient-to-br from-background via-background to-primary/12 p-4 overflow-hidden"
 >
 	<div class="mx-auto flex h-full max-w-4xl flex-col">
 		<!-- Header -->

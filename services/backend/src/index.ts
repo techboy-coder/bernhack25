@@ -7,6 +7,12 @@ import {
   listSavingsProfiles,
   listSavingsProfile,
   createSavingsProfile,
+  listRecurrentPayments,
+  listRecurrentPaymentsByAccount,
+  createRecurrentPaymentEntry,
+  getRecurrentPayment,
+  updateRecurrentPaymentEntry,
+  deleteRecurrentPaymentEntry,
 } from "../func";
 import {
   getAllGoals,
@@ -14,9 +20,13 @@ import {
   createGoal,
   updateGoal,
   deleteGoal,
-  type SavingsGoal,
 } from "./goalsData";
-import type { IncomeCategory, ExpenseCategory } from "./schema";
+import type {
+  IncomeCategory,
+  ExpenseCategory,
+  RecurrentPayment,
+  SavingsProfile,
+} from "./schema";
 
 // Use the same filter type as in the functions
 type TransactionFilter = {
@@ -41,6 +51,28 @@ interface CreateSavingsGoalRequest {
   category: string;
   targetDate?: string;
   startDate?: string;
+}
+
+interface CreateRecurrentPaymentRequest {
+  amount: number;
+  name: string;
+  category:
+    | "other"
+    | "food"
+    | "groceries"
+    | "transport"
+    | "housing"
+    | "utilities"
+    | "healthcare"
+    | "entertainment"
+    | "education"
+    | "shopping"
+    | "travel";
+  frequency: "weekly" | "monthly" | "quarterly" | "yearly";
+  startDate: string;
+  endDate?: string;
+  autoPay?: boolean;
+  savingsProfile?: string;
 }
 
 const app = new Hono();
@@ -250,7 +282,7 @@ const api = new Hono()
   .put("/savings-goals/:goalId", async (c) => {
     try {
       const goalId = c.req.param("goalId");
-      const body: Partial<Omit<SavingsGoal, "id">> = await c.req.json();
+      const body: Partial<Omit<SavingsProfile, "id">> = await c.req.json();
 
       const updatedGoal = updateGoal(goalId, body);
 
@@ -275,6 +307,123 @@ const api = new Hono()
       return c.json({ success: true });
     } catch (error) {
       return c.json({ error: "Failed to delete savings goal" }, 500);
+    }
+  })
+  // Recurrent Payments endpoints
+  .get("/recurrent-payments", (c) => {
+    try {
+      const recurrentPayments = listRecurrentPayments();
+      return c.json(recurrentPayments);
+    } catch (error) {
+      return c.json({ error: "Failed to fetch recurrent payments" }, 500);
+    }
+  })
+  .get("/recurrent-payments/:paymentId", (c) => {
+    try {
+      const paymentId = c.req.param("paymentId");
+      const payment = getRecurrentPayment(paymentId);
+
+      if (!payment) {
+        return c.json({ error: "Recurrent payment not found" }, 404);
+      }
+
+      return c.json(payment);
+    } catch (error) {
+      return c.json({ error: "Failed to fetch recurrent payment" }, 500);
+    }
+  })
+  .get("/bank-accounts/:accountId/recurrent-payments", (c) => {
+    try {
+      const accountId = c.req.param("accountId");
+      const payments = listRecurrentPaymentsByAccount(accountId);
+
+      if (!payments) {
+        return c.json({ error: "Account not found" }, 404);
+      }
+
+      return c.json(payments);
+    } catch (error) {
+      return c.json(
+        { error: "Failed to fetch recurrent payments for account" },
+        500
+      );
+    }
+  })
+  .post("/recurrent-payments", async (c) => {
+    try {
+      const body: CreateRecurrentPaymentRequest = await c.req.json();
+      const {
+        amount,
+        name,
+        category,
+        frequency,
+        startDate,
+        endDate,
+        autoPay = false,
+        savingsProfile,
+      } = body;
+
+      if (
+        !amount ||
+        amount <= 0 ||
+        !name ||
+        !category ||
+        !frequency ||
+        !startDate
+      ) {
+        return c.json(
+          {
+            error:
+              "Invalid input: amount, name, category, frequency, and startDate are required",
+          },
+          400
+        );
+      }
+
+      const newPayment = createRecurrentPaymentEntry({
+        amount,
+        name,
+        category,
+        frequency,
+        startDate,
+        endDate,
+        autoPay,
+        savingsProfile,
+      });
+
+      return c.json(newPayment, 201);
+    } catch (error) {
+      return c.json({ error: "Failed to create recurrent payment" }, 500);
+    }
+  })
+  .put("/recurrent-payments/:paymentId", async (c) => {
+    try {
+      const paymentId = c.req.param("paymentId");
+      const body: Partial<Omit<RecurrentPayment, "id">> = await c.req.json();
+
+      const updatedPayment = updateRecurrentPaymentEntry(paymentId, body);
+
+      if (!updatedPayment) {
+        return c.json({ error: "Recurrent payment not found" }, 404);
+      }
+
+      return c.json(updatedPayment);
+    } catch (error) {
+      return c.json({ error: "Failed to update recurrent payment" }, 500);
+    }
+  })
+  .delete("/recurrent-payments/:paymentId", (c) => {
+    try {
+      const paymentId = c.req.param("paymentId");
+      const success = deleteRecurrentPaymentEntry(paymentId);
+
+      if (!success) {
+        return c.json({ error: "Recurrent payment not found" }, 404);
+      }
+
+      return c.json({ success: true });
+    } catch (error) {
+      return c.json({ error: "Failed to delete recurrent payment" }, 500);
     }
   });
 
