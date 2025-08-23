@@ -23,7 +23,6 @@ def ollama(text):
         'model': 'llama3.1:8b',
         'prompt': text
     }
-
     response = requests.post(OLLAMA_URL, json=data)
     text = ''.join(map(lambda e: e['response'], map(json.loads, response.text.split('\n')[0:-1])))
     return text
@@ -55,13 +54,18 @@ def result():
     _list = ollama(PREFIX + 'try to list the bought items with prices only as json: ' + ocr_text)
 
     print('ai')
-    print(_date, _amount, _list)
+    print(_date) 
+    print(_amount)
+    print(_list)
 
     _date = strip(_date)
     _amount = strip(_amount)
     _list = strip(_list)
 
-    print(_date, _amount, _list)
+    print('strip')
+    print(_date)
+    print(_amount)
+    print(_list)
 
     d = ""
     try:
@@ -82,6 +86,6 @@ def result():
         True
 
     print(d, a, l)
-    return "ok"
+    return {"date": d, "amount": a, "items": l}
 
 app.run(host='127.0.0.1', port=8081)
