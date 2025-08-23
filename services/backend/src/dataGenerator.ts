@@ -1026,7 +1026,7 @@ class RealisticDataGenerator {
         name: "Rent",
         category: ExpenseCategory.HOUSING,
         frequency: "monthly",
-        nextDueDate: "2025-09-01T00:00:00.000Z",
+        startDate: "2025-09-01T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1035,7 +1035,7 @@ class RealisticDataGenerator {
         name: "Internet & Phone",
         category: ExpenseCategory.UTILITIES,
         frequency: "monthly",
-        nextDueDate: "2025-08-28T00:00:00.000Z",
+        startDate: "2025-08-28T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1044,7 +1044,7 @@ class RealisticDataGenerator {
         name: "Health Insurance",
         category: ExpenseCategory.HEALTHCARE,
         frequency: "monthly",
-        nextDueDate: "2025-09-01T00:00:00.000Z",
+        startDate: "2025-09-01T00:00:00.000Z",
         autoPay: false,
       },
       {
@@ -1053,7 +1053,7 @@ class RealisticDataGenerator {
         name: "Mobile Phone",
         category: ExpenseCategory.UTILITIES,
         frequency: "monthly",
-        nextDueDate: "2025-08-25T00:00:00.000Z",
+        startDate: "2025-08-25T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1062,7 +1062,7 @@ class RealisticDataGenerator {
         name: "Gym Membership",
         category: ExpenseCategory.ENTERTAINMENT,
         frequency: "monthly",
-        nextDueDate: "2025-09-15T00:00:00.000Z",
+        startDate: "2025-09-15T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1071,7 +1071,7 @@ class RealisticDataGenerator {
         name: "Retirement Contribution",
         category: ExpenseCategory.OTHER,
         frequency: "monthly",
-        nextDueDate: "2025-08-30T00:00:00.000Z",
+        startDate: "2025-08-30T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1080,7 +1080,7 @@ class RealisticDataGenerator {
         name: "Marriage Fund Transfer",
         category: ExpenseCategory.OTHER,
         frequency: "monthly",
-        nextDueDate: "2025-08-25T00:00:00.000Z",
+        startDate: "2025-08-25T00:00:00.000Z",
         autoPay: true,
       },
     ];

@@ -58,7 +58,8 @@ export const TransactionSchema = z.object({
     z.nativeEnum(IncomeCategory),
     z.nativeEnum(ExpenseCategory),
   ]),
-  receiptId: UUIDSchema, // References a receipt
+  receiptId: UUIDSchema.optional(), // References a receipt if there is one
+  recurrentPaymentId: UUIDSchema.optional(), // References a ruccerent payment if this transaction was triggered by one
   balance: z.number(), // Account balance after this transaction
 });
 
@@ -69,7 +70,8 @@ export const RecurrentPaymentSchema = z.object({
   name: z.string(),
   category: z.nativeEnum(ExpenseCategory), // Recurrent payments are typically expenses
   frequency: z.enum(["weekly", "monthly", "quarterly", "yearly"]),
-  nextDueDate: DateSchema,
+  startDate: DateSchema,
+  endDate: DateSchema.optional(),
   autoPay: z.boolean().default(false),
 });
 
