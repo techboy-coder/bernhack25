@@ -90,6 +90,7 @@ export const BankAccountSchema = z.object({
 export const SavingsProfileSchema = z.object({
   id: UUIDSchema,
   name: z.string(),
+  currentAmount: z.number().nonnegative(),
   targetAmount: z.number().positive(),
   startDate: DateSchema,
   targetDate: DateSchema.optional(),

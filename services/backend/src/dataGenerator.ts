@@ -1098,6 +1098,7 @@ class RealisticDataGenerator {
       {
         id: uuidv4(),
         name: "Emergency Fund",
+        currentAmount: 3867,
         targetAmount: 10000,
         startDate: "2024-01-01T00:00:00.000Z",
         targetDate: "2024-12-31T00:00:00.000Z",
@@ -1106,6 +1107,7 @@ class RealisticDataGenerator {
       {
         id: uuidv4(),
         name: "Vacation to Japan",
+        currentAmount: 765,
         targetAmount: 4500,
         startDate: "2024-03-01T00:00:00.000Z",
         targetDate: "2025-06-01T00:00:00.000Z",
@@ -1114,6 +1116,7 @@ class RealisticDataGenerator {
       {
         id: uuidv4(),
         name: "New Laptop",
+        currentAmount: 1980,
         targetAmount: 2200,
         startDate: "2024-05-01T00:00:00.000Z",
         category: "Technology",
