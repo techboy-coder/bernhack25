@@ -498,7 +498,7 @@ const INCOME_MERCHANTS = {
 };
 
 class RealisticDataGenerator {
-  private currentDate = new Date("2023-08-01"); // Start from 2 years ago
+  private currentDate = new Date("2020-08-20"); // Start from 5 years ago (2020-08-20)
   private userPreferences = {
     preferredLocations: faker.helpers.arrayElements(SWISS_LOCATIONS, 4),
     monthlyIncome: faker.number.int({ min: 4500, max: 7500 }),
@@ -576,10 +576,10 @@ class RealisticDataGenerator {
 
   generateReceipts(): Receipt[] {
     const receipts: Receipt[] = [];
-    this.currentDate = new Date("2023-08-01"); // Reset to start date
+    this.currentDate = new Date("2020-08-20"); // Reset to start date (5 years ago)
 
-    // Generate receipts for 2 years (24 months)
-    const totalDays = 730; // Approximately 2 years
+    // Generate receipts for 5 years (60 months)
+    const totalDays = 1826; // Approximately 5 years (365 * 5 + 1 leap day)
 
     for (let day = 0; day < totalDays; day++) {
       // Generate 4-10 transactions per day
@@ -658,25 +658,48 @@ class RealisticDataGenerator {
 
     const savingsAccount: BankAccount = {
       id: uuidv4(),
-      name: "Savings Account",
+      name: "High-Yield Savings",
       type: AccountType.SAVINGS,
-      currentBalance: 28500.5,
+      currentBalance: 42500.5,
       currency: "CHF",
       transactions: [],
       recurrentPayments: [],
     };
 
-    // Start with a reasonable initial balance
-    let runningBalance = 5000; // Starting balance
-    const startDate = new Date("2023-08-01");
-    const allTransactions: Transaction[] = [];
+    const retirementAccount: BankAccount = {
+      id: uuidv4(),
+      name: "Retirement Fund (3rd Pillar)",
+      type: AccountType.RETIREMENT,
+      currentBalance: 85200.0,
+      currency: "CHF",
+      transactions: [],
+      recurrentPayments: [],
+    };
 
-    // Generate realistic transactions month by month for 24 months
-    for (let month = 0; month < 24; month++) {
+    const marriageAccount: BankAccount = {
+      id: uuidv4(),
+      name: "Marriage Savings Fund",
+      type: AccountType.MARRIAGE,
+      currentBalance: 18750.25,
+      currency: "CHF",
+      transactions: [],
+      recurrentPayments: [],
+    };
+
+    // Start with reasonable initial balances
+    let personalBalance = 5000; // Personal checking starting balance
+    let savingsBalance = 15000; // Savings starting balance
+    let retirementBalance = 25000; // Retirement starting balance
+    let marriageBalance = 5000; // Marriage fund starting balance
+
+    const startDate = new Date("2020-08-20");
+
+    // Generate realistic transactions month by month for 60 months (5 years)
+    for (let month = 0; month < 60; month++) {
       const monthDate = new Date(startDate);
       monthDate.setMonth(monthDate.getMonth() + month);
 
-      // 1. Add monthly salary at the beginning of each month (guaranteed income)
+      // 1. Add monthly salary to personal account at the beginning of each month
       const salaryReceipt =
         receipts.find((r) =>
           INCOME_MERCHANTS[IncomeCategory.SALARY].some((m) =>
@@ -684,10 +707,14 @@ class RealisticDataGenerator {
           )
         ) || receipts[0];
 
-      const salaryAmount = this.getRealisticAmount(IncomeCategory.SALARY, true);
-      runningBalance += salaryAmount;
+      // Salary increases over time (2-3% annually)
+      const yearProgress = month / 12;
+      const salaryGrowth = Math.pow(1.025, yearProgress); // 2.5% annual growth
+      const baseSalary = this.getRealisticAmount(IncomeCategory.SALARY, true);
+      const salaryAmount = baseSalary * salaryGrowth;
+      personalBalance += salaryAmount;
 
-      allTransactions.push({
+      personalAccount.transactions.push({
         id: uuidv4(),
         amount: Math.round(salaryAmount * 100) / 100,
         date: new Date(
@@ -697,14 +724,26 @@ class RealisticDataGenerator {
         ).toISOString(),
         category: IncomeCategory.SALARY,
         receiptId: salaryReceipt.id,
-        balance: Math.round(runningBalance * 100) / 100,
+        balance: Math.round(personalBalance * 100) / 100,
       });
 
-      // 2. Add major monthly expenses first (rent, utilities, etc.)
+      // 2. Add major monthly expenses to personal account
       const majorExpenses = [
-        { category: ExpenseCategory.HOUSING, amount: 1450, day: 5 },
-        { category: ExpenseCategory.UTILITIES, amount: 95.5, day: 8 },
-        { category: ExpenseCategory.HEALTHCARE, amount: 220, day: 12 },
+        {
+          category: ExpenseCategory.HOUSING,
+          amount: 1450 * (1 + yearProgress * 0.03),
+          day: 5,
+        }, // 3% annual rent increases
+        {
+          category: ExpenseCategory.UTILITIES,
+          amount: 95.5 * (1 + yearProgress * 0.02),
+          day: 8,
+        }, // 2% annual utility increases
+        {
+          category: ExpenseCategory.HEALTHCARE,
+          amount: 220 * (1 + yearProgress * 0.04),
+          day: 12,
+        }, // 4% annual healthcare increases
       ];
 
       for (const expense of majorExpenses) {
@@ -715,10 +754,10 @@ class RealisticDataGenerator {
             )
           ) || receipts[faker.number.int({ min: 0, max: receipts.length - 1 })];
 
-        runningBalance -= expense.amount;
-        allTransactions.push({
+        personalBalance -= expense.amount;
+        personalAccount.transactions.push({
           id: uuidv4(),
-          amount: -expense.amount,
+          amount: -Math.round(expense.amount * 100) / 100,
           date: new Date(
             monthDate.getFullYear(),
             monthDate.getMonth(),
@@ -726,40 +765,125 @@ class RealisticDataGenerator {
           ).toISOString(),
           category: expense.category,
           receiptId: receipt.id,
-          balance: Math.round(runningBalance * 100) / 100,
+          balance: Math.round(personalBalance * 100) / 100,
         });
       }
 
-      // 3. Add occasional freelance income (30% chance per month)
-      if (faker.number.float() < 0.3) {
-        const freelanceReceipt =
-          receipts.find((r) =>
-            INCOME_MERCHANTS[IncomeCategory.FREELANCE].some((m) =>
-              r.merchant.includes(m.split(" ")[0])
-            )
-          ) || receipts[faker.number.int({ min: 0, max: receipts.length - 1 })];
+      // 3. Monthly transfers to different accounts
 
-        const freelanceAmount = this.getRealisticAmount(
-          IncomeCategory.FREELANCE,
-          true
+      // Transfer to savings (70% chance, increasing amount over time)
+      if (faker.number.float() < 0.7 && personalBalance > 2000) {
+        const baseTransfer = faker.number.float({ min: 400, max: 1200 });
+        const transferAmount = baseTransfer * (1 + yearProgress * 0.2); // Increase savings over time
+        personalBalance -= transferAmount;
+        savingsBalance += transferAmount;
+
+        const transferDate = new Date(
+          monthDate.getFullYear(),
+          monthDate.getMonth(),
+          15
         );
-        runningBalance += freelanceAmount;
 
-        allTransactions.push({
+        personalAccount.transactions.push({
           id: uuidv4(),
-          amount: Math.round(freelanceAmount * 100) / 100,
-          date: new Date(
+          amount: -Math.round(transferAmount * 100) / 100,
+          date: transferDate.toISOString(),
+          category: ExpenseCategory.OTHER,
+          receiptId:
+            receipts[faker.number.int({ min: 0, max: receipts.length - 1 })].id,
+          balance: Math.round(personalBalance * 100) / 100,
+        });
+
+        savingsAccount.transactions.push({
+          id: uuidv4(),
+          amount: Math.round(transferAmount * 100) / 100,
+          date: transferDate.toISOString(),
+          category: IncomeCategory.OTHER,
+          receiptId:
+            receipts[faker.number.int({ min: 0, max: receipts.length - 1 })].id,
+          balance: Math.round(savingsBalance * 100) / 100,
+        });
+      }
+
+      // Transfer to retirement (monthly, increasing over time)
+      const retirementTransfer =
+        faker.number.float({ min: 300, max: 600 }) * (1 + yearProgress * 0.3);
+      if (personalBalance > retirementTransfer + 1000) {
+        personalBalance -= retirementTransfer;
+        retirementBalance += retirementTransfer * 1.05; // 5% annual growth on retirement investments
+
+        const retirementDate = new Date(
+          monthDate.getFullYear(),
+          monthDate.getMonth(),
+          20
+        );
+
+        personalAccount.transactions.push({
+          id: uuidv4(),
+          amount: -Math.round(retirementTransfer * 100) / 100,
+          date: retirementDate.toISOString(),
+          category: ExpenseCategory.OTHER,
+          receiptId:
+            receipts[faker.number.int({ min: 0, max: receipts.length - 1 })].id,
+          balance: Math.round(personalBalance * 100) / 100,
+        });
+
+        retirementAccount.transactions.push({
+          id: uuidv4(),
+          amount: Math.round(retirementTransfer * 1.05 * 100) / 100,
+          date: retirementDate.toISOString(),
+          category: IncomeCategory.INVESTMENTS,
+          receiptId:
+            receipts.find((r) =>
+              INCOME_MERCHANTS[IncomeCategory.INVESTMENTS].some((m) =>
+                r.merchant.includes(m.split(" ")[0])
+              )
+            )?.id || receipts[0].id,
+          balance: Math.round(retirementBalance * 100) / 100,
+        });
+      }
+
+      // Transfer to marriage fund (started 3 years ago, accelerating)
+      if (month >= 24) {
+        // Start marriage savings after 2 years
+        const marriageTransfer =
+          faker.number.float({ min: 200, max: 500 }) *
+          (1 + (month - 24) * 0.05);
+        if (personalBalance > marriageTransfer + 500) {
+          personalBalance -= marriageTransfer;
+          marriageBalance += marriageTransfer;
+
+          const marriageDate = new Date(
             monthDate.getFullYear(),
             monthDate.getMonth(),
-            faker.number.int({ min: 15, max: 25 })
-          ).toISOString(),
-          category: IncomeCategory.FREELANCE,
-          receiptId: freelanceReceipt.id,
-          balance: Math.round(runningBalance * 100) / 100,
-        });
+            25
+          );
+
+          personalAccount.transactions.push({
+            id: uuidv4(),
+            amount: -Math.round(marriageTransfer * 100) / 100,
+            date: marriageDate.toISOString(),
+            category: ExpenseCategory.OTHER,
+            receiptId:
+              receipts[faker.number.int({ min: 0, max: receipts.length - 1 })]
+                .id,
+            balance: Math.round(personalBalance * 100) / 100,
+          });
+
+          marriageAccount.transactions.push({
+            id: uuidv4(),
+            amount: Math.round(marriageTransfer * 100) / 100,
+            date: marriageDate.toISOString(),
+            category: IncomeCategory.OTHER,
+            receiptId:
+              receipts[faker.number.int({ min: 0, max: receipts.length - 1 })]
+                .id,
+            balance: Math.round(marriageBalance * 100) / 100,
+          });
+        }
       }
 
-      // 4. Generate daily expenses throughout the month
+      // 4. Generate daily expenses for personal account
       const daysInMonth = new Date(
         monthDate.getFullYear(),
         monthDate.getMonth() + 1,
@@ -767,17 +891,13 @@ class RealisticDataGenerator {
       ).getDate();
 
       for (let day = 1; day <= daysInMonth; day++) {
-        // Skip days that already have major expenses
-        if ([1, 2, 3, 5, 8, 12].includes(day)) continue;
+        if ([1, 2, 3, 5, 8, 12, 15, 20, 25].includes(day)) continue; // Skip major transaction days
 
-        // Generate 2-5 small transactions per day
-        const dailyTransactions = faker.number.int({ min: 2, max: 5 });
+        const dailyTransactions = faker.number.int({ min: 1, max: 4 });
 
         for (let i = 0; i < dailyTransactions; i++) {
-          // Only spend if we have enough money (keep minimum 200 CHF buffer)
-          if (runningBalance <= 200) break;
+          if (personalBalance <= 300) break; // Keep minimum buffer
 
-          // Choose expense category based on realistic probabilities
           const category = faker.helpers.weightedArrayElement([
             { weight: 0.35, value: ExpenseCategory.FOOD },
             { weight: 0.25, value: ExpenseCategory.GROCERIES },
@@ -788,7 +908,6 @@ class RealisticDataGenerator {
             { weight: 0.02, value: ExpenseCategory.OTHER },
           ]);
 
-          // Find matching receipt
           const categoryReceipts = receipts.filter((r) =>
             MERCHANTS_BY_CATEGORY[category].some((m) =>
               r.merchant.includes(m.split(" ")[0])
@@ -801,136 +920,109 @@ class RealisticDataGenerator {
                   faker.number.int({ min: 0, max: receipts.length - 1 })
                 ];
 
-          // Get realistic amount for this category
-          let amount = this.getRealisticAmount(category);
-
-          // Don't spend more than we have (minus buffer)
-          const maxSpend = runningBalance - 200;
+          let amount =
+            this.getRealisticAmount(category) * (1 + yearProgress * 0.02); // 2% annual inflation
+          const maxSpend = personalBalance - 300;
           if (amount > maxSpend) {
-            amount = Math.max(5, maxSpend * 0.1); // Spend at most 10% of available funds, min 5 CHF
+            amount = Math.max(5, maxSpend * 0.1);
           }
 
-          runningBalance -= amount;
+          personalBalance -= amount;
 
-          allTransactions.push({
+          personalAccount.transactions.push({
             id: uuidv4(),
             amount: -Math.round(amount * 100) / 100,
             date: new Date(
               monthDate.getFullYear(),
               monthDate.getMonth(),
               day,
-              faker.number.int({ min: 8, max: 22 }), // 8 AM to 10 PM
+              faker.number.int({ min: 8, max: 22 }),
               faker.number.int({ min: 0, max: 59 })
             ).toISOString(),
             category: category,
             receiptId: receipt.id,
-            balance: Math.round(runningBalance * 100) / 100,
+            balance: Math.round(personalBalance * 100) / 100,
           });
         }
       }
 
-      // 5. Add occasional investment income (20% chance per month)
-      if (faker.number.float() < 0.2) {
-        const investmentReceipt =
+      // 5. Add savings account interest (monthly)
+      if (savingsBalance > 0) {
+        const monthlyInterestRate = 0.012 / 12; // 1.2% annual interest rate
+        const interestAmount = savingsBalance * monthlyInterestRate;
+        savingsBalance += interestAmount;
+
+        savingsAccount.transactions.push({
+          id: uuidv4(),
+          amount: Math.round(interestAmount * 100) / 100,
+          date: new Date(
+            monthDate.getFullYear(),
+            monthDate.getMonth() + 1,
+            0
+          ).toISOString(), // Last day of month
+          category: IncomeCategory.INVESTMENTS,
+          receiptId:
+            receipts.find((r) =>
+              INCOME_MERCHANTS[IncomeCategory.INVESTMENTS].some((m) =>
+                r.merchant.includes("Bank")
+              )
+            )?.id || receipts[0].id,
+          balance: Math.round(savingsBalance * 100) / 100,
+        });
+      }
+
+      // 6. Occasional freelance income (25% chance per month)
+      if (faker.number.float() < 0.25) {
+        const freelanceReceipt =
           receipts.find((r) =>
-            INCOME_MERCHANTS[IncomeCategory.INVESTMENTS].some((m) =>
+            INCOME_MERCHANTS[IncomeCategory.FREELANCE].some((m) =>
               r.merchant.includes(m.split(" ")[0])
             )
           ) || receipts[faker.number.int({ min: 0, max: receipts.length - 1 })];
 
-        const investmentAmount = this.getRealisticAmount(
-          IncomeCategory.INVESTMENTS,
-          true
-        );
-        runningBalance += investmentAmount;
+        const freelanceAmount =
+          this.getRealisticAmount(IncomeCategory.FREELANCE, true) *
+          (1 + yearProgress * 0.15);
+        personalBalance += freelanceAmount;
 
-        allTransactions.push({
+        personalAccount.transactions.push({
           id: uuidv4(),
-          amount: Math.round(investmentAmount * 100) / 100,
+          amount: Math.round(freelanceAmount * 100) / 100,
           date: new Date(
             monthDate.getFullYear(),
             monthDate.getMonth(),
-            faker.number.int({ min: 20, max: 28 })
+            faker.number.int({ min: 15, max: 28 })
           ).toISOString(),
-          category: IncomeCategory.INVESTMENTS,
-          receiptId: investmentReceipt.id,
-          balance: Math.round(runningBalance * 100) / 100,
-        });
-      }
-
-      // 6. Transfer to savings (if balance is healthy)
-      if (runningBalance > 2000 && faker.number.float() < 0.7) {
-        const transferAmount = faker.number.float({ min: 200, max: 800 });
-        runningBalance -= transferAmount;
-
-        allTransactions.push({
-          id: uuidv4(),
-          amount: -Math.round(transferAmount * 100) / 100,
-          date: new Date(
-            monthDate.getFullYear(),
-            monthDate.getMonth(),
-            faker.number.int({ min: 25, max: 30 })
-          ).toISOString(),
-          category: ExpenseCategory.OTHER,
-          receiptId:
-            receipts[faker.number.int({ min: 0, max: receipts.length - 1 })].id,
-          balance: Math.round(runningBalance * 100) / 100,
+          category: IncomeCategory.FREELANCE,
+          receiptId: freelanceReceipt.id,
+          balance: Math.round(personalBalance * 100) / 100,
         });
       }
     }
 
-    // Sort all transactions by date
-    allTransactions.sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-    );
+    // Sort all transactions by date for each account
+    [
+      personalAccount,
+      savingsAccount,
+      retirementAccount,
+      marriageAccount,
+    ].forEach((account) => {
+      account.transactions.sort(
+        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+      );
 
-    // Recalculate running balances to ensure they're sequential
-    let recalcBalance = 5000; // Starting balance
-    allTransactions.forEach((transaction) => {
-      recalcBalance += transaction.amount;
-      transaction.balance = Math.round(recalcBalance * 100) / 100;
+      // Update current balance to final transaction balance
+      if (account.transactions.length > 0) {
+        account.currentBalance =
+          account.transactions[account.transactions.length - 1].balance;
+      }
     });
 
-    personalAccount.transactions = allTransactions;
-    personalAccount.currentBalance =
-      allTransactions.length > 0
-        ? allTransactions[allTransactions.length - 1].balance
-        : 5000;
-
-    // Generate savings account transactions (simpler)
-    let savingsBalance = 25000;
-    for (let month = 0; month < 24; month++) {
-      if (faker.number.float() < 0.8) {
-        // 80% chance of monthly savings
-        const transferAmount = faker.number.float({ min: 300, max: 1000 });
-        savingsBalance += transferAmount;
-
-        const transferDate = new Date("2023-08-01");
-        transferDate.setMonth(transferDate.getMonth() + month);
-        transferDate.setDate(faker.number.int({ min: 25, max: 30 }));
-
-        savingsAccount.transactions.push({
-          id: uuidv4(),
-          amount: Math.round(transferAmount * 100) / 100,
-          date: transferDate.toISOString(),
-          category: IncomeCategory.OTHER,
-          receiptId:
-            receipts[faker.number.int({ min: 0, max: receipts.length - 1 })].id,
-          balance: Math.round(savingsBalance * 100) / 100,
-        });
-      }
-    }
-
-    savingsAccount.currentBalance =
-      savingsAccount.transactions.length > 0
-        ? savingsAccount.transactions[savingsAccount.transactions.length - 1]
-            .balance
-        : 25000;
-
+    // Add recurrent payments to personal account
     personalAccount.recurrentPayments = [
       {
         id: uuidv4(),
-        amount: 1450,
+        amount: 1550, // Adjusted for inflation over 5 years
         name: "Rent",
         category: ExpenseCategory.HOUSING,
         frequency: "monthly",
@@ -939,7 +1031,7 @@ class RealisticDataGenerator {
       },
       {
         id: uuidv4(),
-        amount: 95.5,
+        amount: 105,
         name: "Internet & Phone",
         category: ExpenseCategory.UTILITIES,
         frequency: "monthly",
@@ -948,7 +1040,7 @@ class RealisticDataGenerator {
       },
       {
         id: uuidv4(),
-        amount: 220,
+        amount: 250,
         name: "Health Insurance",
         category: ExpenseCategory.HEALTHCARE,
         frequency: "monthly",
@@ -957,7 +1049,7 @@ class RealisticDataGenerator {
       },
       {
         id: uuidv4(),
-        amount: 89,
+        amount: 95,
         name: "Mobile Phone",
         category: ExpenseCategory.UTILITIES,
         frequency: "monthly",
@@ -966,7 +1058,7 @@ class RealisticDataGenerator {
       },
       {
         id: uuidv4(),
-        amount: 45,
+        amount: 55,
         name: "Gym Membership",
         category: ExpenseCategory.ENTERTAINMENT,
         frequency: "monthly",
@@ -975,16 +1067,30 @@ class RealisticDataGenerator {
       },
       {
         id: uuidv4(),
-        amount: 19.9,
-        name: "Netflix Subscription",
-        category: ExpenseCategory.ENTERTAINMENT,
+        amount: 450,
+        name: "Retirement Contribution",
+        category: ExpenseCategory.OTHER,
         frequency: "monthly",
         nextDueDate: "2025-08-30T00:00:00.000Z",
         autoPay: true,
       },
+      {
+        id: uuidv4(),
+        amount: 350,
+        name: "Marriage Fund Transfer",
+        category: ExpenseCategory.OTHER,
+        frequency: "monthly",
+        nextDueDate: "2025-08-25T00:00:00.000Z",
+        autoPay: true,
+      },
     ];
 
-    return [personalAccount, savingsAccount];
+    return [
+      personalAccount,
+      savingsAccount,
+      retirementAccount,
+      marriageAccount,
+    ];
   }
 
   generateSavingsProfiles(): SavingsProfile[] {

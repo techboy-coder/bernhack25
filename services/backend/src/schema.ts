@@ -35,6 +35,8 @@ export const IncomeCategory = {
 export const AccountType = {
   PERSONAL: "personal",
   SAVINGS: "savings",
+  RETIREMENT: "retirement",
+  MARRIAGE: "marriage",
 } as const;
 
 // Receipt schema - contains details about what was purchased/received
