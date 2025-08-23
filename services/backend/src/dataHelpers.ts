@@ -5,12 +5,14 @@ import { v4 as uuidv4 } from "uuid";
 
 type TypeMap = {
   'SavingsProfile': SavingsProfile,
-  'RecurrentPayment': RecurrentPayment
+  'RecurrentPayment': RecurrentPayment,
+  'Transactions': Transaction
 }
 
 const DatabaseFileMap = {
   'SavingsProfile': 'savings.json',
-  'RecurrentPayment': 'recurrent_payments.json'
+  'RecurrentPayment': 'recurrent_payments.json',
+  'Transactions': 'transactions.json'
 } as const
 
 type TypeList = keyof TypeMap

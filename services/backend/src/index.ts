@@ -6,6 +6,7 @@ config();
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { proxy } from "hono/proxy";
+import { v4 as uuidv4 } from "uuid";
 import {
   listBankAccounts,
   listTransactions,
@@ -42,6 +43,7 @@ export type {
   AIAnalysisRequest,
   AIAnalysisResponse,
 } from "./ai";
+import { create, mapDatabaseOperation } from "./dataHelpers";
 
 const OCR_HOSTNAME = "localhost";
 const OCR_PORT = "8081";
@@ -628,9 +630,49 @@ const api = new Hono()
     } catch (error) {
       return c.json({ error: "Failed to delete recurrent payment" }, 500);
     }
-  })
+   })
   .post("/receipt-ocr", async (c) => {
-    return proxy(`http://${OCR_HOSTNAME}:${OCR_PORT}/receipt-ocr`, c.req);
+    return proxy(`http://${OCR_HOSTNAME}:${OCR_PORT}/receipt-ocr`, c.req); })
+  .post("/add-transaction", async (c) => {
+
+    // curl --header "Content-Type: application/json" \
+    //     --request POST \
+    //     --data '{"amount":42,"date":"2012-12-12"}' \
+    //     http://localhost:3000/api/add-transaction
+
+    const createTransction = mapDatabaseOperation(create, 'Transactions');
+
+    try {
+      const body: CreateSavingsGoalRequest = await c.req.json();
+      const {
+        amount,
+        date,
+        category
+      } = body;
+
+      if (amount == undefined || !date) {
+        return c.json(
+          {
+            error: "Invalid input: amount and date are required",
+          },
+          400
+        );
+      }
+
+      const newTransaction = createTransction({
+        id: uuidv4(),
+        amount,
+        date: new Date(date),
+        category: category ?? null,
+        receiptId: uuidv4(),
+        balance: -1,
+      });
+
+      return c.json(newTransaction, 201);
+    } catch (error) {
+      console.error(error);
+      return c.json({ error: "Failed to insert transaction." }, 500);
+    }
   });
 
 const app = new Hono()
