@@ -8,6 +8,40 @@ import {
   listSavingsProfile,
   createSavingsProfile,
 } from "../func";
+import {
+  getAllGoals,
+  getGoalById,
+  createGoal,
+  updateGoal,
+  deleteGoal,
+  type SavingsGoal,
+} from "./goalsData";
+import type { IncomeCategory, ExpenseCategory } from "./schema";
+
+// Use the same filter type as in the functions
+type TransactionFilter = {
+  timeRange?: {
+    start?: number;
+    end?: number;
+  };
+  type?: "income" | "expense";
+  categories?: (keyof typeof IncomeCategory | keyof typeof ExpenseCategory)[];
+};
+
+interface CreateSavingsProfileRequest {
+  name: string;
+  targetAmount: number;
+  targetDate?: number;
+}
+
+interface CreateSavingsGoalRequest {
+  name: string;
+  targetAmount: number;
+  currentAmount?: number;
+  category: string;
+  targetDate?: string;
+  startDate?: string;
+}
 
 const app = new Hono();
 
@@ -36,7 +70,7 @@ const api = new Hono()
   .get("/transactions", (c) => {
     try {
       const query = c.req.query();
-      const filter: any = {};
+      const filter: TransactionFilter = {};
 
       // Parse query parameters for filtering
       if (query.startDate)
@@ -49,8 +83,15 @@ const api = new Hono()
           ...filter.timeRange,
           end: parseInt(query.endDate),
         };
-      if (query.type) filter.type = query.type;
-      if (query.categories) filter.categories = query.categories.split(",");
+      if (query.type && (query.type === "income" || query.type === "expense")) {
+        filter.type = query.type;
+      }
+      if (query.categories) {
+        filter.categories = query.categories.split(",") as (
+          | keyof typeof IncomeCategory
+          | keyof typeof ExpenseCategory
+        )[];
+      }
 
       const transactions = listTransactions(
         Object.keys(filter).length > 0 ? filter : undefined
@@ -64,7 +105,7 @@ const api = new Hono()
     try {
       const accountId = c.req.param("accountId");
       const query = c.req.query();
-      const filter: any = {};
+      const filter: TransactionFilter = {};
 
       // Parse query parameters for filtering
       if (query.startDate)
@@ -77,8 +118,15 @@ const api = new Hono()
           ...filter.timeRange,
           end: parseInt(query.endDate),
         };
-      if (query.type) filter.type = query.type;
-      if (query.categories) filter.categories = query.categories.split(",");
+      if (query.type && (query.type === "income" || query.type === "expense")) {
+        filter.type = query.type;
+      }
+      if (query.categories) {
+        filter.categories = query.categories.split(",") as (
+          | keyof typeof IncomeCategory
+          | keyof typeof ExpenseCategory
+        )[];
+      }
 
       const transactions = listTransactionsForBankAccount(
         accountId,
@@ -118,7 +166,7 @@ const api = new Hono()
   })
   .post("/savings-profiles", async (c) => {
     try {
-      const body = await c.req.json();
+      const body: CreateSavingsProfileRequest = await c.req.json();
       const { name, targetAmount, targetDate } = body;
 
       if (!name || !targetAmount || targetAmount <= 0) {
@@ -139,6 +187,94 @@ const api = new Hono()
       return c.json(profile, 201);
     } catch (error) {
       return c.json({ error: "Failed to create savings profile" }, 500);
+    }
+  })
+  // New savings goals endpoints
+  .get("/savings-goals", (c) => {
+    try {
+      const goals = getAllGoals();
+      return c.json(goals);
+    } catch (error) {
+      return c.json({ error: "Failed to fetch savings goals" }, 500);
+    }
+  })
+  .get("/savings-goals/:goalId", (c) => {
+    try {
+      const goalId = c.req.param("goalId");
+      const goal = getGoalById(goalId);
+
+      if (!goal) {
+        return c.json({ error: "Savings goal not found" }, 404);
+      }
+
+      return c.json(goal);
+    } catch (error) {
+      return c.json({ error: "Failed to fetch savings goal" }, 500);
+    }
+  })
+  .post("/savings-goals", async (c) => {
+    try {
+      const body: CreateSavingsGoalRequest = await c.req.json();
+      const {
+        name,
+        targetAmount,
+        currentAmount = 0,
+        category,
+        targetDate,
+        startDate = new Date().toISOString(),
+      } = body;
+
+      if (!name || !targetAmount || targetAmount <= 0) {
+        return c.json(
+          {
+            error: "Invalid input: name and positive targetAmount are required",
+          },
+          400
+        );
+      }
+
+      const newGoal = createGoal({
+        name,
+        targetAmount,
+        currentAmount,
+        category,
+        targetDate,
+        startDate,
+      });
+
+      return c.json(newGoal, 201);
+    } catch (error) {
+      return c.json({ error: "Failed to create savings goal" }, 500);
+    }
+  })
+  .put("/savings-goals/:goalId", async (c) => {
+    try {
+      const goalId = c.req.param("goalId");
+      const body: Partial<Omit<SavingsGoal, "id">> = await c.req.json();
+
+      const updatedGoal = updateGoal(goalId, body);
+
+      if (!updatedGoal) {
+        return c.json({ error: "Savings goal not found" }, 404);
+      }
+
+      return c.json(updatedGoal);
+    } catch (error) {
+      return c.json({ error: "Failed to update savings goal" }, 500);
+    }
+  })
+  .delete("/savings-goals/:goalId", (c) => {
+    try {
+      const goalId = c.req.param("goalId");
+      const success = deleteGoal(goalId);
+
+      if (!success) {
+        return c.json({ error: "Savings goal not found" }, 404);
+      }
+
+      return c.json({ success: true });
+    } catch (error) {
+      return c.json({ error: "Failed to delete savings goal" }, 500);
     }
   });
 
