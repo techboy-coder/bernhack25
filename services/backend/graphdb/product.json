@@ -18008,6 +18008,5298 @@
 					"type": "literal",
 					"value": "Dekorationen"
 				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8714100799123"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Knorr · Gemüsesuppe · 100% natürliche Zutaten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495486"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Gemüsebouillons"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8715700423869"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Heinz · Ketchup · 50% weniger zucker"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495442"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Ketchup"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404223468"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Limetten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495375"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zitronen & Limetten"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/9005425000742"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Carpe Diem Kombucha · Fermentiertes Teegetränk · Classic"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/10600312"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wellness-Drinks"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/90280184"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Carpe Diem · Kombucha · Classic, vegan"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/10600312"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wellness-Drinks"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/0000076111488"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Knorr · Gemüse Bouillon · Paste"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495486"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Gemüsebouillons"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/0778988419571"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Spinmaster · Zauberwürfel 3x3"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495213"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Gesellschaftsspiele, Rollenspiele & Puzzles"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/3045320104806"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Andros · Pink Grapefruitsaft · gepresst"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494961"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Andere Frischsäfte"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/3057640521928"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Volvic Essence · Natürliches Mineralwasser · Minze-Gurke"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494957"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Aromatisiertes Wasser"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/3068320014067"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Evian · Natürliches Mineralwasser · Sport"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494955"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wasser ohne Kohlensäure"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/3131917240603"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Pilot Frixion ball · Tintenroller · Schwarz, Blau und Rot, 0.7mm, radierbar & wiederaufladbar"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/10690773"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Back to school"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/3608580755333"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Andros · Orangensaft ohne Fruchtfleisch · gepresst"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494960"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischer Orangensaft"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/4000512015246"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Trolli · Marshmallow"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495534"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geleebonbons"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/4000512364320"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Trolli · Schaumzuckerbonbons · Pfirsichringe"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495534"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geleebonbons"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/4003759013983"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Xenia · Feta"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495335"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Feta"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/4005555010586"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Ravensburger · RVB Puzzle 200 T. Jurassic World"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495213"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Gesellschaftsspiele, Rollenspiele & Puzzles"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/4005808649433"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Nivea Sun Kids Sensitive · Sonnenspray für Kinder · 50+, UVA/UVB, Waterproof"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495710"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Gesichts- & Körperpflege"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/4008400280127"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Kinder Schoko-Bons · Vollmilchschokoladebonbons gefüllt · mit Milch und fein gehackten Haselnüssen."
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495523"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Schokoladesnacks"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/4012824401754"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Yogi Tea · Teemischung · Ingwer, Orange, Vanille"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494974"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kräutertee"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/5053990182534"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Pringles · Chips · Sweet Wings"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495500"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Chips Essig & Gewürz"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/5449000131836"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Coca-Cola · Zero"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494949"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cola"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/5702017415871"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Lego · 31134 SPACESHUTTLE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495711"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Lego"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/5702017415932"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Lego · 31140 MAGISCHES EINHORN"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495711"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Lego"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/5702017567495"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Lego · City 60406 Autotransporter mit Rennwagen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495711"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Lego"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610095005007"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Zweifel Original · Chips · Nature"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495498"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Chips Nature"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610095015006"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Zweifel Original · Chips · Paprika"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495499"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Chips Paprika & Chili"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610097111072"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Rivella · Rot · Original"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494951"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Softdrinks"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610097112185"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Rivella · Blau · kalorienarm"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494951"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Softdrinks"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610100031106"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Thomy · Senf · mild"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495443"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Senf"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610108082001"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Elmex Junior · Zahnpasta für Kinder"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495210"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Pflege von Nase, Ohren & Zähnen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610167690117"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Salbisan · Halspastillen · mit Salbeigeschmack, Sugarfree"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495535"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kräuterbonbons & Pastillen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610186433726"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Caran d'Ache · Graphitstift"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495614"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Schreiben & Korrigieren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200012913"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Cervelas"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495309"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wienerli & Cervelats"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200041050"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Da Emilio Grana Padano · Italienischer Extra-Hartkäse, gerib., 3/4 fett, aus Rohmilch · gerieben"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495339"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Reibkäse"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200053527"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Boncampo Classico · Bohnenkaffee · Kräftig & rassig"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494966"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Bohnenkaffee"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200068323"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Da Emilio Grana Padano · Italienischer Extra-Hartkäse, gerib., 3/4 fett, aus Rohmilch · gerieben"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495339"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Reibkäse"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200257383"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "«Aus der Region.» Wienerli"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495309"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wienerli & Cervelats"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200279934"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Käsekuchen-Mischung"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495339"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Reibkäse"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200317537"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Valflora · Halbrahm · ohne Zuckerzusatz"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495318"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Doppelrahm & Schlagrahm"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200328656"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Frühkartoffeln · festkochend"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494908"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kartoffeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200363350"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Frühkartoffeln"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494908"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kartoffeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200370457"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "«Aus der Region.» Cervelas"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495309"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wienerli & Cervelats"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200501462"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Blutorangen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495376"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Orangen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610502127773"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Minipic"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495308"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Snacks & Apéro"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610632942062"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Amandine · Bio Kartoffeln Amandine"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494908"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kartoffeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610899110006"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Chicco D'Oro Tradition · Bohnenkaffee"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494966"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Bohnenkaffee"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7611983249725"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "I AM CREATIVE · Diamond Painting"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495612"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Anderes Zubehör"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7612016007305"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Fritzo Cube Format 30Mm Mit 27 Würfeln"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495213"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Gesellschaftsspiele, Rollenspiele & Puzzles"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613035779778"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Buitoni Piccolinis · Mini-Pizzen · Tomaten-Mozzarella"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495548"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Andere Pizzas"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269165477"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Max · Snacks für Hunde"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495562"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Snacks"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269273127"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sun Queen · Walnusskerne · Nicht gesalzen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495032"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Nüsse & Mandeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269317319"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Grüne Linsen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495438"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Linsen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269319337"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Anna's Best · Salatbouquet"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494914"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Abgepackte Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269380238"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Chili"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494903"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zucchetti, Auberginen & Peperoni"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269393573"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Kartoffeln festkochend IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494908"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kartoffeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269462231"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Dessert Tradition · Crème Vanille"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495353"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cremes & Mousses"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269562979"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sélection · Kartoffeln · Raclette"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494908"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kartoffeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269678960"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Champignons · weiss"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494906"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Pilze"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269753957"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · M-Classic Rindshamburger"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494842"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Hackfleisch & Hamburger"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269815860"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca Fairtrade · Trauben · gemischt, kernlos"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494896"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Trauben"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269853138"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Steinofenraute · Four à pierre"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495385"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dunkles Brot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269876892"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Migros Bio Buttergipfel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494925"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Süsse Backwaren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269911395"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Fairtrade Limetten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495375"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zitronen & Limetten"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613295536876"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Mioplant · Unkrautvertilger Spray, 500 ml"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495183"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Rasen, Erde & Dünger"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312000359"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sun Queen · Cashewkerne"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495032"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Nüsse & Mandeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312030776"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Ice Tea · Eistee · Zitrone - Light"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495416"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Eistee flüssig"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312064139"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Jasmin Reis"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495432"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Basmati- & Parfümreis"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312065273"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "IP Suisse aha! · Maisgriess fein · Polenta"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495436"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Griess"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312074299"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blévita · Dinkelgebäck · Chia-Randen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495024"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312074312"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blévita · Dinkelgebäck · Milch-Zimt"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495024"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312124352"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "I am · I am men 5-Klingen Ersatzklingen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495727"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Rasierer & Klingen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312169032"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sun Queen · Mangoschnitze getrocknet"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495031"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dörrobst"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312176627"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic Basmati · Basmati-Reis"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495432"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Basmati- & Parfümreis"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312236246"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Nussmischung · Nicht gesalzen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495032"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Nüsse & Mandeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312249130"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Brillenreinigungstüchlein"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495772"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Augen-, Ohren- & Nasenpflege"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312256411"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Patissier · Backpulver"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495399"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Hefe"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312261767"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sun Queen · Cranberries · Gezuckert, getrocknet"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495031"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dörrobst"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312278321"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic Maxi · Glace Vanille · mit Milchschokoladeüberzug und Mandeln"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7798225"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Am Stiel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312284797"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Farmer Classic · Getreideriegel · Choco-Apfel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495025"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Getreideriegel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312285718"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Farmer Kids · Getreideriegel · Erdbeere - Apfel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495025"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Getreideriegel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312285732"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Farmer Classic · Getreideriegel · Apfel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495025"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Getreideriegel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312285770"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Farmer Soft · Getreideriegel · Joghurt"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495025"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Getreideriegel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312288016"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Party · Jungle pretzels · gesalzen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495504"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Sticks & Brezeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312294918"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "You · Powerful Mix · Edamame, geröstet Mandeln, Cassis & Kichererbsen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495033"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Mischungen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312312209"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sun Queen · Ananasscheiben · in Ananassaft"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495482"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Früchte in Sirup"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312332276"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Optimum Nature · Lebensmittel Mottenfalle · Für die Küche und Vorratsraum"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495184"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Insektizide"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312334669"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Beluga Linsen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495438"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Linsen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312342695"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Eistee · Schweizer Alpenkräuter - ohne Zucker"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495416"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Eistee flüssig"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312373705"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Belle Journée Extra · Himbeergelee"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494945"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Konfitüren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312376577"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Zahnbürsten · Soft"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495754"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Erwachsene"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312397091"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Weissmehl"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495395"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Weissmehl"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312409008"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Twist Classic · Haushaltpapier · 3 Lagig"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495155"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Allzwecktücher"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312411407"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Tomatensauce · mit Gemüse"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/12671420"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Pastasaucen & Pestos"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312412503"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Italienische Kräuter · Getrocknet"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495457"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kräuter"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312431757"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Thymian · Getrocknet"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495457"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kräuter"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312433348"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Schweizer Apfelringe"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495031"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dörrobst"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312434826"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Nature Clean · WC-Reiniger"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495581"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Reinigungsgel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312441787"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Maiskörner · ohne Salz"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495470"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Mais"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312445174"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic Iron · Fruchtsaft"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494963"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Andere Fruchtsäfte"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312448366"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Chewing Gum · Strawberry  "
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495531"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frucht"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312477366"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Würzmischung · Geflügel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/12844804"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Gewürzmischungen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312480076"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Farmer's Best · Gartenerbsen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495089"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Gemüse"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404000724"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Peperoni · mini, Mix"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494903"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zucchetti, Auberginen & Peperoni"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404028230"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Cervelas und Bratwurst"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495310"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Grillwürste"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404099094"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Cornatur Quorn · Gehacktes · Vegetarisch"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494865"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Alternativen zu Hackfleisch & Geschnetzeltem"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404115879"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Dessert Tradition · Crème Caramel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495353"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cremes & Mousses"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404136331"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Kopfsalat · Duo grün"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494912"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404211625"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Demeter · Karotten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494909"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Karotten & Lauch"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404222935"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Wienerli"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495309"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wienerli & Cervelats"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404553404"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Lattich mini grün"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494912"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404586860"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Optigal · Pouletbrust"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494856"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geflügel-Charcuterie"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404635834"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Krustenkranz"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495384"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Weissbrot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404636916"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Extra · Extra Perl Champignons"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494906"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Pilze"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404655474"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Citterio · Salami Milano"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495307"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geschnitten"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404655610"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Citterio · Salami Milano"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495307"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geschnitten"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404678169"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Tradition · Bauernschinken · maxi"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495304"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geschnittener Kochschinken"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404723968"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Eisbergsalat"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494912"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404744628"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Frühstückseier CH Freiland 68g+"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494870"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Eier"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404827147"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Elsa IP-SUISSE · Joghurt · Aprikose"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495344"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frucht & Aroma"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404893197"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · M-Classic Aare Hamburger Rind"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494842"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Hackfleisch & Hamburger"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613434766706"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Müllsäcke · 25l"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495575"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Müllbeutel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613434784335"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Miobrill · Microfaser-Reinigungstücher · 35 x 35cm, Küche"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495157"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Tücher & Staubwedel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613434895345"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "MIGROS KITCHEN & CO. · Ofenform, 34 x 23.5 cm"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495634"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Backen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7614700002061"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Grether's · Pastillen für den Hals · Schwarze Johannisbeere"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495535"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kräuterbonbons & Pastillen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616500631304"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Candida Fresh classic · Zuckerfreier Kaugummi · Spearmint"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495533"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Oral Care"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616500923393"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Frey Risoletto · Tafelschokolade · Milchschokolade mit Reis-Crispies und Caramel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495515"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Milch"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700002782"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "IP-SUISSE · Basler Brot"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495385"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dunkles Brot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700006513"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Dreikönigskuchen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495390"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Brioche"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700037234"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Hausbäckerei · Butterzopf IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495386"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zopf"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700112153"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Hausbäckerei · Seeländer Brot IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495385"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dunkles Brot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700269116"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Hausbäckerei · Centerbrot IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495385"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dunkles Brot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/76167966"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Kuchenteig ausgewallt · rund 33cm"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/10134927"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kuchenteig"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616800430379"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic Mifloc · Kartoffelstock · Instant - mit Milch"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494978"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Püree & Rösti"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617014129318"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Exquisito Crema · Bohnenkaffee · Cremig & aromatisch"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494966"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Bohnenkaffee"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027539036"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Apfel · Gala"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495373"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Äpfel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027541343"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Äpfel · Topaz"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495373"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Äpfel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027542456"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Birnen · Beurre-bosc"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495374"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Birnen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027551762"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Rispentomaten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494901"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Tomaten"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027554466"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Zucchetti"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494903"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zucchetti, Auberginen & Peperoni"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027556798"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Lauch · grün"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494909"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Karotten & Lauch"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027631396"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Mischsalat"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494914"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Abgepackte Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027631594"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Anna's Best · Alicesalat"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494914"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Abgepackte Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027632843"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Anna's Best · Anna's Best Peterli geschnitten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494917"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frische Kräuter"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027731904"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Kartoffeln festkochend IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494908"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kartoffeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027861021"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Kartoffeln · festkochend"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494908"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kartoffeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027938655"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Bohnen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494904"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Bohnen & Mais"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617100213341"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "IP-SUISSE · Vorderschinken"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495304"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geschnittener Kochschinken"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400031942"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Party · Pizza Crackers"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495506"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400033557"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blévita · 5-Korngebäck · 5-Korngebäck"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495024"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400045253"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Soft Ice · Glace · Vanille mit Schokoladesauce"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495552"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Portionenbecher"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617500198552"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Tuca · Citro"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494951"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Softdrinks"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617500199177"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Schweppes · Bitter Lemon · kalorienarm"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494952"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Bitter & Tonic"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7621361046020"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Clean · MCLEAN Mikrofaser Reinigungstücher"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495157"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Tücher & Staubwedel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186106019"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "IP-SUISSE · Hinterschinken · hauchdünn"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495304"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geschnittener Kochschinken"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186107481"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "IP-SUISSE · Bündnerfleisch"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495303"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Trockenfleisch"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186154973"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Anna's Best · Orangensaft"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494960"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischer Orangensaft"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186189265"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Tradition IP-SUISSE · Kalbfleischwurst"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494852"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Aufschnitt & Fleischkäse"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186189623"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "ASC Lachsfilets mit Haut"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494858"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischfisch & Schalentiere"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186208270"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Bündnerfleisch"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495303"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Trockenfleisch"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186247880"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Anna's Best · Kuchenteig · ausgewallt und rund"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/10134927"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kuchenteig"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186280771"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Saison-Joghurt Limette"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495344"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frucht & Aroma"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186281013"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Petit Bonheur · Madeleines · mit Schokosplitter"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495028"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Madeleines & Küchlein"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186317927"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Elsa IP-SUISSE · Joghurt · Mokka"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495344"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frucht & Aroma"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186370298"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Orangensaft"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494960"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischer Orangensaft"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186449819"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Karotten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494909"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Karotten & Lauch"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186463853"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "IP Spitzbrötchen dunkel IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494925"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Süsse Backwaren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186519567"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Le Gruyère AOP · Schweizer Hartkäse, vollfett, mit Rohmilch · gerieben"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495339"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Reibkäse"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186537295"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Broccoli"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494905"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Blumenkohl, Broccoli & Kohl"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/76242151"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Patissier · Vanillezucker aus Bourbon-Vanille"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495402"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Puderzucker & Spezialzucker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871173864"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "MIGROS KITCHEN & CO. · Eiswürfelformer mit Deckel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495631"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischhalten & Aufbewahren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871325003"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "MIGROS KITCHEN & CO. · Kitchen & Co. Kuchenblech Ø 32 cm"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495634"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Backen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871627657"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Kitchen & Co. N°2 · Druck-Beutel · 1l, 18 x 22cm"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495631"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischhalten & Aufbewahren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871627763"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Kitchen & Co. N°1 · Druck-Beutel · 3l, 27 x 31cm"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495631"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischhalten & Aufbewahren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871627824"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Kitchen & Co. N°23 · Zip-Beutel · 3l"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495631"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischhalten & Aufbewahren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871627862"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Kitchen & Co. N°24 · Zip-Beutel · 1l"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495631"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischhalten & Aufbewahren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871656886"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "MIGROS PAPER & CO. · Farbstifte 24 Stk."
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495610"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Farbstifte & farbige Filzstifte"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871742084"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "MIGROS PAPER & CO. · Klebeband Kristallklar"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495605"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Klebstoff & Klebestreifen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871901016"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Clean · Stahlknäuel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495586"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Andere"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7630028631851"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Anti Insect · Anti Insect Après Pic Roll-on"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495768"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Kompressen & Pflege"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7630028639147"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Nature Clean · Essigreiniger"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495147"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Entkalker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7630028639185"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Nature Clean Sensitive aha! · Kalkreiniger-Spray · Essig"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495147"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Entkalker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7630028639284"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Nature Clean · Badreiniger Spray · Mit Milchsäure"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495146"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Badreiniger"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7630028639307"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Nature Clean · Badreiniger Nachfüller · Mit Milchsäure"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495146"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Badreiniger"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7630028639321"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Nature Clean · Küchenreiniger Spray"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495578"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Fettlöser & Reiniger"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7638900379914"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Energizer · Batterien Lithium 3V · 2430"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495653"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Batterien & Akkus"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7649994063023"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "planted. · Poulet aus Erbsenprotein · Güggeli - Vegan"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494865"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Alternativen zu Hackfleisch & Geschnetzeltem"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8000139911187"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Garofalo · Rigatoni"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495426"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Hartweizenteigwaren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8000500164976"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Tic Tac · Bonbons · Fresh Orange"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495537"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Andere Bonbons"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8001090896315"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Head & Shoulders Classic Clean · Shampoo · Anti-Schuppen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/11123813"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Anti-Schuppen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8002270015380"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "S. Pellegrino · Natürliches Mineralwasser · mit Kohlensäure"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494956"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wasser mit Kohlensäure"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8004030344938"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Rio Mare · Thunfisch · in Olivenöl"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495475"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Thon"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/80525462"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Agnesi · Tomatensauce · Napoletana"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/12671420"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Pastasaucen & Pestos"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8715700117140"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Heinz · Ketchup zero"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495442"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Ketchup"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8715700125817"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Heinz · Ketchup · Bio"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495442"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Ketchup"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8723400787174"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Mentos · Chewy Dragees · Rainbow"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495537"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Andere Bonbons"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/9001616830822"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "MAM Original Pure · Nuggi · Ab 16 Monaten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495195"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Nuggis"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404635872"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Silser Kranz"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495384"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Weissbrot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312388259"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Griechische Oliven · Amphisis"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495496"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Oliven"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312393819"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blévita Bio · Dinkelgebäck"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495024"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610352716004"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Rapelli · Salami · Extrafino"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495307"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geschnitten"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8002510500300"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Longobardi · Pizza Sauce · Basilikum"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/12671420"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Pastasaucen & Pestos"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616800810508"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Farmer's Best IP-SUISSE · Hackspinat · gewürzt"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495089"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Gemüse"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700002669"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "IP-SUISSE · Butterzopf"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495386"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zopf"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613194232565"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Mehrzweckbeutel · 2l, 20 x 30cm"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495631"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frischhalten & Aufbewahren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269290865"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Peperoni"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494903"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zucchetti, Auberginen & Peperoni"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269321651"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Wassermelone · mini"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494897"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Melonen & Wassermelonen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404635896"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Silserkranz IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495384"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Weissbrot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/4008400221021"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Kinder Riegel · Schokoladen-Riegel · Milchschokolade mit Milchfüllung"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495522"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Riegel & Branches"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200337443"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Natürliches Mineralwasser · mit Kohlensäure"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494956"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wasser mit Kohlensäure"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404179338"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Anna's Best · Dinkel Pizzateig · eckig 36x23cm"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/10134993"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Pizzateig"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617100197771"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Rindshackfleisch"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494842"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Hackfleisch & Hamburger"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027556880"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blumenkohl"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494905"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Blumenkohl, Broccoli & Kohl"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027556613"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Fenchel"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494910"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Radiesli & Fenchel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269291268"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Zucchetti"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494903"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zucchetti, Auberginen & Peperoni"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200010438"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sun Queen · Cashewkerne · Nicht gesalzen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495032"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Nüsse & Mandeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404113783"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Berner Eier Freiland 63g+ IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494870"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Eier"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312143490"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sun Queen · Mangoschnitze getrocknet"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495031"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dörrobst"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312403600"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Schweizer Haferflöckli · fein"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494944"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Flocken & Kleie"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8715700017006"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Heinz · Ketchup"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495442"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Ketchup"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312208786"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Suppen-Perlen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495491"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Croûtons"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400030235"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Haselnussgebäck Nuss Stengeli"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495011"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Guetzli & Löffelbiscuits"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269830870"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Twister Rustico · Steinofen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495385"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dunkles Brot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186505560"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Kalbs-Cipollatta"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495310"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Grillwürste"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269462682"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Cervelas"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495309"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wienerli & Cervelats"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027855464"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Spitzpeperoni · Kapija"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494903"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zucchetti, Auberginen & Peperoni"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269259046"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Ice Tea Zero · Eistee · Zitrone"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495416"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Eistee flüssig"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269831105"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Twister · Steinofen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495384"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Weissbrot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404034019"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Schweinscipollata · Tricolore"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495310"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Grillwürste"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312328200"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Party · BBQ Mandeln · mit Rauchgeschmack"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495511"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Mandeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617067003412"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Tilsiter · Schweizer Halbhartkäse, vollfett, aus pasteurisierter Milch · Mild"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495324"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Appenzeller & Tilsiter"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/80525264"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Agnesi · Tomatensauce · Basilico"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/12671420"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Pastasaucen & Pestos"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700002676"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Butterzopf IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495386"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zopf"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400038538"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blévita · Dinkelgebäck · Gruyère AOC"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495024"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400035636"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blévita · Dinkelgebäck · Tomate und Basilikum"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495024"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027752794"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "GrillMi · Rinds Husarenspiess"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494841"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Rind"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200337405"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Aproz Classic · Natürliches Mineralwasser · Mit Kohlensäure"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494956"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wasser mit Kohlensäure"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200391186"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Valflora IP-SUISSE · Halbrahm · UHT, 25% Fett"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495316"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Voll- & Halbrahm"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312393796"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blévita · Bio Dinkelgebäck"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495024"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027855389"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Anna's Best · Anna's Best Karotten geraffelt"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494914"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Abgepackte Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269548300"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Beeren gemischt"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494895"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Rote Früchte & Beeren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700178692"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Urdinkelbrot IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495385"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dunkles Brot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312285817"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Farmer Classic · Getreideriegel · Kokos - Choco"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495025"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Getreideriegel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8422174010029"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Alvalle Gazpacho · Mittelmeersuppe frisches Gemüse · Original"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494889"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Suppen & Gazpacho"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616800831930"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Ice Tea · Eistee · Zitrone"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495416"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Eistee flüssig"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200337450"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Budget · Gazéifiée · mit Kohlensäure"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494955"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wasser ohne Kohlensäure"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/40345512"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Smarties · Milchschokoladebonbons"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495523"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Schokoladesnacks"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400036299"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blévita · Dinkelgebäck · Thymian - Meersalz"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495024"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312026533"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Blévita · Dinkelgebäck · Kürbiskernen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495024"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Cracker"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269253730"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Tessiner Brot"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495384"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Weissbrot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312285930"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Farmer Classic · Getreideriegel · Himbeer"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495025"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Getreideriegel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312285756"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Farmer Classic · Getreideriegel · Milch"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495025"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Getreideriegel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404761892"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Tradition · Bauernsalami"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495307"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geschnitten"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269464051"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Lauch · geschnitten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494909"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Karotten & Lauch"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269290889"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Rispentomaten"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494901"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Tomaten"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613269676614"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Triosalat"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494912"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404827710"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Elsa IP-SUISSE · Joghurt · Waldbeeren"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495344"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frucht & Aroma"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312351222"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Reiswaffel · Glutenfrei"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494931"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Reiswaffeln & Maiswaffeln"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613039788646"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Smarties · Schokolinsen mit Zuckerüberzug"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495523"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Schokoladesnacks"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404162521"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Joghurt stichfest · Schokolade"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495344"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Frucht & Aroma"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700037692"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Kartoffelbrot · mit Nüssen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495384"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Weissbrot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404658710"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Äpfel · süss-säuerlich"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495373"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Äpfel"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200017192"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Handymatic Classic · Regeneriersalz"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495572"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Salze, Spülglanz & Schutz"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700037258"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Hausbäckerei · Butterzopf IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495386"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zopf"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610128737165"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Die Butter"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495320"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Butter"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/8710800985309"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Mentos · Chewy Dragees · Fruit"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495537"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Andere Bonbons"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400030723"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "M-Classic · Zwieback"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494930"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Knäckebrot & Zwieback"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700177336"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Dinkelbrötli mit Frucht & Baumnüssen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494925"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Süsse Backwaren"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610108060023"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Elmex · Zahnseide · Minz"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495254"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Zahnseide & Zahnhölzer"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/40084701"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Kinder · Milchschokolade"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495522"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Riegel & Branches"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186282096"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Römersalat"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494912"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400020151"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Homemade · Backmischung für Zitronen Cake · Mit Zitronenglasur und ein Backform"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494937"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dessertmischungen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186172229"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Knöpfli mit Ei"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495358"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Spätzli & Gnocchi"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186105944"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "IP-SUISSE · Hinterschinken"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495304"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geschnittener Kochschinken"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200337511"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Aproz · Gazéifiée · mit Kohlensäure"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494956"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Wasser mit Kohlensäure"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/5021047101319"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Thai Kitchen · Rote Curry Paste"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495492"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Thailand"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186356353"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Birnen Kaiser Alexander"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495374"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Birnen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312456422"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sun Queen · Ananas Scheiben"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495482"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Früchte in Sirup"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7628871232059"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Baumwolltasche"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/10555170"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Einkaufstaschen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312342633"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Eistee · Schweizer Alpenkräuter"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495416"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Eistee flüssig"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616800831954"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Kult Ice Tea · Ice Tea · Pfirsich, vegan"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495416"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Eistee flüssig"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7612100908341"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Ovomaltine · Tafelschokolade · Milchschokolade mit Ovomaltine Extra"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495515"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Milch"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404113721"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Berner Eier Freiland 53g+ IP-SUISSE"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494870"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Eier"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404553299"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Römersalat · mini, grün"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494912"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404588239"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Tradition · Bauernschinken · maxi"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495304"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Geschnittener Kochschinken"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613312447581"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio Fairtrade · Bio-Bohnenkaffee · Crema 3/10"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494966"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Bohnenkaffee"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610128737127"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Die Butter"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495320"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Butter"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7610200277633"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sbrinz · Schweizer Extra-Hartkäse vollfett, aus Rohmilch · gehobelt"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495341"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Snacks & Apéros"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027550789"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Fresca · Römersalat"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494912"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Salate"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617400020410"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Homemade · Backmischung für Brownies · Mit Backform, mit Pecannüssen"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494937"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dessertmischungen"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7613404116067"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Tomaten · Datterino"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494901"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Tomaten"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7623186463235"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Feta"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495335"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Feta"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027149556"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Sélection · Feta"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495335"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Feta"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7616700071054"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Alpenbrot"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7495385"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Dunkles Brot"
+				}
+			},
+			{
+				"product": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/gtin/7617027853361"
+				},
+				"product_label": {
+					"type": "literal",
+					"value": "Migros Bio · Himbeeren"
+				},
+				"category": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/migros/category/7494895"
+				},
+				"category_label": {
+					"type": "literal",
+					"value": "Rote Früchte & Beeren"
+				}
 			}
 		]
 	}
