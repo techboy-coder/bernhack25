@@ -1,51 +1,23 @@
 <script lang="ts">
-	import { Presentation, Slide } from '@animotion/core';
+	import { Presentation, Slide, Action, Transition } from '@animotion/core';
+
+	// State for managing which items are visible
+	let showItem1 = $state(false);
+	let showItem2 = $state(false);
+	let showItem3 = $state(false);
+	let showItem4 = $state(false);
 </script>
 
 <svelte:head>
-	<title>Animotion Test - 2 Slides</title>
+	<title>Animotion Test - Step by Step List</title>
 </svelte:head>
 
 <Presentation>
-	<!-- Slide 1 -->
-	<Slide>
-		<div
-			class="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-blue-500 to-purple-600 text-white"
-		>
-			<h1 class="text-6xl font-bold mb-8">Welcome to Animotion</h1>
-			<p class="text-2xl text-center max-w-2xl mb-8">
-				This is slide 1 - a simple test of the Animotion presentation framework
-			</p>
-			<div class="mt-8 p-4 bg-white/20 rounded-lg">
-				<p class="text-lg">✨ Beautiful animations</p>
-				<p class="text-lg">🎯 Easy to use</p>
-				<p class="text-lg">⚡ Powered by Svelte</p>
-			</div>
-		</div>
-	</Slide>
-
-	<!-- Slide 2 -->
-	<Slide>
-		<div
-			class="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-green-500 to-teal-600 text-white"
-		>
-			<h1 class="text-6xl font-bold mb-8">Slide Number Two</h1>
-			<p class="text-2xl text-center max-w-2xl mb-8">
-				This is slide 2 - testing navigation between slides
-			</p>
-			<div class="grid grid-cols-2 gap-8 mb-8">
-				<div class="p-6 bg-white/20 rounded-lg text-center">
-					<div class="text-4xl mb-4">📊</div>
-					<h3 class="text-xl font-semibold">Data Visualization</h3>
-				</div>
-				<div class="p-6 bg-white/20 rounded-lg text-center">
-					<div class="text-4xl mb-4">🎨</div>
-					<h3 class="text-xl font-semibold">Beautiful Design</h3>
-				</div>
-			</div>
-			<div class="text-center">
-				<p class="text-lg opacity-80">Use arrow keys to navigate between slides</p>
-			</div>
+	<Slide class="h-full place-content-center place-items-center">
+		<div class="grid grid-cols-4 grid-rows-2 gap-4 text-white">
+			{#each Array.from({ length: 100 }, (_, i) => i + 1) as item, index}
+				<Transition order={100 - index} visible={index === 99}>{item}</Transition>
+			{/each}
 		</div>
 	</Slide>
 </Presentation>
