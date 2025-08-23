@@ -155,7 +155,15 @@
 				<!-- Action Buttons -->
 				<div class="flex gap-2 pt-2">
 					<Button variant="outline" size="sm" class="flex-1">View Details</Button>
-					<Button variant="outline" size="sm" class="flex-1">Transactions</Button>
+					<Button
+						variant="outline"
+						size="sm"
+						class="flex-1"
+						onclick={() =>
+							(window.location.href = `/accounts/${accountSummary.account.id}/transactions`)}
+					>
+						Transactions
+					</Button>
 				</div>
 			</CardContent>
 		</Card>
