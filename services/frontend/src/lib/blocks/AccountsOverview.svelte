@@ -159,8 +159,7 @@
 						variant="outline"
 						size="sm"
 						class="flex-1"
-						onclick={() =>
-							(window.location.href = `/accounts/${accountSummary.account.id}/transactions`)}
+						href="/accounts/{accountSummary.account.id}/transactions"
 					>
 						Transactions
 					</Button>

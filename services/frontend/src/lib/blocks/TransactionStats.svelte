@@ -32,7 +32,16 @@
 
 	let totalIncome = $derived(incomeTransactions.reduce((sum, t) => sum + t.amount, 0));
 	let totalExpenses = $derived(Math.abs(expenseTransactions.reduce((sum, t) => sum + t.amount, 0)));
-	let netAmount = $derived(totalIncome - totalExpenses);
+	let netTransactionAmount = $derived(totalIncome - totalExpenses);
+
+	// Get the most recent balance (current account balance)
+	let currentBalance = $derived(
+		transactions.length > 0
+			? transactions.reduce((latest, current) =>
+					new Date(current.date) > new Date(latest.date) ? current : latest
+				).balance
+			: 0
+	);
 
 	// Helper function to format currency
 	function formatCurrency(amount: number, currency: string = 'CHF'): string {
@@ -56,7 +65,7 @@
 </script>
 
 <!-- Transaction Statistics Cards -->
-<div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+<div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
 	<!-- Total Transactions -->
 	<Card>
 		<CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -74,7 +83,7 @@
 	<!-- Total Income -->
 	<Card>
 		<CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
-			<CardTitle class="text-sm font-medium">Total Income</CardTitle>
+			<CardTitle class="text-sm font-medium">Total Income (All Time)</CardTitle>
 			<div class="text-2xl">💰</div>
 		</CardHeader>
 		<CardContent>
@@ -82,7 +91,7 @@
 				{formatCurrency(totalIncome, accountCurrency)}
 			</div>
 			<p class="text-xs text-muted-foreground">
-				{incomeTransactions.length} transactions
+				{incomeTransactions.length} transactions (account lifetime)
 			</p>
 		</CardContent>
 	</Card>
@@ -90,7 +99,7 @@
 	<!-- Total Expenses -->
 	<Card>
 		<CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
-			<CardTitle class="text-sm font-medium">Total Expenses</CardTitle>
+			<CardTitle class="text-sm font-medium">Total Expenses (All Time)</CardTitle>
 			<div class="text-2xl">💸</div>
 		</CardHeader>
 		<CardContent>
@@ -98,7 +107,7 @@
 				{formatCurrency(totalExpenses, accountCurrency)}
 			</div>
 			<p class="text-xs text-muted-foreground">
-				{expenseTransactions.length} transactions
+				{expenseTransactions.length} transactions (account lifetime)
 			</p>
 		</CardContent>
 	</Card>
@@ -106,15 +115,31 @@
 	<!-- Net Amount -->
 	<Card>
 		<CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
-			<CardTitle class="text-sm font-medium">Net Amount</CardTitle>
+			<CardTitle class="text-sm font-medium">Net Amount (All Time)</CardTitle>
 			<div class="text-2xl">📈</div>
 		</CardHeader>
 		<CardContent>
-			<div class="text-2xl font-bold {getBalanceColorClass(netAmount)}">
-				{formatCurrency(netAmount, accountCurrency)}
+			<div class="text-2xl font-bold {getBalanceColorClass(netTransactionAmount)}">
+				{formatCurrency(netTransactionAmount, accountCurrency)}
 			</div>
 			<p class="text-xs text-muted-foreground">
-				{netAmount >= 0 ? 'Positive' : 'Negative'} balance
+				Total income minus expenses since account creation
+			</p>
+		</CardContent>
+	</Card>
+
+	<!-- Current Balance -->
+	<Card>
+		<CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
+			<CardTitle class="text-sm font-medium">Current Balance</CardTitle>
+			<div class="text-2xl">🏦</div>
+		</CardHeader>
+		<CardContent>
+			<div class="text-2xl font-bold {getBalanceColorClass(currentBalance)}">
+				{formatCurrency(currentBalance, accountCurrency)}
+			</div>
+			<p class="text-xs text-muted-foreground">
+				{currentBalance >= 0 ? 'Positive' : 'Negative'} balance
 			</p>
 		</CardContent>
 	</Card>

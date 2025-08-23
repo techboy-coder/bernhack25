@@ -141,7 +141,7 @@
 
 	<!-- Tabs for different views -->
 	<Tabs value="overview" class="w-full">
-		<TabsList class="grid w-full grid-cols-2">
+		<TabsList class="grid w-full grid-cols-2 bg-card">
 			<TabsTrigger value="overview">Charts Overview</TabsTrigger>
 			<TabsTrigger value="transactions">Transaction List</TabsTrigger>
 		</TabsList>
@@ -158,8 +158,6 @@
 					accountCurrency={data.account.account.currency}
 				/>
 			</div>
-
-			<Separator />
 
 			<!-- Charts -->
 			<div class="space-y-4">
@@ -181,12 +179,12 @@
 			</div>
 
 			<!-- Transaction Table -->
-			<Card>
+			<Card class="pt-0">
 				<CardContent class="p-0">
 					<div class="overflow-x-auto">
 						<table class="w-full text-sm">
-							<thead class="border-b bg-muted/50">
-								<tr>
+							<thead class="border-b font-black">
+								<tr class="">
 									<th class="text-left p-4 font-medium">Date</th>
 									<th class="text-left p-4 font-medium">Amount</th>
 									<th class="text-left p-4 font-medium">Category</th>
@@ -195,7 +193,7 @@
 							</thead>
 							<tbody>
 								{#each data.transactions.slice().reverse().slice(0, 50) as transaction}
-									<tr class="border-b hover:bg-muted/50">
+									<tr class="border-b hover:bg-muted/10">
 										<td class="p-4">
 											{formatDate(transaction.date)}
 										</td>
