@@ -45,6 +45,7 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
+		"@animotion/core": "^1.1.8",
 		"lucide-svelte": "^0.541.0"
 	}
 }
