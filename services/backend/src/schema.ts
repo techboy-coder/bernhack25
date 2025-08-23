@@ -89,7 +89,6 @@ export const SavingsProfileSchema = z.object({
   id: UUIDSchema,
   name: z.string(),
   targetAmount: z.number().positive(),
-  currentAmount: z.number().nonnegative(),
   startDate: DateSchema,
   targetDate: DateSchema.optional(),
   category: z.string(),
