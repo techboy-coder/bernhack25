@@ -175,7 +175,7 @@
 								</span>
 							</div>
 						</div>
-						<div class="flex gap-1 h-6 bg-gray-100 dark:bg-gray-800 rounded">
+						<div class="flex gap-1 h-6 bg-gray-100 dark:bg-muted/50 rounded">
 							<!-- Income bar -->
 							<div
 								class="bg-green-500 rounded-l transition-all duration-300"
