@@ -5,6 +5,7 @@ config();
 
 import { Hono } from "hono";
 import { cors } from "hono/cors";
+import { proxy } from "hono/proxy";
 import {
   listBankAccounts,
   listTransactions,
@@ -41,6 +42,9 @@ export type {
   AIAnalysisRequest,
   AIAnalysisResponse,
 } from "./ai";
+
+const OCR_HOSTNAME = "localhost";
+const OCR_PORT = "8081";
 
 // Use the same filter type as in the functions
 type TransactionFilter = {
@@ -425,7 +429,9 @@ const api = new Hono()
     } catch (error) {
       return c.json({ error: "Failed to delete recurrent payment" }, 500);
     }
-  });
+   })
+  .post("/receipt-ocr", async (c) => {
+    return proxy(`http://${OCR_HOSTNAME}:${OCR_PORT}/receipt-ocr`, c.req); });
 
 const app = new Hono()
   .route("/api", api)
