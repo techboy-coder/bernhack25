@@ -1,4 +1,4 @@
-import requests
+import aiohttp
 from fastapi import FastAPI
 from pydantic import BaseModel
 import jmespath
@@ -6,6 +6,8 @@ import uvicorn
 import json
 import os
 from dotenv import load_dotenv
+from jmespath.functions import Functions
+import asyncio
 
 load_dotenv()
 
@@ -233,44 +235,100 @@ app = FastAPI()
 class QueryRequest(BaseModel):
     query: str
 
+original_sum = Functions.FUNCTION_TABLE['sum']['function']
+def flat_sum_patch(self, arg):
+    if len(arg) == 0:
+        return 0
+    
+    if isinstance(arg[0], list):
+        arg = [val for nested in arg for val in nested]
+
+    return original_sum(self, arg)
+
+Functions.FUNCTION_TABLE['sum']['signature'] = ({'types': ['array-number', 'array-array']},)
+Functions.FUNCTION_TABLE['sum']['function'] = flat_sum_patch
+
+async def run_query(payload: dict, session: aiohttp.ClientSession, db: dict):
+    try:
+        async with session.post('https://litellm.sph-prod.ethz.ch/chat/completions', headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {API_TOKEN}"
+        }, json=payload) as resp:
+            if resp.status != 200:
+                return
+            
+            result = await resp.json()
+
+        choices = result['choices']
+
+        if not choices or len(choices) == 0:
+            raise Exception('invalid LLM response')
+        
+        path: str = choices[0]['message']['content']
+
+        if not path:
+            raise Exception('invalid LLM response')
+        
+        if path.startswith('```jmespath'):
+            path = path[11:]
+        
+        path.replace('\\n', '\n')
+        path = path.strip(' `\r\n')
+
+        return jmespath.search(path, db)
+    except Exception as e:
+        print(e)
+        return
+    
+def monte_carlo(results: list):
+    if len(results) == 0:
+        return None
+
+    counter = {}
+    value_map = {}
+
+    for result in results:
+        if str(result) in results:
+            counter[str(result)] += 1
+        else:
+            counter[str(result)] = 1
+            value_map[str(result)] = result
+
+    keys = list(counter.keys())
+    max_key = keys[0]
+    max_value = counter[max_key]
+
+    for key in keys:
+        count = counter[key]
+        if count > max_value:
+            max_value = count
+            max_key = key
+
+    return value_map[max_key]
+
 @app.post("/query")
-def query(query: QueryRequest):
+async def query(query: QueryRequest):
     payload = {
-      "model": "openai/gpt-4o-mini",
-      "messages": [
-        {
-          "role": "system",
-          "content": instruction
-        },
-        {
-          "role": "user",
-          "content": query.query
-        }
-      ]
+        "model": "openai/gpt-4o-mini",
+        "messages": [
+            {
+                "role": "system",
+                "content": instruction
+            },
+            {
+                "role": "user",
+                "content": query.query
+            }
+        ]
     }
 
-    response = requests.post('https://litellm.sph-prod.ethz.ch/chat/completions', headers={
-      "Content-Type": "application/json",
-      "Authorization": f"Bearer {API_TOKEN}"
-    }, json=payload)
-
-    response.raise_for_status()
-
-    result = response.json()
-    choices = result['choices']
-
-    if not choices or len(choices) == 0:
-        raise Exception('invalid LLM response')
-    
-    path: str = choices[0]['message']['content']
-
-    if not path:
-        raise Exception('invalid LLM response')
-    
-    path = path.strip(' `\r\n')
-
     with open('../backend/db/db.json', 'rt') as f:
-        return { 'result': jmespath.search(path, json.load(f)) }
+        db = json.load(f)
+
+    async with aiohttp.ClientSession() as session:
+        responses = await asyncio.gather(*[run_query(payload, session, db) for _ in range(3)])
+
+    return {'result': monte_carlo(responses), 'responses': responses}
 
 
 
