@@ -430,15 +430,22 @@ const api = new Hono()
 const app = new Hono()
   .route("/api", api)
   .route("/ai", ai_hono)
-  .get("/", (c) => c.text("Banking API Server"));
-// .use(
-//   "/*",
-//   cors({
-//     origin: ["*", "http://localhost:3000", "http://localhost:5173"],
-//     allowHeaders: ["Content-Type"],
-//     allowMethods: ["GET", "POST", "PUT", "DELETE"],
-//   })
-// )
+  .get("/", (c) => c.text("Banking API Server"))
+  // Enable CORS for frontend communication
+  .use(
+    "/*",
+    cors({
+      origin: [
+        "*",
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://localhost:4173",
+      ],
+      allowHeaders: ["Content-Type", "Authorization"],
+      allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      credentials: true,
+    })
+  );
 
 export default app;
 

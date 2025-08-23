@@ -43,7 +43,7 @@
 	function getMessageWidth(message: Message): string {
 		// User messages: 30% width
 		if (message.isUser) {
-			return 'max-w-[50%]';
+			return 'max-w-[30%]';
 		}
 
 		// AI component responses: 80% width
@@ -61,6 +61,14 @@
 
 	function getComponentName(message: Message): string {
 		return message.aiDecision?.content || '';
+	}
+
+	function getAccountId(message: Message): string | undefined {
+		return message.aiDecision?.accountId;
+	}
+
+	function getAccountType(message: Message): string | undefined {
+		return message.aiDecision?.accountType;
 	}
 </script>
 
@@ -101,16 +109,18 @@
 						</div>
 					{:else}
 						<!-- Component rendering -->
-						<div
-							class={cn('rounded-lg border border-input/75 shadow-sm', getMessageWidth(message))}
-						>
+						<div class={cn('rounded-lg shadow-sm', getMessageWidth(message))}>
 							<!-- Component header with explanation -->
-							<div class="bg-background/20 p-3 border-b border-input/50">
+							<!-- <div class="bg-background/20 p-3 border-b border-input/50">
 								<p class="text-sm text-foreground">{message.content}</p>
-							</div>
+							</div> -->
 
 							<!-- Component content -->
-							<ComponentRegistry componentName={getComponentName(message)} />
+							<ComponentRegistry
+								componentName={getComponentName(message)}
+								accountId={getAccountId(message)}
+								accountType={getAccountType(message)}
+							/>
 						</div>
 					{/if}
 				</div>

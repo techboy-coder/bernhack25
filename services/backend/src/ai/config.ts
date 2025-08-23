@@ -1,4 +1,5 @@
 import { config } from "dotenv";
+import { listBankAccounts } from "../../func/listBankAccounts";
 
 // Load environment variables
 config();
@@ -31,11 +32,11 @@ console.log(
 
 // Available components (imported from components.ts)
 export const AVAILABLE_COMPONENTS = [
-  "account-header",
   "accounts-overview",
+  "account-header",
+  "transaction-table",
   "transaction-stats",
   "transaction-charts",
-  "transaction-table",
   "transaction-overview",
   "savings-profiles",
   "savings-analysis",
@@ -43,14 +44,53 @@ export const AVAILABLE_COMPONENTS = [
   "recurrent-payment-grid",
   "recurrent-payment-categories",
   "upcoming-payments",
-];
+] as const;
 
-export const AccountsToId = {
-  personal: "bf2d10a8-2303-485f-aa84-6064a73ac215",
-  "high-yield": "f831779d-985e-4483-8800-5849dfc8ea7f",
-  retirement: "c416bdbe-ea67-401b-965d-fb68d713e1ce",
-  marriage: "4e78e497-9512-4534-96f7-ebd8e1bb4987",
-  generic: "",
-};
+// Available components type
+export type ComponentKey = (typeof AVAILABLE_COMPONENTS)[number];
 
-export const AVAILABLE_ACCOUNTS = Object.keys(AccountsToId);
+// Function to dynamically generate AccountsToId mapping from actual database accounts
+function generateAccountsToId() {
+  try {
+    const accounts = listBankAccounts();
+    const accountsMap: Record<string, string> = { generic: "" };
+
+    for (const accountSummary of accounts) {
+      const account = accountSummary.account;
+      switch (account.type) {
+        case "personal":
+          accountsMap.personal = account.id;
+          break;
+        case "savings":
+          accountsMap["high-yield"] = account.id;
+          break;
+        case "retirement":
+          accountsMap.retirement = account.id;
+          break;
+        case "marriage":
+          accountsMap.marriage = account.id;
+          break;
+      }
+    }
+
+    return accountsMap;
+  } catch (error) {
+    console.error("Error loading account IDs from database:", error);
+    // Fallback to empty mapping if there's an error
+    return {
+      personal: "",
+      "high-yield": "",
+      retirement: "",
+      marriage: "",
+      generic: "",
+    };
+  }
+}
+
+// Dynamically generated account mapping from actual database
+export const AccountsToId = generateAccountsToId();
+
+// Available accounts list (excluding generic)
+export const AVAILABLE_ACCOUNTS = Object.keys(AccountsToId).filter(
+  (key) => key !== "generic"
+);

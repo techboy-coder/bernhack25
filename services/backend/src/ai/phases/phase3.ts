@@ -4,6 +4,7 @@ import {
   LITELLM_API_KEY,
   AI_MODEL,
   AVAILABLE_COMPONENTS,
+  type ComponentKey,
 } from "../config.js";
 
 export async function executePhase3(
@@ -26,7 +27,8 @@ RESPOND WITH VALID JSON ONLY in this exact format:
 {
   "type": "component|query", 
   "content": "component_key_or_query_description",
-  "reasoning": "brief explanation of your choice"
+  "reasoning": "brief explanation of your choice",
+  "accountType": "savings|personal|retirement|marriage|all" (optional - only for account-header component)
 }
 
 For "component" type, content MUST be exactly one of: ${AVAILABLE_COMPONENTS.join(
@@ -35,18 +37,33 @@ For "component" type, content MUST be exactly one of: ${AVAILABLE_COMPONENTS.joi
 For "query" type, content should describe the data query needed.
 
 Component descriptions:
-- "accounts-overview": Summary of all bank accounts (checking, savings, retirement, etc.)
-- "account-header": Single account basic information and details
+- "accounts-overview": Overview of all bank accounts when user asks for "all accounts", "account summary", or "account overview"
+- "account-header": Detailed view of a specific single bank account - use for "my savings account", "savings account details", "tell me about my [specific account type]". ALWAYS specify accountType when using this component.
 - "transaction-table": Detailed transaction list for accounts
 - "transaction-stats": Transaction statistics and metrics
 - "transaction-charts": Visual transaction analysis and trends
-- "savings-profiles": Savings GOALS and targets management (NOT account balances)
+- "savings-profiles": Personal savings GOALS and financial targets (vacation fund, emergency fund, etc.) - NOT bank account balances
 - "recurrent-payment-stats": Recurring payments and subscriptions overview
 
 IMPORTANT DISTINCTIONS:
-- For "savings account" or "bank account" questions -> use "accounts-overview" or "account-header"
-- For "savings goals" or "financial targets" questions -> use "savings-profiles"
+- For "my savings account", "savings account details", "tell me about my savings account" -> use "account-header" with accountType: "savings"
+- For "my personal account", "checking account" -> use "account-header" with accountType: "personal"  
+- For "my retirement account", "retirement fund" -> use "account-header" with accountType: "retirement"
+- For "my marriage fund", "marriage account" -> use "account-header" with accountType: "marriage"
+- For "show all accounts", "account overview", "all my accounts" -> use "accounts-overview" (all bank accounts)
+- For "savings goals", "savings targets", "financial goals", "saving for vacation" etc. -> use "savings-profiles" (personal goals)
 - For "transactions" questions -> use "transaction-table", "transaction-stats", or "transaction-charts"
+
+EXAMPLES:
+- "tell me about my savings account" -> account-header with accountType: "savings"
+- "show my savings account" -> account-header with accountType: "savings"  
+- "savings account info" -> account-header with accountType: "savings"
+- "my high interest savings account" -> account-header with accountType: "savings"
+- "personal checking account" -> account-header with accountType: "personal"
+- "show all my accounts" -> accounts-overview (all bank accounts)
+- "account overview" -> accounts-overview (all bank accounts)
+- "my savings goals" -> savings-profiles (personal goals)
+- "how much am I saving for vacation" -> savings-profiles (personal goals)
 
 Conversation History:
 ${context.conversationContext}
@@ -104,7 +121,7 @@ New User Prompt: ${context.newPrompt}`;
 
     if (
       decision.type === "component" &&
-      !AVAILABLE_COMPONENTS.includes(decision.content)
+      !AVAILABLE_COMPONENTS.includes(decision.content as ComponentKey)
     ) {
       throw new Error(`Invalid component key: ${decision.content}`);
     }

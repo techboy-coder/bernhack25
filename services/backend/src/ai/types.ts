@@ -14,24 +14,48 @@ export type AccountScope = "generic" | "specific";
 
 export interface Phase2Decision {
   scope: AccountScope;
-  accountId?: string; // Only present if scope is "specific"
+  account?: string; // Account type (e.g., "personal", "high-yield", "retirement", "marriage")
+  accountId?: string; // Derived from AccountsToId mapping, only present if scope is "specific"
   reasoning: string;
 }
 
 // Phase 3: Component or query decision
 export type Phase3DecisionType = "component" | "query";
 
-export interface Phase3Decision {
-  type: Phase3DecisionType;
-  content: string; // Component key or query description
+// Import the ComponentKey type from config
+import type { ComponentKey } from "./config.js";
+
+// Account type for specific account requests
+export type AccountType =
+  | "savings"
+  | "personal"
+  | "retirement"
+  | "marriage"
+  | "all";
+
+// Separate interfaces for each decision type
+export interface Phase3ComponentDecision {
+  type: "component";
+  content: ComponentKey;
+  reasoning: string;
+  accountType?: AccountType; // Optional account type specification
+}
+
+export interface Phase3QueryDecision {
+  type: "query";
+  content: string;
   reasoning: string;
 }
+
+// Union type for Phase 3 decisions
+export type Phase3Decision = Phase3ComponentDecision | Phase3QueryDecision;
 
 // Final combined decision
 export interface AIDecision {
   type: AIDecisionType;
   content: string; // Generic response text, component key, or query parameters
   accountId?: string; // Only present for specific account queries
+  accountType?: AccountType; // Account type for component decisions
   reasoning?: string; // Optional explanation of why this decision was made
 }
 

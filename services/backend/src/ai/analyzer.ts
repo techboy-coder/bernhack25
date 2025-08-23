@@ -67,6 +67,11 @@ export async function analyzeWithLiteLLM(
       reasoning: `${phase1Result.reasoning} → ${phase2Result.reasoning} → ${phase3Result.reasoning}`,
     };
 
+    // Add accountType if present in Phase 3 result
+    if (phase3Result.type === "component" && phase3Result.accountType) {
+      finalDecision.accountType = phase3Result.accountType;
+    }
+
     // Add accountId if specific scope
     if (phase2Result.scope === "specific" && phase2Result.accountId) {
       const accountId =

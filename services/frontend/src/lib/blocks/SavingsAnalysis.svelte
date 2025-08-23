@@ -9,6 +9,9 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import { Progress } from '$lib/components/ui/progress';
+	import { createQuery } from '@tanstack/svelte-query';
+	import { getSavingsProfiles } from '$lib/api';
+	import { TrendingUp, Target, Calendar, PieChart, AlertCircle } from 'lucide-svelte';
 
 	interface Transaction {
 		id: string;
@@ -28,7 +31,17 @@
 		difficulty: 'easy' | 'medium' | 'hard';
 	}
 
-	let { transactions }: { transactions: Transaction[] } = $props();
+	interface SavingsProfile {
+		id: string;
+		name: string;
+		currentAmount: number;
+		targetAmount: number;
+		startDate: string;
+		targetDate?: string;
+		category: string;
+	}
+
+	let { transactions = [] }: { transactions: Transaction[] } = $props();
 
 	// Analyze spending patterns to identify savings opportunities
 	const savingsOpportunities = $derived.by(() => {
@@ -123,6 +136,50 @@
 		savingsOpportunities.reduce((sum, opp) => sum + opp.potentialSaving, 0)
 	);
 
+	// Query for savings profiles
+	const savingsQuery = createQuery({
+		queryKey: ['savingsProfiles'],
+		queryFn: () => getSavingsProfiles(),
+		staleTime: 1000 * 60 * 5
+	});
+
+	// Derived calculations
+	let savingsProfiles = $derived(($savingsQuery.data as SavingsProfile[]) || []);
+
+	let totalTargetAmount = $derived(
+		savingsProfiles.reduce((sum, profile) => sum + profile.targetAmount, 0)
+	);
+
+	let totalCurrentAmount = $derived(
+		savingsProfiles.reduce((sum, profile) => sum + profile.currentAmount, 0)
+	);
+
+	let totalSavingsRate = $derived(
+		totalTargetAmount > 0 ? (totalCurrentAmount / totalTargetAmount) * 100 : 0
+	);
+
+	let completedGoals = $derived(
+		savingsProfiles.filter((profile) => profile.currentAmount >= profile.targetAmount).length
+	);
+
+	let activeGoals = $derived(
+		savingsProfiles.filter((profile) => profile.currentAmount < profile.targetAmount).length
+	);
+
+	// Calculate savings from transactions
+	let savingsTransactions = $derived(
+		transactions.filter(
+			(t) =>
+				t.amount > 0 &&
+				(t.category.toLowerCase().includes('savings') ||
+					t.category.toLowerCase().includes('transfer'))
+		)
+	);
+
+	let totalSavingsFromTransactions = $derived(
+		savingsTransactions.reduce((sum, t) => sum + t.amount, 0)
+	);
+
 	// Helper functions
 	function formatCurrency(amount: number): string {
 		return new Intl.NumberFormat('de-CH', {
@@ -176,6 +233,20 @@
 			default:
 				return '💰';
 		}
+	}
+
+	function getProgressColor(percentage: number): string {
+		if (percentage >= 100) return 'bg-green-500';
+		if (percentage >= 75) return 'bg-blue-500';
+		if (percentage >= 50) return 'bg-yellow-500';
+		return 'bg-red-500';
+	}
+
+	function getDaysToTarget(profile: SavingsProfile): number | null {
+		if (!profile.targetDate) return null;
+		const target = new Date(profile.targetDate);
+		const now = new Date();
+		return Math.ceil((target.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
 	}
 </script>
 
@@ -290,6 +361,176 @@
 					</CardContent>
 				</Card>
 			</div>
+		{/if}
+	</div>
+
+	<!-- Savings Analysis -->
+	<div class="space-y-6">
+		<!-- Header -->
+		<div class="space-y-2">
+			<h2 class="text-2xl font-bold tracking-tight">📈 Savings Analysis</h2>
+			<p class="text-muted-foreground">
+				Detailed analysis of your savings performance and goal achievement
+			</p>
+		</div>
+
+		{#if $savingsQuery.isLoading}
+			<div class="flex justify-center items-center py-12">
+				<div class="flex flex-col items-center gap-4">
+					<div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+					<p class="text-sm text-muted-foreground">Loading savings analysis...</p>
+				</div>
+			</div>
+		{:else if $savingsQuery.isError}
+			<Card class="border-destructive">
+				<CardContent class="p-6">
+					<div class="text-center space-y-2">
+						<AlertCircle class="size-12 text-destructive mx-auto" />
+						<h3 class="font-semibold text-destructive">Error Loading Analysis</h3>
+						<p class="text-sm text-muted-foreground">Failed to load savings analysis data.</p>
+					</div>
+				</CardContent>
+			</Card>
+		{:else}
+			<!-- Overview Statistics -->
+			<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+				<Card>
+					<CardContent class="p-6">
+						<div class="flex items-center justify-between space-y-0 pb-2">
+							<CardTitle class="text-sm font-medium">Overall Progress</CardTitle>
+							<Target class="size-4 text-muted-foreground" />
+						</div>
+						<div class="text-2xl font-bold">{totalSavingsRate.toFixed(1)}%</div>
+						<p class="text-xs text-muted-foreground">
+							{formatCurrency(totalCurrentAmount)} of {formatCurrency(totalTargetAmount)}
+						</p>
+					</CardContent>
+				</Card>
+
+				<Card>
+					<CardContent class="p-6">
+						<div class="flex items-center justify-between space-y-0 pb-2">
+							<CardTitle class="text-sm font-medium">Completed Goals</CardTitle>
+							<TrendingUp class="size-4 text-green-600" />
+						</div>
+						<div class="text-2xl font-bold text-green-600">{completedGoals}</div>
+						<p class="text-xs text-muted-foreground">
+							{activeGoals} still active
+						</p>
+					</CardContent>
+				</Card>
+
+				<Card>
+					<CardContent class="p-6">
+						<div class="flex items-center justify-between space-y-0 pb-2">
+							<CardTitle class="text-sm font-medium">Total Saved</CardTitle>
+							<PieChart class="size-4 text-muted-foreground" />
+						</div>
+						<div class="text-2xl font-bold">{formatCurrency(totalCurrentAmount)}</div>
+						<p class="text-xs text-muted-foreground">
+							Across {savingsProfiles.length} goals
+						</p>
+					</CardContent>
+				</Card>
+
+				<Card>
+					<CardContent class="p-6">
+						<div class="flex items-center justify-between space-y-0 pb-2">
+							<CardTitle class="text-sm font-medium">From Transactions</CardTitle>
+							<Calendar class="size-4 text-muted-foreground" />
+						</div>
+						<div class="text-2xl font-bold">{formatCurrency(totalSavingsFromTransactions)}</div>
+						<p class="text-xs text-muted-foreground">
+							{savingsTransactions.length} savings transactions
+						</p>
+					</CardContent>
+				</Card>
+			</div>
+
+			<!-- Goal Progress Details -->
+			{#if savingsProfiles.length > 0}
+				<Card>
+					<CardHeader>
+						<CardTitle>Goal Progress Details</CardTitle>
+						<CardDescription>Individual analysis for each savings goal</CardDescription>
+					</CardHeader>
+					<CardContent class="space-y-6">
+						{#each savingsProfiles as profile}
+							{@const progress =
+								profile.targetAmount > 0 ? (profile.currentAmount / profile.targetAmount) * 100 : 0}
+							{@const remaining = Math.max(0, profile.targetAmount - profile.currentAmount)}
+							{@const daysToTarget = getDaysToTarget(profile)}
+
+							<div class="space-y-3 p-4 border rounded-lg">
+								<div class="flex items-start justify-between">
+									<div class="space-y-1">
+										<h3 class="font-semibold">{profile.name}</h3>
+										<Badge variant="outline" class="text-xs capitalize">{profile.category}</Badge>
+									</div>
+									<div class="text-right space-y-1">
+										<div class="text-sm font-bold">
+											{formatCurrency(profile.currentAmount)} / {formatCurrency(
+												profile.targetAmount
+											)}
+										</div>
+										<div class="text-xs text-muted-foreground">
+											{progress >= 100
+												? 'Goal Achieved! 🎉'
+												: `${formatCurrency(remaining)} remaining`}
+										</div>
+									</div>
+								</div>
+
+								<Progress value={Math.min(progress, 100)} class="h-3" />
+
+								<div class="flex items-center justify-between text-xs text-muted-foreground">
+									<span>{progress.toFixed(1)}% complete</span>
+									{#if daysToTarget !== null}
+										<span>
+											{daysToTarget > 0 ? `${daysToTarget} days remaining` : 'Target date passed'}
+										</span>
+									{/if}
+								</div>
+
+								{#if progress >= 100}
+									<div class="flex items-center gap-2 text-green-600 text-sm">
+										<TrendingUp class="size-4" />
+										<span class="font-medium">Goal Successfully Achieved!</span>
+									</div>
+								{:else if progress >= 75}
+									<div class="flex items-center gap-2 text-blue-600 text-sm">
+										<Target class="size-4" />
+										<span>Almost there - great progress!</span>
+									</div>
+								{:else if progress >= 25}
+									<div class="flex items-center gap-2 text-yellow-600 text-sm">
+										<Calendar class="size-4" />
+										<span>Good start - keep it up!</span>
+									</div>
+								{:else}
+									<div class="flex items-center gap-2 text-red-600 text-sm">
+										<AlertCircle class="size-4" />
+										<span>Consider increasing contributions</span>
+									</div>
+								{/if}
+							</div>
+						{/each}
+					</CardContent>
+				</Card>
+			{/if}
+
+			{#if savingsProfiles.length === 0}
+				<Card>
+					<CardContent class="flex flex-col items-center justify-center py-12">
+						<Target class="size-12 text-muted-foreground mb-4" />
+						<h3 class="text-xl font-medium mb-2">No Savings Goals Found</h3>
+						<p class="text-muted-foreground text-center max-w-md">
+							Create your first savings goal to start tracking your progress and get personalized
+							analysis.
+						</p>
+					</CardContent>
+				</Card>
+			{/if}
 		{/if}
 	</div>
 </div>

@@ -22,7 +22,15 @@ interface TransactionFilter {
 }
 
 // Create the single RPC client pointing to the backend server
-const client = hc<AppRoutes>('http://localhost:3000');
+// Use environment variable or default to localhost:3000
+const BACKEND_URL =
+	typeof window !== 'undefined'
+		? window.location.hostname === 'localhost'
+			? 'http://localhost:3000'
+			: 'http://localhost:3000'
+		: 'http://localhost:3000';
+
+const client = hc<AppRoutes>(BACKEND_URL);
 
 export const rpc = client;
 
@@ -72,13 +80,22 @@ export const getAIStatus = async (): Promise<{
 	return (await response.json()) as { message: string; model: string; baseUrl: string };
 };
 
-// Convenience function to get bank accounts
+// Convenience function to get bank accounts with better error handling
 export const getBankAccounts = async () => {
-	const response = await rpc.api['bank-accounts'].$get();
-	if (!response.ok) {
-		throw new Error('Failed to fetch bank accounts');
+	try {
+		const response = await rpc.api['bank-accounts'].$get();
+		if (!response.ok) {
+			const errorText = await response.text();
+			throw new Error(`Failed to fetch bank accounts: ${response.status} ${errorText}`);
+		}
+		return await response.json();
+	} catch (error) {
+		console.error('Error fetching bank accounts:', error);
+		if (error instanceof Error) {
+			throw error;
+		}
+		throw new Error('Network error: Unable to connect to the backend server');
 	}
-	return await response.json();
 };
 
 // Convenience function to get all transactions with optional filters
@@ -310,3 +327,16 @@ export const deleteRecurrentPayment = async (paymentId: string): Promise<{ succe
 	}
 	return await response.json();
 };
+
+// Add missing type definitions
+export interface RecurrentPayment {
+	id: string;
+	amount: number;
+	name: string;
+	category: string;
+	frequency: 'weekly' | 'monthly' | 'quarterly' | 'yearly';
+	startDate: string;
+	endDate?: string;
+	autoPay: boolean;
+	savingsProfile?: string;
+}
