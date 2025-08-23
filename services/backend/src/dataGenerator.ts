@@ -468,6 +468,18 @@ const INCOME_MERCHANTS = {
     "Credit Card Cashback",
     "Loyalty Cashback",
   ],
+  [IncomeCategory.INITIAL_DEPOSIT]: [
+    "Account Opening Deposit",
+    "Initial Balance Transfer",
+    "Opening Balance",
+    "Starting Deposit",
+    "Account Setup",
+    "Initial Funding",
+    "Opening Contribution",
+    "Account Initialization",
+    "Starting Balance",
+    "Initial Investment",
+  ],
   [IncomeCategory.OTHER]: [
     "Miscellaneous Income",
     "Side Income",
@@ -650,7 +662,7 @@ class RealisticDataGenerator {
       id: uuidv4(),
       name: "Personal Checking",
       type: AccountType.PERSONAL,
-      currentBalance: 3850.75,
+      currentBalance: 0, // Will be calculated from transactions
       currency: "CHF",
       transactions: [],
       recurrentPayments: [],
@@ -660,7 +672,7 @@ class RealisticDataGenerator {
       id: uuidv4(),
       name: "High-Yield Savings",
       type: AccountType.SAVINGS,
-      currentBalance: 42500.5,
+      currentBalance: 0, // Will be calculated from transactions
       currency: "CHF",
       transactions: [],
       recurrentPayments: [],
@@ -670,7 +682,7 @@ class RealisticDataGenerator {
       id: uuidv4(),
       name: "Retirement Fund (3rd Pillar)",
       type: AccountType.RETIREMENT,
-      currentBalance: 85200.0,
+      currentBalance: 0, // Will be calculated from transactions
       currency: "CHF",
       transactions: [],
       recurrentPayments: [],
@@ -680,19 +692,96 @@ class RealisticDataGenerator {
       id: uuidv4(),
       name: "Marriage Savings Fund",
       type: AccountType.MARRIAGE,
-      currentBalance: 18750.25,
+      currentBalance: 0, // Will be calculated from transactions
       currency: "CHF",
       transactions: [],
       recurrentPayments: [],
     };
 
-    // Start with reasonable initial balances
-    let personalBalance = 5000; // Personal checking starting balance
-    let savingsBalance = 15000; // Savings starting balance
-    let retirementBalance = 25000; // Retirement starting balance
-    let marriageBalance = 5000; // Marriage fund starting balance
+    // Define initial balances that will be recorded as income transactions
+    const initialBalances = {
+      personal: 5000,
+      savings: 15000,
+      retirement: 25000,
+      marriage: 0, // Marriage fund starts later
+    };
+
+    let personalBalance = 0;
+    let savingsBalance = 0;
+    let retirementBalance = 0;
+    let marriageBalance = 0;
 
     const startDate = new Date("2020-08-20");
+    const accountOpeningDate = new Date("2020-08-20");
+
+    // Create initial deposit receipts for each account
+    const initialDepositReceipts = {
+      personal: {
+        id: uuidv4(),
+        description: "Account Opening Deposit",
+        merchant: "Initial Funding",
+        location: this.getRandomLocation(),
+        tags: ["account-setup"],
+      },
+      savings: {
+        id: uuidv4(),
+        description: "Savings Account Opening Balance",
+        merchant: "Initial Investment",
+        location: this.getRandomLocation(),
+        tags: ["account-setup"],
+      },
+      retirement: {
+        id: uuidv4(),
+        description: "Retirement Account Initial Contribution",
+        merchant: "Opening Contribution",
+        location: this.getRandomLocation(),
+        tags: ["account-setup"],
+      },
+    };
+
+    // Add initial deposit receipts to the receipts array
+    receipts.unshift(
+      initialDepositReceipts.personal,
+      initialDepositReceipts.savings,
+      initialDepositReceipts.retirement
+    );
+
+    // Record initial deposits as income transactions
+    if (initialBalances.personal > 0) {
+      personalBalance = initialBalances.personal;
+      personalAccount.transactions.push({
+        id: uuidv4(),
+        amount: initialBalances.personal,
+        date: accountOpeningDate.toISOString(),
+        category: IncomeCategory.INITIAL_DEPOSIT,
+        receiptId: initialDepositReceipts.personal.id,
+        balance: personalBalance,
+      });
+    }
+
+    if (initialBalances.savings > 0) {
+      savingsBalance = initialBalances.savings;
+      savingsAccount.transactions.push({
+        id: uuidv4(),
+        amount: initialBalances.savings,
+        date: accountOpeningDate.toISOString(),
+        category: IncomeCategory.INITIAL_DEPOSIT,
+        receiptId: initialDepositReceipts.savings.id,
+        balance: savingsBalance,
+      });
+    }
+
+    if (initialBalances.retirement > 0) {
+      retirementBalance = initialBalances.retirement;
+      retirementAccount.transactions.push({
+        id: uuidv4(),
+        amount: initialBalances.retirement,
+        date: accountOpeningDate.toISOString(),
+        category: IncomeCategory.INITIAL_DEPOSIT,
+        receiptId: initialDepositReceipts.retirement.id,
+        balance: retirementBalance,
+      });
+    }
 
     // Generate realistic transactions month by month for 60 months (5 years)
     for (let month = 0; month < 60; month++) {
@@ -859,6 +948,38 @@ class RealisticDataGenerator {
             25
           );
 
+          // Create initial deposit for marriage account if first transaction
+          if (marriageAccount.transactions.length === 0) {
+            const marriageInitialReceipt = {
+              id: uuidv4(),
+              description: "Marriage Fund Account Opening",
+              merchant: "Account Setup",
+              location: this.getRandomLocation(),
+              tags: ["account-setup"],
+            };
+            receipts.push(marriageInitialReceipt);
+
+            marriageAccount.transactions.push({
+              id: uuidv4(),
+              amount: Math.round(marriageTransfer * 100) / 100,
+              date: marriageDate.toISOString(),
+              category: IncomeCategory.INITIAL_DEPOSIT,
+              receiptId: marriageInitialReceipt.id,
+              balance: Math.round(marriageBalance * 100) / 100,
+            });
+          } else {
+            marriageAccount.transactions.push({
+              id: uuidv4(),
+              amount: Math.round(marriageTransfer * 100) / 100,
+              date: marriageDate.toISOString(),
+              category: IncomeCategory.OTHER,
+              receiptId:
+                receipts[faker.number.int({ min: 0, max: receipts.length - 1 })]
+                  .id,
+              balance: Math.round(marriageBalance * 100) / 100,
+            });
+          }
+
           personalAccount.transactions.push({
             id: uuidv4(),
             amount: -Math.round(marriageTransfer * 100) / 100,
@@ -868,17 +989,6 @@ class RealisticDataGenerator {
               receipts[faker.number.int({ min: 0, max: receipts.length - 1 })]
                 .id,
             balance: Math.round(personalBalance * 100) / 100,
-          });
-
-          marriageAccount.transactions.push({
-            id: uuidv4(),
-            amount: Math.round(marriageTransfer * 100) / 100,
-            date: marriageDate.toISOString(),
-            category: IncomeCategory.OTHER,
-            receiptId:
-              receipts[faker.number.int({ min: 0, max: receipts.length - 1 })]
-                .id,
-            balance: Math.round(marriageBalance * 100) / 100,
           });
         }
       }

@@ -3,3 +3,8 @@ export {
   listTransactions,
   listTransactionsForBankAccount,
 } from "./listTransactions";
+export {
+  listSavingsProfiles,
+  listSavingsProfile,
+  createSavingsProfile,
+} from "./listSavingsProfile";

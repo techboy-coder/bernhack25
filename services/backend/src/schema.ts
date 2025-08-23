@@ -29,6 +29,7 @@ export const IncomeCategory = {
   INVESTMENTS: "investments",
   GIFTS: "gifts",
   REFUNDS: "refunds",
+  INITIAL_DEPOSIT: "initial_deposit", // For recording initial account balances
   OTHER: "other",
 } as const;
 

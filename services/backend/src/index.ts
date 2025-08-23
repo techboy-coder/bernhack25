@@ -4,6 +4,9 @@ import {
   listBankAccounts,
   listTransactions,
   listTransactionsForBankAccount,
+  listSavingsProfiles,
+  listSavingsProfile,
+  createSavingsProfile,
 } from "../func";
 
 const app = new Hono();
@@ -89,6 +92,53 @@ const api = new Hono()
       return c.json(transactions);
     } catch (error) {
       return c.json({ error: "Failed to fetch transactions for account" }, 500);
+    }
+  })
+  .get("/savings-profiles", (c) => {
+    try {
+      const savingsProfiles = listSavingsProfiles();
+      return c.json(savingsProfiles);
+    } catch (error) {
+      return c.json({ error: "Failed to fetch savings profiles" }, 500);
+    }
+  })
+  .get("/savings-profiles/:profileId", (c) => {
+    try {
+      const profileId = c.req.param("profileId");
+      const profile = listSavingsProfile(profileId);
+
+      if (!profile) {
+        return c.json({ error: "Savings profile not found" }, 404);
+      }
+
+      return c.json(profile);
+    } catch (error) {
+      return c.json({ error: "Failed to fetch savings profile" }, 500);
+    }
+  })
+  .post("/savings-profiles", async (c) => {
+    try {
+      const body = await c.req.json();
+      const { name, targetAmount, targetDate } = body;
+
+      if (!name || !targetAmount || targetAmount <= 0) {
+        return c.json(
+          {
+            error: "Invalid input: name and positive targetAmount are required",
+          },
+          400
+        );
+      }
+
+      const profile = createSavingsProfile({
+        name,
+        targetAmount,
+        targetDate,
+      });
+
+      return c.json(profile, 201);
+    } catch (error) {
+      return c.json({ error: "Failed to create savings profile" }, 500);
     }
   });
 
