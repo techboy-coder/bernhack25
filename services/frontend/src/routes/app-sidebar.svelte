@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 	import { page } from '$app/stores';
-	import { MessageSquare, Sparkles, Home } from 'lucide-svelte';
+	import { MessageSquare, Sparkles, Home, HomeIcon } from 'lucide-svelte';
 	import type { ComponentProps } from 'svelte';
 
 	let { ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
@@ -18,6 +18,12 @@
 			url: '/animation',
 			icon: Sparkles,
 			description: 'Animotion Playground'
+		},
+		{
+			title: 'Accounts',
+			url: '/accounts',
+			icon: HomeIcon,
+			description: 'Account Overview'
 		}
 	];
 </script>

@@ -46,6 +46,7 @@
 	},
 	"dependencies": {
 		"@animotion/core": "^1.1.8",
+		"hono": "^4.9.4",
 		"lucide-svelte": "^0.541.0"
 	}
 }
