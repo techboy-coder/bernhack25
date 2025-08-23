@@ -1,7 +1,7 @@
 [
   {
     "id": "0382f84a-d7c5-4966-8e4c-c846fcc77fd8",
-    "name": "heyy",
+    "name": "Vacation to Japan",
     "targetAmount": 100,
     "currentAmount": 90,
     "category": "Home",
@@ -14,5 +14,13 @@
     "currentAmount": 10,
     "category": "Emergency",
     "startDate": "2025-08-23T14:20:29.890Z"
+  },
+  {
+    "id": "4e12424e-20d4-4f63-8a3a-39189e979767",
+    "name": "Buy car",
+    "targetAmount": 30000,
+    "currentAmount": 90000,
+    "category": "Car",
+    "startDate": "2025-08-23T14:55:09.332Z"
   }
 ]

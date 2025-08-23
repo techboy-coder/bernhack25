@@ -1,3 +1,8 @@
+import { config } from "dotenv";
+
+// Load environment variables first
+config();
+
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import {
@@ -27,6 +32,15 @@ import type {
   RecurrentPayment,
   SavingsProfile,
 } from "./schema";
+import { ai_hono } from "./ai";
+// Export AI types for frontend use
+export type {
+  AIDecisionType,
+  AIDecision,
+  UserMessage,
+  AIAnalysisRequest,
+  AIAnalysisResponse,
+} from "./ai";
 
 // Use the same filter type as in the functions
 type TransactionFilter = {
@@ -74,20 +88,6 @@ interface CreateRecurrentPaymentRequest {
   autoPay?: boolean;
   savingsProfile?: string;
 }
-
-const app = new Hono();
-
-// Enable CORS for frontend communication
-app.use(
-  "/*",
-  cors({
-    origin: ["*", "http://localhost:3000", "http://localhost:5173"],
-    allowHeaders: ["Content-Type"],
-    allowMethods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
-
-app.get("/", (c) => c.text("Banking API Server"));
 
 // API routes
 const api = new Hono()
@@ -427,7 +427,22 @@ const api = new Hono()
     }
   });
 
-app.route("/api", api);
+const app = new Hono();
+
+// Enable CORS for frontend communication
+app.use(
+  "/*",
+  cors({
+    origin: ["*", "http://localhost:3000", "http://localhost:5173"],
+    allowHeaders: ["Content-Type"],
+    allowMethods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
+
+app
+  .route("/api", api)
+  .route("/ai", ai_hono)
+  .get("/", (c) => c.text("Banking API Server"));
 
 export default app;
 export type ApiRoutes = typeof api;
