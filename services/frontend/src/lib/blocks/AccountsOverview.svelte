@@ -25,7 +25,7 @@
 	}
 
 	interface AccountsData {
-		bankAccounts?: AccountSummary[];
+		bankAccounts: AccountSummary[];
 		error?: string;
 	}
 
@@ -81,156 +81,118 @@
 	}
 </script>
 
-<div class="flex-1 space-y-6 p-6">
-	<!-- Page Header -->
-	<div class="space-y-2">
-		<h1 class="text-3xl font-bold tracking-tight">Bank Accounts</h1>
-		<p class="text-muted-foreground">Manage and overview your financial accounts</p>
-	</div>
+<!-- Account Cards Grid -->
+<div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+	{#each data.bankAccounts as accountSummary}
+		{@const accountBadge = getAccountTypeBadge(accountSummary.account.type)}
+		{@const balanceClass = getBalanceColorClass(accountSummary.account.currentBalance)}
 
-	{#if data.error}
-		<!-- Error State -->
-		<Card class="border-destructive bg-destructive/5">
-			<CardContent class="pt-6">
-				<p class="text-destructive flex items-center gap-2">
-					⚠️ {data.error}
-				</p>
-			</CardContent>
-		</Card>
-	{:else if data.bankAccounts && data.bankAccounts.length > 0}
-		<!-- Account Cards Grid -->
-		<div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-			{#each data.bankAccounts as accountSummary}
-				{@const accountBadge = getAccountTypeBadge(accountSummary.account.type)}
-				{@const balanceClass = getBalanceColorClass(accountSummary.account.currentBalance)}
-
-				<Card class="transition-all hover:shadow-lg">
-					<CardHeader class="pb-4">
-						<div class="flex items-start justify-between">
-							<div class="space-y-1">
-								<CardTitle class="text-lg">{accountSummary.account.name}</CardTitle>
-								<CardDescription>
-									ID: {accountSummary.account.id.slice(0, 8)}...
-								</CardDescription>
-							</div>
-							<Badge variant={accountBadge.variant}>
-								{accountBadge.label}
-							</Badge>
-						</div>
-					</CardHeader>
-
-					<CardContent class="space-y-6">
-						<!-- Balance Section -->
-						<div class="space-y-2">
-							<p class="text-sm font-medium text-muted-foreground">Current Balance</p>
-							<p class="text-2xl font-bold {balanceClass}">
-								{formatCurrency(
-									accountSummary.account.currentBalance,
-									accountSummary.account.currency
-								)}
-							</p>
-						</div>
-
-						<Separator />
-
-						<!-- Statistics Grid -->
-						<div class="grid grid-cols-2 gap-4">
-							<div class="space-y-1">
-								<p class="text-sm text-muted-foreground">Transactions</p>
-								<p class="font-semibold">{accountSummary.transactionCount.toLocaleString()}</p>
-							</div>
-							<div class="space-y-1">
-								<p class="text-sm text-muted-foreground">Last Activity</p>
-								<p class="text-xs font-medium">
-									{formatDate(accountSummary.lastTransactionDate)}
-								</p>
-							</div>
-						</div>
-
-						<!-- Monthly Summary -->
-						<div class="space-y-3">
-							<p class="text-sm font-medium text-muted-foreground">Last 30 Days</p>
-							<div class="space-y-2">
-								<div class="flex justify-between items-center">
-									<span class="text-sm text-muted-foreground">Income:</span>
-									<span class="text-sm font-medium text-green-600 dark:text-green-400">
-										+{formatCurrency(
-											accountSummary.monthlyIncomeTotal,
-											accountSummary.account.currency
-										)}
-									</span>
-								</div>
-								<div class="flex justify-between items-center">
-									<span class="text-sm text-muted-foreground">Expenses:</span>
-									<span class="text-sm font-medium text-red-600 dark:text-red-400">
-										-{formatCurrency(
-											accountSummary.monthlyExpenseTotal,
-											accountSummary.account.currency
-										)}
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<!-- Action Buttons -->
-						<div class="flex gap-2 pt-2">
-							<Button variant="outline" size="sm" class="flex-1">View Details</Button>
-							<Button variant="outline" size="sm" class="flex-1">Transactions</Button>
-						</div>
-					</CardContent>
-				</Card>
-			{/each}
-		</div>
-
-		<!-- Summary Statistics Card -->
-		<Card>
-			<CardHeader>
-				<CardTitle class="flex items-center gap-2">📊 Account Summary</CardTitle>
-			</CardHeader>
-			<CardContent>
-				<div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-					<div class="space-y-2">
-						<p class="text-sm text-muted-foreground">Total Accounts</p>
-						<p class="text-2xl font-bold">{data.bankAccounts.length}</p>
+		<Card class="transition-all hover:shadow-lg">
+			<CardHeader class="pb-4">
+				<div class="flex items-start justify-between">
+					<div class="space-y-1">
+						<CardTitle class="text-lg">{accountSummary.account.name}</CardTitle>
+						<CardDescription>
+							ID: {accountSummary.account.id.slice(0, 8)}...
+						</CardDescription>
 					</div>
-
-					<div class="space-y-2">
-						<p class="text-sm text-muted-foreground">Total Balance</p>
-						<p
-							class="text-2xl font-bold {getBalanceColorClass(
-								data.bankAccounts.reduce((sum, acc) => sum + acc.account.currentBalance, 0)
-							)}"
-						>
-							{formatCurrency(
-								data.bankAccounts.reduce((sum, acc) => sum + acc.account.currentBalance, 0)
-							)}
-						</p>
-					</div>
-
-					<div class="space-y-2">
-						<p class="text-sm text-muted-foreground">Total Transactions</p>
-						<p class="text-2xl font-bold">
-							{data.bankAccounts
-								.reduce((sum, acc) => sum + acc.transactionCount, 0)
-								.toLocaleString()}
-						</p>
-					</div>
+					<Badge variant={accountBadge.variant}>
+						{accountBadge.label}
+					</Badge>
 				</div>
-			</CardContent>
-		</Card>
-	{:else}
-		<!-- Empty State -->
-		<Card class="text-center py-12">
+			</CardHeader>
+
 			<CardContent class="space-y-6">
-				<div class="text-6xl">🏦</div>
+				<!-- Balance Section -->
 				<div class="space-y-2">
-					<h3 class="text-lg font-semibold">No Bank Accounts Found</h3>
-					<p class="text-muted-foreground max-w-sm mx-auto">
-						You don't have any bank accounts set up yet. Add your first account to get started.
+					<p class="text-sm font-medium text-muted-foreground">Current Balance</p>
+					<p class="text-2xl font-bold {balanceClass}">
+						{formatCurrency(accountSummary.account.currentBalance, accountSummary.account.currency)}
 					</p>
 				</div>
-				<Button>Add Bank Account</Button>
+
+				<Separator />
+
+				<!-- Statistics Grid -->
+				<div class="grid grid-cols-2 gap-4">
+					<div class="space-y-1">
+						<p class="text-sm text-muted-foreground">Transactions</p>
+						<p class="font-semibold">{accountSummary.transactionCount.toLocaleString()}</p>
+					</div>
+					<div class="space-y-1">
+						<p class="text-sm text-muted-foreground">Last Activity</p>
+						<p class="text-xs font-medium">
+							{formatDate(accountSummary.lastTransactionDate)}
+						</p>
+					</div>
+				</div>
+
+				<!-- Monthly Summary -->
+				<div class="space-y-3">
+					<p class="text-sm font-medium text-muted-foreground">Last 30 Days</p>
+					<div class="space-y-2">
+						<div class="flex justify-between items-center">
+							<span class="text-sm text-muted-foreground">Income:</span>
+							<span class="text-sm font-medium text-green-600 dark:text-green-400">
+								+{formatCurrency(
+									accountSummary.monthlyIncomeTotal,
+									accountSummary.account.currency
+								)}
+							</span>
+						</div>
+						<div class="flex justify-between items-center">
+							<span class="text-sm text-muted-foreground">Expenses:</span>
+							<span class="text-sm font-medium text-red-600 dark:text-red-400">
+								-{formatCurrency(
+									accountSummary.monthlyExpenseTotal,
+									accountSummary.account.currency
+								)}
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Action Buttons -->
+				<div class="flex gap-2 pt-2">
+					<Button variant="outline" size="sm" class="flex-1">View Details</Button>
+					<Button variant="outline" size="sm" class="flex-1">Transactions</Button>
+				</div>
 			</CardContent>
 		</Card>
-	{/if}
+	{/each}
 </div>
+
+<!-- Summary Statistics Card -->
+<Card>
+	<CardHeader>
+		<CardTitle class="flex items-center gap-2">📊 Account Summary</CardTitle>
+	</CardHeader>
+	<CardContent>
+		<div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+			<div class="space-y-2">
+				<p class="text-sm text-muted-foreground">Total Accounts</p>
+				<p class="text-2xl font-bold">{data.bankAccounts.length}</p>
+			</div>
+
+			<div class="space-y-2">
+				<p class="text-sm text-muted-foreground">Total Balance</p>
+				<p
+					class="text-2xl font-bold {getBalanceColorClass(
+						data.bankAccounts.reduce((sum, acc) => sum + acc.account.currentBalance, 0)
+					)}"
+				>
+					{formatCurrency(
+						data.bankAccounts.reduce((sum, acc) => sum + acc.account.currentBalance, 0)
+					)}
+				</p>
+			</div>
+
+			<div class="space-y-2">
+				<p class="text-sm text-muted-foreground">Total Transactions</p>
+				<p class="text-2xl font-bold">
+					{data.bankAccounts.reduce((sum, acc) => sum + acc.transactionCount, 0).toLocaleString()}
+				</p>
+			</div>
+		</div>
+	</CardContent>
+</Card>
