@@ -37,6 +37,20 @@ export const rpc = client;
 // Export AI types for frontend use
 export type { AIDecision, AIDecisionType, UserMessage, AIAnalysisRequest, AIAnalysisResponse };
 
+// JSON Query types
+export interface JsonQueryRequest {
+	query: string;
+}
+
+export interface JsonQueryResponse {
+	query: string;
+	result: any;
+	responses: any[];
+	humanResponse: string;
+	success: boolean;
+	error?: string;
+}
+
 // AI convenience functions
 export const analyzeUserInput = async (
 	history: UserMessage[],
@@ -53,31 +67,42 @@ export const analyzeUserInput = async (
 	return (await response.json()) as AIAnalysisResponse;
 };
 
-export const getAvailableComponents = async (): Promise<{
-	available: string[];
-	count: number;
-}> => {
-	const response = await rpc.ai.components.$get();
+// JSON Query convenience function
+export const queryFinancialData = async (query: string): Promise<JsonQueryResponse> => {
+	try {
+		if (!query || typeof query !== 'string' || query.trim().length === 0) {
+			throw new Error('Query must be a non-empty string');
+		}
 
-	if (!response.ok) {
-		throw new Error('Failed to fetch available components');
+		const response = await rpc.api.query.$post({
+			json: { query: query.trim() }
+		});
+
+		if (!response.ok) {
+			const errorData = await response.json().catch(() => ({}));
+			const errorMessage = errorData.humanResponse || errorData.error || 'Failed to process query';
+			throw new Error(errorMessage);
+		}
+
+		const result = await response.json();
+		return result as JsonQueryResponse;
+	} catch (error) {
+		console.error('Error querying financial data:', error);
+
+		// Return a user-friendly error response
+		const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+
+		return {
+			query,
+			result: null,
+			responses: [],
+			humanResponse: errorMessage.includes('fetch')
+				? "I'm having trouble connecting to our analysis service. Please check if the service is running and try again."
+				: errorMessage,
+			success: false,
+			error: errorMessage
+		};
 	}
-
-	return (await response.json()) as { available: string[]; count: number };
-};
-
-export const getAIStatus = async (): Promise<{
-	message: string;
-	model: string;
-	baseUrl: string;
-}> => {
-	const response = await rpc.ai['/'].$get();
-
-	if (!response.ok) {
-		throw new Error('Failed to get AI status');
-	}
-
-	return (await response.json()) as { message: string; model: string; baseUrl: string };
 };
 
 // Convenience function to get bank accounts with better error handling
@@ -327,16 +352,3 @@ export const deleteRecurrentPayment = async (paymentId: string): Promise<{ succe
 	}
 	return await response.json();
 };
-
-// Add missing type definitions
-export interface RecurrentPayment {
-	id: string;
-	amount: number;
-	name: string;
-	category: string;
-	frequency: 'weekly' | 'monthly' | 'quarterly' | 'yearly';
-	startDate: string;
-	endDate?: string;
-	autoPay: boolean;
-	savingsProfile?: string;
-}

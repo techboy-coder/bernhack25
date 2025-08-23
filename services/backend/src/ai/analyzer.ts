@@ -3,6 +3,7 @@ import { AccountsToId } from "./config.js";
 import { executePhase1 } from "./phases/phase1.js";
 import { executePhase2 } from "./phases/phase2.js";
 import { executePhase3 } from "./phases/phase3.js";
+import { LITELLM_BASE_URL, LITELLM_API_KEY, AI_MODEL } from "./config.js";
 
 export async function analyzeWithLiteLLM(
   history: UserMessage[],
@@ -27,9 +28,14 @@ export async function analyzeWithLiteLLM(
     console.log("✅ Phase 1 result:", phase1Result);
 
     if (phase1Result.type === "generic") {
+      const genericResponse = await generateGenericResponse(
+        newPrompt,
+        conversationContext
+      );
       return {
         type: "generic",
-        content: generateGenericResponse(newPrompt),
+        content: genericResponse.content,
+        ttsText: genericResponse.ttsText,
         reasoning: phase1Result.reasoning,
       };
     }
@@ -39,77 +45,204 @@ export async function analyzeWithLiteLLM(
     const phase2Result = await executePhase2(context);
     console.log("✅ Phase 2 result:", phase2Result);
 
-    // Phase 3: Component or query decision
-    const accountScope =
-      phase2Result.scope === "specific"
-        ? `specific account: ${phase2Result.accountId}`
-        : "all accounts";
-
-    console.log("🔍 Phase 3: Determining component or query...");
-    const phase3Result = await executePhase3(context, accountScope);
+    // Phase 3: Determine component or query
+    console.log("🔍 Phase 3: Generating component/query decision...");
+    const phase3Result = await executePhase3(context, phase2Result.scope);
     console.log("✅ Phase 3 result:", phase3Result);
 
-    // Handle query type (not implemented)
-    if (phase3Result.type === "query") {
-      console.log("⚠️ Query WIP:", phase3Result.content);
+    if (phase3Result.type === "component") {
+      const ttsText = await generateComponentTTSResponse(
+        newPrompt,
+        phase3Result.content,
+        phase2Result.accountId,
+        phase3Result.accountType,
+        conversationContext
+      );
+
       return {
-        type: "generic",
-        content:
-          "Query functionality is work in progress. Please try asking for a specific view or overview instead.",
-        reasoning: "Query functionality not yet implemented",
+        type: "component",
+        content: phase3Result.content,
+        ttsText,
+        accountId: phase2Result.accountId,
+        accountType: phase3Result.accountType,
+        reasoning: phase3Result.reasoning,
+      };
+    } else {
+      return {
+        type: "query",
+        content: phase3Result.content,
+        reasoning: phase3Result.reasoning,
       };
     }
-
-    // Build final decision
-    const finalDecision: AIDecision = {
-      type: "component",
-      content: phase3Result.content, // Now supports both string and string[]
-      reasoning: `${phase1Result.reasoning} → ${phase2Result.reasoning} → ${phase3Result.reasoning}`,
-    };
-
-    // Add accountType if present in Phase 3 result
-    if (phase3Result.type === "component" && phase3Result.accountType) {
-      finalDecision.accountType = phase3Result.accountType;
-    }
-
-    // Add accountId if specific scope
-    if (phase2Result.scope === "specific" && phase2Result.accountId) {
-      const accountId =
-        AccountsToId[phase2Result.accountId as keyof typeof AccountsToId];
-      if (accountId) {
-        finalDecision.accountId = accountId;
-      }
-    }
-
-    return finalDecision;
   } catch (error) {
-    console.error("Multi-phase analysis error:", error);
+    console.error("❌ Analysis error:", error);
+    const fallbackResponse = await generateGenericResponse(
+      "I encountered an error processing your request. Please try again.",
+      conversationContext
+    );
     return {
       type: "generic",
-      content:
-        "I encountered an error processing your request. Could you please try rephrasing your question?",
-      reasoning: "Error fallback from multi-phase analysis",
+      content: fallbackResponse.content,
+      ttsText: fallbackResponse.ttsText,
+      reasoning: "Error fallback",
     };
   }
 }
 
-function generateGenericResponse(prompt: string): string {
-  const lowercasePrompt = prompt.toLowerCase();
+async function generateGenericResponse(
+  prompt: string,
+  conversationContext: string
+): Promise<{ content: string; ttsText: string }> {
+  const systemPrompt = `You are Ueli, a friendly and helpful banking assistant for Spendcast. Generate a personalized response to the user's message.
 
-  if (lowercasePrompt.includes("hello") || lowercasePrompt.includes("hi")) {
-    return "Hello! I'm your banking assistant. I can help you view your accounts, analyze transactions, track savings goals, and manage recurring payments. What would you like to see?";
+Guidelines for responses:
+- Be kind, warm, and professional
+- Use a conversational, approachable tone
+- Keep responses concise but informative
+- Offer specific help related to banking features
+- Be encouraging and supportive
+- Never be rude, dismissive, or overly formal
+- Use "I" statements to make it personal ("I can help you with...")
+- Show enthusiasm for helping with their financial goals
+
+Available banking features you can mention:
+- View account balances and summaries
+- Analyze spending patterns and transaction history
+- Track and manage savings goals
+- Monitor recurring payments and subscriptions
+- Generate financial insights and reports
+
+Conversation History:
+${conversationContext}
+
+Generate a response that feels natural and personally crafted for this specific interaction. The response should be suitable for both text display and text-to-speech.`;
+
+  try {
+    const response = await fetch(`${LITELLM_BASE_URL}/v1/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${LITELLM_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: AI_MODEL,
+        messages: [
+          {
+            role: "system",
+            content: systemPrompt,
+          },
+          {
+            role: "user",
+            content: prompt,
+          },
+        ],
+        temperature: 0.7, // Higher temperature for more creative responses
+        max_tokens: 200,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `LiteLLM API error: ${response.status} ${response.statusText}`
+      );
+    }
+
+    const data = await response.json();
+    const aiResponse = data.choices?.[0]?.message?.content?.trim();
+
+    if (!aiResponse) {
+      throw new Error("No response content from LiteLLM");
+    }
+
+    return {
+      content: aiResponse,
+      ttsText: aiResponse, // Same text for both display and TTS for generic responses
+    };
+  } catch (error) {
+    console.error("Error generating generic response:", error);
+    // Fallback to a simple response
+    return {
+      content:
+        "I'm here to help you with your banking needs. What would you like to explore?",
+      ttsText:
+        "I'm here to help you with your banking needs. What would you like to explore?",
+    };
   }
+}
 
-  if (
-    lowercasePrompt.includes("help") ||
-    lowercasePrompt.includes("what can you do")
-  ) {
-    return "I can help you with:\n• View account balances and summaries\n• Analyze your spending patterns\n• Track savings goals\n• Monitor recurring payments\n• Show transaction history and statistics\n\nJust ask me about any of these topics!";
+async function generateComponentTTSResponse(
+  userPrompt: string,
+  components: string | string[],
+  accountId?: string,
+  accountType?: string,
+  conversationContext?: string
+): Promise<string> {
+  const componentList = Array.isArray(components) ? components : [components];
+  const componentNames = componentList.join(", ");
+
+  const systemPrompt = `You are Ueli, a friendly banking assistant for Spendcast. Generate a natural, conversational introduction for the financial component(s) being shown to the user.
+
+Guidelines:
+- Be warm, personal, and enthusiastic
+- Keep it concise (1-2 sentences max)
+- Sound natural when spoken aloud
+- Acknowledge what the user asked for specifically
+- Use "Here's" or "I've found" or "Let me show you" type language
+- Be encouraging about their financial management
+- Don't be overly formal or robotic
+
+Component(s) being shown: ${componentNames}
+${accountType ? `Account type: ${accountType}` : ""}
+${accountId ? `Specific account: ${accountId}` : ""}
+
+User's original request: "${userPrompt}"
+
+Conversation context:
+${conversationContext || "No previous context"}
+
+Generate a brief, natural introduction that sounds good when spoken aloud.`;
+
+  try {
+    const response = await fetch(`${LITELLM_BASE_URL}/v1/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${LITELLM_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: AI_MODEL,
+        messages: [
+          {
+            role: "system",
+            content: systemPrompt,
+          },
+          {
+            role: "user",
+            content: userPrompt,
+          },
+        ],
+        temperature: 0.6,
+        max_tokens: 100,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `LiteLLM API error: ${response.status} ${response.statusText}`
+      );
+    }
+
+    const data = await response.json();
+    const aiResponse = data.choices?.[0]?.message?.content?.trim();
+
+    if (!aiResponse) {
+      throw new Error("No response content from LiteLLM");
+    }
+
+    return aiResponse;
+  } catch (error) {
+    console.error("Error generating component TTS response:", error);
+    // Fallback to a simple response
+    return `Here's the information you requested.`;
   }
-
-  if (lowercasePrompt.includes("thank")) {
-    return "You're welcome! Let me know if you need anything else with your banking data.";
-  }
-
-  return "I'm here to help you with your banking needs. You can ask me to show your accounts, analyze transactions, or check your savings goals. What would you like to explore?";
 }

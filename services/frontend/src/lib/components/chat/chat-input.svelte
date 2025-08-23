@@ -358,6 +358,14 @@
 
 		console.log('🎙️ Microphone clicked, current state:', isRecording);
 
+		// Stop any ongoing TTS when starting to record
+		if (!isRecording && typeof window !== 'undefined' && 'speechSynthesis' in window) {
+			if (window.speechSynthesis.speaking) {
+				console.log('🔊 Stopping TTS before starting recording');
+				window.speechSynthesis.cancel();
+			}
+		}
+
 		if (isRecording) {
 			// Stop recording - this will trigger onend and potentially auto-submit
 			console.log('🛑 Stopping speech recognition...');

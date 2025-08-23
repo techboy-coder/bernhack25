@@ -12,16 +12,20 @@ export async function executePhase3(
   accountScope: string,
   retryConfig: RetryConfig = { maxRetries: 3, currentRetry: 0 }
 ): Promise<Phase3Decision> {
-  const systemPrompt = `You are a banking assistant for "Spendcast" called Ueli, an  AI deciding between showing a component or performing a query.
+  const systemPrompt = `You are a banking assistant for "Spendcast" called Ueli, an AI deciding between showing a component or performing a query.
 
 Account scope: ${accountScope}
 Available components: ${AVAILABLE_COMPONENTS.join(", ")}
 
 Choose between:
-1. "component" - Show a specific UI component with banking data (up to 2 components max)
-2. "query" - Perform a data search/filter (NOT YET IMPLEMENTED - will show WIP message)
+1. "component" - Show a specific UI component with banking data (up to 2 components max) - ONLY if there's a clear, relevant match
+2. "query" - Perform a natural language data search/analysis of financial data - use this for specific questions, calculations, or when no component fits well
 
-When in doubt, ALWAYS choose "component" and pick the most relevant one(s).
+IMPORTANT: Don't force a component choice if none fit well. Use "query" when:
+- User asks specific numerical questions ("How much did I spend on X?", "How many transactions?")
+- No component clearly matches the request
+- User wants calculations, analysis, or specific data points
+- User asks about trends, comparisons, or specific time periods
 
 RESPOND WITH VALID JSON ONLY in this exact format:
 For single component:
@@ -40,10 +44,29 @@ For multiple components (max 2):
   "accountType": "savings|personal|retirement|marriage|all" (optional - only for account-header component)
 }
 
+For query:
+{
+  "type": "query",
+  "content": "natural language query about financial data",
+  "reasoning": "brief explanation of your choice"
+}
+
 For "component" type, content MUST be exactly one of or an array of: ${AVAILABLE_COMPONENTS.join(
     ", "
   )}
-For "query" type, content should describe the data query needed.
+For "query" type, content should be the natural language question to search the financial data.
+
+Use "query" for questions like:
+- "How many groceries were bought last month?"
+- "What's my total spending on transport?"
+- "How much did I spend on entertainment this year?"
+- "Show me my average monthly expenses"
+- "How many transactions were made in December?"
+- "What did I buy at Migros last week?"
+- "Find my largest expense this month"
+- "Show me all purchases over $100"
+- Any specific numerical or analytical questions about financial data
+- Questions that don't have a clear component match
 
 Component descriptions:
 - "accounts-overview": Overview of all bank accounts when user asks for "all accounts", "account summary", or "account overview"
@@ -72,7 +95,15 @@ IMPORTANT DISTINCTIONS:
 - For "my marriage fund", "marriage account" -> use "account-header" with accountType: "marriage"
 - For "show all accounts", "account overview", "all my accounts" -> use "accounts-overview" (all bank accounts)
 - For "savings goals", "savings targets", "financial goals", "saving for vacation" etc. -> use "savings-profiles" (personal goals)
-- For "transactions" questions -> use "transaction-table", "transaction-stats", or "transaction-charts"
+- For "transactions" questions -> use "transaction-table", "transaction-stats", or "transaction-charts".
+
+You MUST round to the nearest whole number for any numerical values in queries!!! 12.423 -> 12. Use whole numbers only.
+
+Note that for query response might fail and you might need to:
+- Provide approximate values/ranges
+- Take absolute values
+- Provide best-effort estimates
+- If data is missing, respond with a helpful fallback message
 
 Conversation History:
 ${context.conversationContext}
@@ -153,6 +184,45 @@ New User Prompt: ${context.newPrompt}`;
       } else {
         decision.content = components as ComponentKey[];
       }
+    } else if (decision.type === "query") {
+      // For query type, we'll execute the query and return the human response
+      try {
+        const queryResponse = await fetch("http://127.0.0.1:3000/api/query", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query: decision.content }),
+        });
+
+        if (queryResponse.ok) {
+          const queryResult = await queryResponse.json();
+
+          // Check if we got a meaningful response
+          if (
+            queryResult.success &&
+            queryResult.humanResponse &&
+            !queryResult.humanResponse.includes("I couldn't find") &&
+            !queryResult.humanResponse.includes("I didn't find any results") &&
+            !queryResult.humanResponse.includes(
+              "I'm not quite sure how to interpret"
+            )
+          ) {
+            // We got a good response, use it
+            decision.content = queryResult.humanResponse;
+          } else {
+            // Query didn't return useful data, provide a helpful response as Ueli
+            decision.content = `I looked through your financial data but couldn't find specific information about "${decision.content}". This might be because the data isn't available for that particular query, or it might be phrased in a way that's hard to search. Could you try asking about it differently, or would you like me to show you a relevant overview instead?`;
+          }
+        } else {
+          // Fallback response if query service fails
+          decision.content = `I'm having trouble accessing your financial data right now to answer "${decision.content}". The analysis service might be temporarily unavailable. Could you try asking again in a moment?`;
+        }
+      } catch (error) {
+        console.error("Error executing financial query:", error);
+        // Provide a helpful response as Ueli rather than a technical error
+        decision.content = `I encountered an issue while searching for information about "${decision.content}". This might be a temporary technical problem. In the meantime, is there something else I can help you with regarding your finances?`;
+      }
     }
 
     return decision;
@@ -169,12 +239,13 @@ New User Prompt: ${context.newPrompt}`;
       });
     }
 
-    // Final fallback to accounts-overview component
+    // Final fallback - try to be helpful rather than just showing accounts-overview
     return {
-      type: "component",
-      content: "accounts-overview",
+      type: "query",
+      content:
+        "I'm having some technical difficulties right now, but I'm here to help with your banking questions. Could you try asking me again about what you'd like to know?",
       reasoning:
-        "Error occurred during phase 3 analysis, defaulting to accounts-overview component",
+        "Error occurred during phase 3 analysis, providing helpful fallback response",
     };
   }
 }

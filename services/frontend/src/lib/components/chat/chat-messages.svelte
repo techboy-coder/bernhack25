@@ -95,17 +95,20 @@
 
 		let textToSpeak = '';
 
-		// Determine what to speak based on message type
-		if (shouldShowComponent(message)) {
-			// For component messages, speak the confirmation messages
+		// Use AI-generated TTS text if available, otherwise fall back to content or hardcoded messages
+		if (message.aiDecision?.ttsText) {
+			textToSpeak = message.aiDecision.ttsText;
+			console.log('🔊 Using AI-generated TTS text:', textToSpeak);
+		} else if (shouldShowComponent(message)) {
+			// Fallback to hardcoded confirmation messages for component messages without TTS text
 			const components = getComponents(message);
 			const confirmations = components.map((componentName) =>
 				getConfirmationMessage(componentName, getAccountId(message), getAccountType(message))
 			);
 			textToSpeak = confirmations.join(' ');
-			console.log('🔊 Component message - text to speak:', textToSpeak);
+			console.log('🔊 Component message - fallback text to speak:', textToSpeak);
 		} else {
-			// For generic messages, speak the content
+			// For generic messages without TTS text, use the content
 			textToSpeak = message.content;
 			console.log('🔊 Generic message - text to speak:', textToSpeak);
 		}

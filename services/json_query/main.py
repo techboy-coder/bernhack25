@@ -13,6 +13,8 @@ load_dotenv()
 
 API_TOKEN = os.getenv('LITTLE_LLM_TOKEN')
 
+print(API_TOKEN)
+
 instruction = '''
 You will need to query a JSON file using JMESPath to get the result. The JSON follows the following schema:
 ```
@@ -257,7 +259,7 @@ async def run_query(payload: dict, session: aiohttp.ClientSession, db: dict):
             if resp.status != 200:
                 return
             
-            result = await resp.json()
+            result = int(await resp.json())
 
         choices = result['choices']
 
@@ -332,4 +334,4 @@ async def query(query: QueryRequest):
 
 
 
-uvicorn.run(app, host="127.0.0.1", port=8000)
+uvicorn.run(app, host="127.0.0.1", port=9000)
