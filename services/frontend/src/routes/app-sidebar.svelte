@@ -40,12 +40,14 @@
 			<Sidebar.MenuItem>
 				<Sidebar.MenuButton>
 					<a href="/" class="flex items-center gap-2">
-						<div
-							class="w-6 h-6 bg-gradient-to-br from-purple-600 to-blue-600 rounded-md flex items-center justify-center"
-						>
-							<span class="text-xs font-bold text-white">A</span>
+						<div class="relative text-2xl">
+							<span class="absolute top-1 left-1 font-black text-black uppercase tracking-tighter">
+								SPENDCAST
+							</span>
+							<span class="relative font-black text-yellow-400 uppercase tracking-tighter">
+								SPENDCAST
+							</span>
 						</div>
-						<span class="text-base font-semibold">Acme Inc.</span>
 					</a>
 				</Sidebar.MenuButton>
 			</Sidebar.MenuItem>

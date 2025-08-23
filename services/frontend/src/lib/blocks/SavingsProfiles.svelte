@@ -261,12 +261,6 @@
 <div class="space-y-6">
 	<!-- Header with Action Button -->
 	<div class="flex items-center justify-between">
-		<div class="space-y-2">
-			<h2 class="text-2xl font-bold tracking-tight">🎯 Savings Goals</h2>
-			<p class="text-muted-foreground">
-				Track your progress towards financial goals with smart insights
-			</p>
-		</div>
 		<Sheet bind:open={isSheetOpen}>
 			<SheetTrigger>
 				<Button onclick={openCreateSheet} class="gap-2">

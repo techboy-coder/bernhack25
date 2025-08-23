@@ -62,7 +62,7 @@
 </svelte:head>
 
 <div
-	class="dark h-screen bg-gradient-to-br from-background via-background to-muted/20 p-4 overflow-hidden"
+	class="dark h-screen bg-gradient-to-br from-background via-background to-primary/10 p-4 overflow-hidden"
 >
 	<div class="mx-auto flex h-full max-w-4xl flex-col">
 		<!-- Header -->
@@ -91,7 +91,7 @@
 		</div>
 
 		<!-- Chat Input Area -->
-		<div class="border-border border-t bg-background/20 p-4 backdrop-blur-sm rounded-xl">
+		<div class="p-4 backdrop-blur-sm rounded-xl">
 			<div class="mx-auto max-w-3xl">
 				<ChatInput
 					bind:value={inputValue}

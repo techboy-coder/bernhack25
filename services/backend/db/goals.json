@@ -1,15 +1,6 @@
 {
   "goals": [
     {
-      "id": "738c2666-06e0-499c-af55-db6876322dad",
-      "name": "Emergency Fund",
-      "targetAmount": 2000,
-      "currentAmount": 100,
-      "category": "Emergency",
-      "targetDate": "2025-09-26",
-      "startDate": "2025-08-23T10:10:12.340Z"
-    },
-    {
       "id": "13ebdf50-6da1-4660-b67b-1a659c51e8b3",
       "name": "Vacation to LA",
       "targetAmount": 3000,
@@ -17,6 +8,15 @@
       "category": "Travel",
       "targetDate": "2025-11-20",
       "startDate": "2025-08-23T10:11:12.375Z"
+    },
+    {
+      "id": "97238b6b-f45a-4668-9621-c107ab51da6c",
+      "name": "Buy Gold",
+      "targetAmount": 1000,
+      "currentAmount": 2000,
+      "category": "Gift",
+      "targetDate": "2026-09-09",
+      "startDate": "2025-08-23T10:15:25.796Z"
     }
   ]
 }

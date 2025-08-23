@@ -24,7 +24,7 @@
 			class="!bg-background"
 			style="--sidebar-width: calc(var(--spacing) * 72); --header-height: calc(var(--spacing) * 12);"
 		>
-			<AppSidebar variant="sidebar" />
+			<AppSidebar variant="sidebar" class="bg-card" />
 			<Sidebar.Inset>
 				{@render children?.()}
 			</Sidebar.Inset>

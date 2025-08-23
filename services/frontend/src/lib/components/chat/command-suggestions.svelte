@@ -51,7 +51,11 @@
 					{/if}
 					<div class="flex-1">
 						<div class="font-medium">/{command.name}</div>
-						<div class="text-white/75 text-xs">{command.description}</div>
+						<div
+							class={cn('text-white/75 text-xs', index === selectedIndex ? 'text-black/75' : '')}
+						>
+							{command.description}
+						</div>
 					</div>
 				</button>
 			{/each}
