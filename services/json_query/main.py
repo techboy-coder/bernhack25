@@ -4,8 +4,12 @@ from pydantic import BaseModel
 import jmespath
 import uvicorn
 import json
+import os
+from dotenv import load_dotenv
 
-API_TOKEN = ''
+load_dotenv()
+
+API_TOKEN = os.getenv('LITTLE_LLM_TOKEN')
 
 instruction = '''
 You will need to query a JSON file using JMESPath to get the result. The JSON follows the following schema:
