@@ -5,7 +5,8 @@
     "targetAmount": 100,
     "currentAmount": 90,
     "category": "Home",
-    "startDate": "2025-08-23T14:20:14.240Z"
+    "startDate": "2025-08-23T14:20:14.240Z",
+    "targetDate": "2025-08-25"
   },
   {
     "id": "946d4eb6-b1e3-46f7-a7c6-f9939a1ee717",

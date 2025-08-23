@@ -63,7 +63,7 @@ export async function analyzeWithLiteLLM(
     // Build final decision
     const finalDecision: AIDecision = {
       type: "component",
-      content: phase3Result.content,
+      content: phase3Result.content, // Now supports both string and string[]
       reasoning: `${phase1Result.reasoning} → ${phase2Result.reasoning} → ${phase3Result.reasoning}`,
     };
 

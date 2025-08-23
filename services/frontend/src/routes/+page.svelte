@@ -49,7 +49,9 @@
 			if (aiResponse.success) {
 				const aiMessage: Message = {
 					id: crypto.randomUUID(),
-					content: aiResponse.decision.content,
+					content: Array.isArray(aiResponse.decision.content)
+						? aiResponse.decision.content.join('\n')
+						: aiResponse.decision.content,
 					author: {
 						name: 'Ueli',
 						avatar: undefined

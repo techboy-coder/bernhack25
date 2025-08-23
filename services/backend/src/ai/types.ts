@@ -36,7 +36,7 @@ export type AccountType =
 // Separate interfaces for each decision type
 export interface Phase3ComponentDecision {
   type: "component";
-  content: ComponentKey;
+  content: ComponentKey | ComponentKey[]; // Updated to support multiple components
   reasoning: string;
   accountType?: AccountType; // Optional account type specification
 }
@@ -53,7 +53,7 @@ export type Phase3Decision = Phase3ComponentDecision | Phase3QueryDecision;
 // Final combined decision
 export interface AIDecision {
   type: AIDecisionType;
-  content: string; // Generic response text, component key, or query parameters
+  content: string | string[]; // Updated to support multiple components - Generic response text, component key(s), or query parameters
   accountId?: string; // Only present for specific account queries
   accountType?: AccountType; // Account type for component decisions
   reasoning?: string; // Optional explanation of why this decision was made

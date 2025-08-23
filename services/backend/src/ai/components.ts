@@ -48,4 +48,11 @@ let components = `{
     "description": "Calendar view of upcoming recurring payments and due dates"
   }
 }
-`;
+
+When responding with components, you can suggest up to 2 components maximum. Use an array format for multiple components:
+- Single component: { "type": "component", "content": "component-name" }
+- Multiple components: { "type": "component", "content": ["component-1", "component-2"] }
+
+Each component in the array can optionally include account filtering:
+- { "type": "component", "content": ["component-name"], "accountId": "specific-id" }
+- { "type": "component", "content": ["component-name"], "accountType": "checking" }`;

@@ -189,7 +189,7 @@
 					</div>
 					<span class="text-sm font-medium text-foreground">PostFinance Spendcast</span>
 				</div>
-				<p class="text-xs text-muted-foreground leading-relaxed">Built with ❤️ by "Glassklar"</p>
+				<p class="text-xs text-muted-foreground leading-relaxed">Built with ❤️ by "Glasklar"</p>
 			</div>
 		</div>
 	</Sidebar.Footer>

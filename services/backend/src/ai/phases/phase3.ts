@@ -12,26 +12,35 @@ export async function executePhase3(
   accountScope: string,
   retryConfig: RetryConfig = { maxRetries: 3, currentRetry: 0 }
 ): Promise<Phase3Decision> {
-  const systemPrompt = `You are a banking assistant AI deciding between showing a component or performing a query.
+  const systemPrompt = `You are a banking assistant for "Spendcast" called Ueli, an  AI deciding between showing a component or performing a query.
 
 Account scope: ${accountScope}
 Available components: ${AVAILABLE_COMPONENTS.join(", ")}
 
 Choose between:
-1. "component" - Show a specific UI component with banking data
+1. "component" - Show a specific UI component with banking data (up to 2 components max)
 2. "query" - Perform a data search/filter (NOT YET IMPLEMENTED - will show WIP message)
 
-When in doubt, ALWAYS choose "component" and pick the most relevant one.
+When in doubt, ALWAYS choose "component" and pick the most relevant one(s).
 
 RESPOND WITH VALID JSON ONLY in this exact format:
+For single component:
 {
-  "type": "component|query", 
-  "content": "component_key_or_query_description",
+  "type": "component", 
+  "content": "component_key",
   "reasoning": "brief explanation of your choice",
   "accountType": "savings|personal|retirement|marriage|all" (optional - only for account-header component)
 }
 
-For "component" type, content MUST be exactly one of: ${AVAILABLE_COMPONENTS.join(
+For multiple components (max 2):
+{
+  "type": "component", 
+  "content": ["component_key_1", "component_key_2"],
+  "reasoning": "brief explanation of your choice",
+  "accountType": "savings|personal|retirement|marriage|all" (optional - only for account-header component)
+}
+
+For "component" type, content MUST be exactly one of or an array of: ${AVAILABLE_COMPONENTS.join(
     ", "
   )}
 For "query" type, content should describe the data query needed.
@@ -42,8 +51,19 @@ Component descriptions:
 - "transaction-table": Detailed transaction list for accounts
 - "transaction-stats": Transaction statistics and metrics
 - "transaction-charts": Visual transaction analysis and trends
+- "transaction-overview": High-level summary of recent transactions
 - "savings-profiles": Personal savings GOALS and financial targets (vacation fund, emergency fund, etc.) - NOT bank account balances
+- "savings-analysis": Analysis of savings performance and goal achievement
 - "recurrent-payment-stats": Recurring payments and subscriptions overview
+- "recurrent-payment-grid": Grid view of all recurring payments
+- "recurrent-payment-categories": Categorized breakdown of recurring payments
+- "upcoming-payments": Calendar view of upcoming recurring payments
+
+MULTIPLE COMPONENT EXAMPLES:
+- "show me spending analysis" -> ["transaction-stats", "transaction-charts"]
+- "transaction overview and details" -> ["transaction-overview", "transaction-table"]
+- "savings goals and performance" -> ["savings-profiles", "savings-analysis"]
+- "recurring payments overview" -> ["recurrent-payment-stats", "recurrent-payment-grid"]
 
 IMPORTANT DISTINCTIONS:
 - For "my savings account", "savings account details", "tell me about my savings account" -> use "account-header" with accountType: "savings"
@@ -53,17 +73,6 @@ IMPORTANT DISTINCTIONS:
 - For "show all accounts", "account overview", "all my accounts" -> use "accounts-overview" (all bank accounts)
 - For "savings goals", "savings targets", "financial goals", "saving for vacation" etc. -> use "savings-profiles" (personal goals)
 - For "transactions" questions -> use "transaction-table", "transaction-stats", or "transaction-charts"
-
-EXAMPLES:
-- "tell me about my savings account" -> account-header with accountType: "savings"
-- "show my savings account" -> account-header with accountType: "savings"  
-- "savings account info" -> account-header with accountType: "savings"
-- "my high interest savings account" -> account-header with accountType: "savings"
-- "personal checking account" -> account-header with accountType: "personal"
-- "show all my accounts" -> accounts-overview (all bank accounts)
-- "account overview" -> accounts-overview (all bank accounts)
-- "my savings goals" -> savings-profiles (personal goals)
-- "how much am I saving for vacation" -> savings-profiles (personal goals)
 
 Conversation History:
 ${context.conversationContext}
@@ -119,11 +128,31 @@ New User Prompt: ${context.newPrompt}`;
       throw new Error(`Invalid phase3 decision type: ${decision.type}`);
     }
 
-    if (
-      decision.type === "component" &&
-      !AVAILABLE_COMPONENTS.includes(decision.content as ComponentKey)
-    ) {
-      throw new Error(`Invalid component key: ${decision.content}`);
+    if (decision.type === "component") {
+      // Handle both single component and array of components
+      const components = Array.isArray(decision.content)
+        ? decision.content
+        : [decision.content];
+
+      // Limit to maximum 2 components
+      if (components.length > 2) {
+        components.splice(2);
+        decision.content = components as ComponentKey | ComponentKey[];
+      }
+
+      // Validate each component
+      for (const component of components) {
+        if (!AVAILABLE_COMPONENTS.includes(component as ComponentKey)) {
+          throw new Error(`Invalid component key: ${component}`);
+        }
+      }
+
+      // Update content back to single item if only one component
+      if (components.length === 1) {
+        decision.content = components[0] as ComponentKey;
+      } else {
+        decision.content = components as ComponentKey[];
+      }
     }
 
     return decision;

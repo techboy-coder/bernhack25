@@ -11,7 +11,7 @@ export async function executePhase2(
   context: AnalysisContext,
   retryConfig: RetryConfig = { maxRetries: 3, currentRetry: 0 }
 ): Promise<Phase2Decision> {
-  const systemPrompt = `You are a banking assistant AI analyzing account scope. Determine if the user is asking about:
+  const systemPrompt = `You are a banking assistant for "Spendcast" called Ueli, an  AI analyzing account scope. Determine if the user is asking about:
 
 1. "generic" - All accounts or general banking overview
 2. "specific" - A specific account type

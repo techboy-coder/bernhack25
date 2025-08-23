@@ -59,8 +59,14 @@
 		return !message.isUser && message.aiDecision?.type === 'component';
 	}
 
-	function getComponentName(message: Message): string {
-		return message.aiDecision?.content || '';
+	function getComponents(message: Message): string[] {
+		const content = message.aiDecision?.content;
+		if (Array.isArray(content)) {
+			return content;
+		} else if (typeof content === 'string') {
+			return [content];
+		}
+		return [];
 	}
 
 	function getAccountId(message: Message): string | undefined {
@@ -109,18 +115,24 @@
 						</div>
 					{:else}
 						<!-- Component rendering -->
-						<div class={cn('rounded-lg shadow-sm', getMessageWidth(message))}>
-							<!-- Component header with explanation -->
-							<!-- <div class="bg-background/20 p-3 border-b border-input/50">
-								<p class="text-sm text-foreground">{message.content}</p>
-							</div> -->
+						<div class={cn('rounded-lg shadow-sm space-y-3', getMessageWidth(message))}>
+							<!-- Show message content if present -->
+							{#if message.content.trim()}
+								<div class="bg-background/20 p-3 border border-input/50 rounded-lg">
+									<p class="text-sm text-foreground">{message.content}</p>
+								</div>
+							{/if}
 
-							<!-- Component content -->
-							<ComponentRegistry
-								componentName={getComponentName(message)}
-								accountId={getAccountId(message)}
-								accountType={getAccountType(message)}
-							/>
+							<!-- Render each component -->
+							{#each getComponents(message) as componentName}
+								<div class="bg-background/5 border border-input/50 rounded-lg overflow-hidden">
+									<ComponentRegistry
+										{componentName}
+										accountId={getAccountId(message)}
+										accountType={getAccountType(message)}
+									/>
+								</div>
+							{/each}
 						</div>
 					{/if}
 				</div>
