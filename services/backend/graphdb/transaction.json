@@ -1,0 +1,4178 @@
+{
+	"head": {
+		"vars": [
+			"transaction",
+			"amount",
+			"card",
+			"date",
+			"receipt"
+		]
+	},
+	"results": {
+		"bindings": [
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240703_183347_0033140_001_768_2024_07_03"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240703_183347_0033140_001_768_2024_07_03_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-03"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240703_183347_0033140_001_768_2024_07_03_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240704_150041_0033140_001_503_2024_07_04"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240704_150041_0033140_001_503_2024_07_04_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-04"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240704_150041_0033140_001_503_2024_07_04_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240705_192305_0033140_001_789_2024_07_05"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240705_192305_0033140_001_789_2024_07_05_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-05"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240705_192305_0033140_001_789_2024_07_05_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240706_165722_0033140_003_82_2024_07_06"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240706_165722_0033140_003_82_2024_07_06_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-06"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240706_165722_0033140_003_82_2024_07_06_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240707_230902_4160001_1_4004_2024_07_07"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240707_230902_4160001_1_4004_2024_07_07_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-07"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240707_230902_4160001_1_4004_2024_07_07_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240709_083032_0034710_010_19_2024_07_09"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240709_083032_0034710_010_19_2024_07_09_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-09"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240709_083032_0034710_010_19_2024_07_09_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240709_190245_0033140_252_186_2024_07_09"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240709_190245_0033140_252_186_2024_07_09_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-09"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240709_190245_0033140_252_186_2024_07_09_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240712_183653_0036425_041_261_2024_07_12"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240712_183653_0036425_041_261_2024_07_12_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-12"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240712_183653_0036425_041_261_2024_07_12_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240712_193020_0034320_254_223_2024_07_12"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240712_193020_0034320_254_223_2024_07_12_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-12"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240712_193020_0034320_254_223_2024_07_12_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240716_102612_2022501_880_5410_2024_07_16"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240716_102612_2022501_880_5410_2024_07_16_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-16"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240716_102612_2022501_880_5410_2024_07_16_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240717_124707_0033140_253_109_2024_07_17"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240717_124707_0033140_253_109_2024_07_17_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-17"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240717_124707_0033140_253_109_2024_07_17_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240718_151034_0033140_001_514_2024_07_18"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240718_151034_0033140_001_514_2024_07_18_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-18"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240718_151034_0033140_001_514_2024_07_18_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240719_164124_0033220_255_71_2024_07_19"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240719_164124_0033220_255_71_2024_07_19_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-19"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240719_164124_0033220_255_71_2024_07_19_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240724_132354_0150397_001_285_2024_07_24"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240724_132354_0150397_001_285_2024_07_24_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-24"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240724_132354_0150397_001_285_2024_07_24_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240725_103646_0036410_252_4_2024_07_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240725_103646_0036410_252_4_2024_07_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240725_103646_0036410_252_4_2024_07_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240726_144526_0036402_044_285_2024_07_26"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240726_144526_0036402_044_285_2024_07_26_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-26"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240726_144526_0036402_044_285_2024_07_26_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240726_145502_0036400_001_216_2024_07_26"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240726_145502_0036400_001_216_2024_07_26_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-26"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240726_145502_0036400_001_216_2024_07_26_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240731_163707_0033140_001_698_2024_07_31"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240731_163707_0033140_001_698_2024_07_31_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-07-31"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240731_163707_0033140_001_698_2024_07_31_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240803_162730_0033140_001_615_2024_08_03"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240803_162730_0033140_001_615_2024_08_03_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-03"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240803_162730_0033140_001_615_2024_08_03_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240803_230507_4160001_1_2132_2024_08_03"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240803_230507_4160001_1_2132_2024_08_03_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-03"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240803_230507_4160001_1_2132_2024_08_03_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240804_230602_4160002_1_1927_2024_08_04"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240804_230602_4160002_1_1927_2024_08_04_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-04"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240804_230602_4160002_1_1927_2024_08_04_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240806_104849_0036410_001_65_2024_08_06"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240806_104849_0036410_001_65_2024_08_06_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-06"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240806_104849_0036410_001_65_2024_08_06_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240808_081226_0034530_258_2_2024_08_08"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240808_081226_0034530_258_2_2024_08_08_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-08"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240808_081226_0034530_258_2_2024_08_08_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240808_114918_0033140_253_71_2024_08_08"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240808_114918_0033140_253_71_2024_08_08_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-08"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240808_114918_0033140_253_71_2024_08_08_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240810_090322_0033390_251_3_2024_08_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240810_090322_0033390_251_3_2024_08_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240810_090322_0033390_251_3_2024_08_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240810_101033_0033140_251_43_2024_08_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240810_101033_0033140_251_43_2024_08_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240810_101033_0033140_251_43_2024_08_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240810_150927_0034540_002_419_2024_08_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240810_150927_0034540_002_419_2024_08_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240810_150927_0034540_002_419_2024_08_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240816_185059_0033390_001_818_2024_08_16"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240816_185059_0033390_001_818_2024_08_16_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-16"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240816_185059_0033390_001_818_2024_08_16_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240817_140716_0034530_267_29_2024_08_17"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240817_140716_0034530_267_29_2024_08_17_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-17"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240817_140716_0034530_267_29_2024_08_17_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240820_175149_0033140_251_160_2024_08_20"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240820_175149_0033140_251_160_2024_08_20_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-20"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240820_175149_0033140_251_160_2024_08_20_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240821_155110_0033220_256_134_2024_08_21"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240821_155110_0033220_256_134_2024_08_21_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-21"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240821_155110_0033220_256_134_2024_08_21_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240823_195936_0033140_252_202_2024_08_23"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240823_195936_0033140_252_202_2024_08_23_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-23"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240823_195936_0033140_252_202_2024_08_23_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240825_145718_4167296_2_8903_2024_08_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240825_145718_4167296_2_8903_2024_08_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240825_145718_4167296_2_8903_2024_08_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240825_163023_4167296_2_8981_2024_08_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240825_163023_4167296_2_8981_2024_08_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240825_163023_4167296_2_8981_2024_08_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240825_181138_4167296_2_9067_2024_08_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240825_181138_4167296_2_9067_2024_08_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240825_181138_4167296_2_9067_2024_08_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240828_155403_0033220_256_156_2024_08_28"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240828_155403_0033220_256_156_2024_08_28_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-28"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240828_155403_0033220_256_156_2024_08_28_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240828_183705_0033140_001_873_2024_08_28"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240828_183705_0033140_001_873_2024_08_28_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-28"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240828_183705_0033140_001_873_2024_08_28_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240829_093403_0033390_001_65_2024_08_29"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240829_093403_0033390_001_65_2024_08_29_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-29"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240829_093403_0033390_001_65_2024_08_29_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240830_200159_0033140_001_955_2024_08_30"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240830_200159_0033140_001_955_2024_08_30_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-08-30"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240830_200159_0033140_001_955_2024_08_30_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240903_184114_0033091_001_615_2024_09_03"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240903_184114_0033091_001_615_2024_09_03_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-03"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240903_184114_0033091_001_615_2024_09_03_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240904_182747_0033140_251_224_2024_09_04"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240904_182747_0033140_251_224_2024_09_04_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-04"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240904_182747_0033140_251_224_2024_09_04_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240910_194343_0033140_251_237_2024_09_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240910_194343_0033140_251_237_2024_09_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240910_194343_0033140_251_237_2024_09_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240910_194753_0033140_252_215_2024_09_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240910_194753_0033140_252_215_2024_09_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240910_194753_0033140_252_215_2024_09_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240911_162518_0034440_251_283_2024_09_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240911_162518_0034440_251_283_2024_09_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240911_162518_0034440_251_283_2024_09_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240911_184549_0033140_251_205_2024_09_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240911_184549_0033140_251_205_2024_09_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240911_184549_0033140_251_205_2024_09_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240914_163535_0150397_001_692_2024_09_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240914_163535_0150397_001_692_2024_09_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240914_163535_0150397_001_692_2024_09_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240917_193859_0033140_251_222_2024_09_17"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240917_193859_0033140_251_222_2024_09_17_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-17"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240917_193859_0033140_251_222_2024_09_17_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240920_112131_0033220_253_56_2024_09_20"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240920_112131_0033220_253_56_2024_09_20_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-20"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240920_112131_0033220_253_56_2024_09_20_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20240921_112223_4797469_2_1017_2024_09_21"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20240921_112223_4797469_2_1017_2024_09_21_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-09-21"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20240921_112223_4797469_2_1017_2024_09_21_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241009_184546_0033140_001_821_2024_10_09"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241009_184546_0033140_001_821_2024_10_09_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-10-09"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241009_184546_0033140_001_821_2024_10_09_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241010_163033_0033140_001_602_2024_10_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241010_163033_0033140_001_602_2024_10_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-10-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241010_163033_0033140_001_602_2024_10_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241011_100734_0033140_001_146_2024_10_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241011_100734_0033140_001_146_2024_10_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-10-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241011_100734_0033140_001_146_2024_10_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241014_183558_0036410_254_50_2024_10_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241014_183558_0036410_254_50_2024_10_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-10-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241014_183558_0036410_254_50_2024_10_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241015_193619_0033140_001_991_2024_10_15"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241015_193619_0033140_001_991_2024_10_15_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-10-15"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241015_193619_0033140_001_991_2024_10_15_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241020_232201_4160001_1_605_2024_10_20"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241020_232201_4160001_1_605_2024_10_20_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-10-20"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241020_232201_4160001_1_605_2024_10_20_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241025_114320_0033140_251_57_2024_10_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241025_114320_0033140_251_57_2024_10_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-10-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241025_114320_0033140_251_57_2024_10_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241026_165722_0033140_001_654_2024_10_26"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241026_165722_0033140_001_654_2024_10_26_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-10-26"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241026_165722_0033140_001_654_2024_10_26_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241102_103002_0033091_002_58_2024_11_02"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241102_103002_0033091_002_58_2024_11_02_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-02"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241102_103002_0033091_002_58_2024_11_02_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241105_165027_0033220_255_150_2024_11_05"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241105_165027_0033220_255_150_2024_11_05_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-05"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241105_165027_0033220_255_150_2024_11_05_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241109_112755_0033140_252_49_2024_11_09"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241109_112755_0033140_252_49_2024_11_09_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-09"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241109_112755_0033140_252_49_2024_11_09_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241110_172930_4167190_2_703_2024_11_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241110_172930_4167190_2_703_2024_11_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241110_172930_4167190_2_703_2024_11_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241113_184924_0150082_270_197_2024_11_13"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241113_184924_0150082_270_197_2024_11_13_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-13"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241113_184924_0150082_270_197_2024_11_13_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241115_162801_0033091_001_471_2024_11_15"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241115_162801_0033091_001_471_2024_11_15_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-15"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241115_162801_0033091_001_471_2024_11_15_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241118_191705_0033140_253_295_2024_11_18"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241118_191705_0033140_253_295_2024_11_18_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-18"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241118_191705_0033140_253_295_2024_11_18_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241120_171311_0033220_251_218_2024_11_20"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241120_171311_0033220_251_218_2024_11_20_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-20"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241120_171311_0033220_251_218_2024_11_20_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241122_192035_0033140_001_826_2024_11_22"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241122_192035_0033140_001_826_2024_11_22_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-22"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241122_192035_0033140_001_826_2024_11_22_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241127_185922_0033091_255_174_2024_11_27"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241127_185922_0033091_255_174_2024_11_27_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-27"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241127_185922_0033091_255_174_2024_11_27_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241129_184735_0033140_001_750_2024_11_29"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241129_184735_0033140_001_750_2024_11_29_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-29"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241129_184735_0033140_001_750_2024_11_29_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241130_163142_0033140_253_219_2024_11_30"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241130_163142_0033140_253_219_2024_11_30_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-11-30"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241130_163142_0033140_253_219_2024_11_30_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241203_143430_0033220_255_77_2024_12_03"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241203_143430_0033220_255_77_2024_12_03_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-03"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241203_143430_0033220_255_77_2024_12_03_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241204_173509_0034710_266_190_2024_12_04"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241204_173509_0034710_266_190_2024_12_04_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-04"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241204_173509_0034710_266_190_2024_12_04_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241206_181340_0033140_253_264_2024_12_06"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241206_181340_0033140_253_264_2024_12_06_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-06"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241206_181340_0033140_253_264_2024_12_06_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241210_140706_0033220_255_102_2024_12_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241210_140706_0033220_255_102_2024_12_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241210_140706_0033220_255_102_2024_12_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241211_123555_0036402_041_40_2024_12_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241211_123555_0036402_041_40_2024_12_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241211_123555_0036402_041_40_2024_12_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241211_124003_0034710_271_64_2024_12_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241211_124003_0034710_271_64_2024_12_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241211_124003_0034710_271_64_2024_12_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241211_173350_0033140_253_188_2024_12_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241211_173350_0033140_253_188_2024_12_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241211_173350_0033140_253_188_2024_12_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241214_165412_0034320_002_122_2024_12_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241214_165412_0034320_002_122_2024_12_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241214_165412_0034320_002_122_2024_12_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241215_191344_4167190_2_3872_2024_12_15"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241215_191344_4167190_2_3872_2024_12_15_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-15"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241215_191344_4167190_2_3872_2024_12_15_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241216_120409_0150397_001_195_2024_12_16"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241216_120409_0150397_001_195_2024_12_16_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-16"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241216_120409_0150397_001_195_2024_12_16_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241218_185507_0033091_001_572_2024_12_18"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241218_185507_0033091_001_572_2024_12_18_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-18"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241218_185507_0033091_001_572_2024_12_18_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241220_133510_0036410_254_29_2024_12_20"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241220_133510_0036410_254_29_2024_12_20_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-20"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241220_133510_0036410_254_29_2024_12_20_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241221_115657_0036400_252_75_2024_12_21"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241221_115657_0036400_252_75_2024_12_21_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-21"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241221_115657_0036400_252_75_2024_12_21_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241223_155400_0034320_008_204_2024_12_23"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241223_155400_0034320_008_204_2024_12_23_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-23"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241223_155400_0034320_008_204_2024_12_23_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241223_202739_4167190_1_8721_2024_12_23"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241223_202739_4167190_1_8721_2024_12_23_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-23"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241223_202739_4167190_1_8721_2024_12_23_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241224_142155_0036410_255_29_2024_12_24"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241224_142155_0036410_255_29_2024_12_24_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-24"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241224_142155_0036410_255_29_2024_12_24_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241226_112832_4797373_2_9689_2024_12_26"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241226_112832_4797373_2_9689_2024_12_26_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-26"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241226_112832_4797373_2_9689_2024_12_26_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241228_092135_0033091_252_12_2024_12_28"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241228_092135_0033091_252_12_2024_12_28_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-28"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241228_092135_0033091_252_12_2024_12_28_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20241231_110614_0034710_251_21_2024_12_31"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20241231_110614_0034710_251_21_2024_12_31_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2024-12-31"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20241231_110614_0034710_251_21_2024_12_31_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250106_170205_0033390_254_71_2025_01_06"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250106_170205_0033390_254_71_2025_01_06_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-06"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250106_170205_0033390_254_71_2025_01_06_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250106_170925_0033140_253_213_2025_01_06"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250106_170925_0033140_253_213_2025_01_06_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-06"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250106_170925_0033140_253_213_2025_01_06_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250108_184754_0033140_001_746_2025_01_08"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250108_184754_0033140_001_746_2025_01_08_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-08"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250108_184754_0033140_001_746_2025_01_08_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250110_142910_0034530_258_40_2025_01_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250110_142910_0034530_258_40_2025_01_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250110_142910_0034530_258_40_2025_01_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250110_205400_0033091_001_587_2025_01_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250110_205400_0033091_001_587_2025_01_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250110_205400_0033091_001_587_2025_01_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250111_102127_0033091_002_30_2025_01_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250111_102127_0033091_002_30_2025_01_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250111_102127_0033091_002_30_2025_01_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250111_124407_0033140_252_65_2025_01_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250111_124407_0033140_252_65_2025_01_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250111_124407_0033140_252_65_2025_01_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250111_152919_4167190_1_90_2025_01_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250111_152919_4167190_1_90_2025_01_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250111_152919_4167190_1_90_2025_01_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250115_170328_0033140_253_178_2025_01_15"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250115_170328_0033140_253_178_2025_01_15_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-15"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250115_170328_0033140_253_178_2025_01_15_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250120_162813_0033220_254_158_2025_01_20"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250120_162813_0033220_254_158_2025_01_20_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-20"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250120_162813_0033220_254_158_2025_01_20_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250124_131802_0034710_012_214_2025_01_24"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250124_131802_0034710_012_214_2025_01_24_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-24"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250124_131802_0034710_012_214_2025_01_24_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250124_140800_4020000_216_675_2025_01_24"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250124_140800_4020000_216_675_2025_01_24_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-24"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250124_140800_4020000_216_675_2025_01_24_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250125_155515_0033140_001_571_2025_01_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250125_155515_0033140_001_571_2025_01_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250125_155515_0033140_001_571_2025_01_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250125_160457_0033140_252_142_2025_01_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250125_160457_0033140_252_142_2025_01_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250125_160457_0033140_252_142_2025_01_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250129_170918_0033220_253_145_2025_01_29"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250129_170918_0033220_253_145_2025_01_29_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-01-29"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250129_170918_0033220_253_145_2025_01_29_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250203_073628_0033115_256_74_2025_02_03"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250203_073628_0033115_256_74_2025_02_03_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-03"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250203_073628_0033115_256_74_2025_02_03_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250205_073008_0033115_002_126_2025_02_05"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250205_073008_0033115_002_126_2025_02_05_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-05"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250205_073008_0033115_002_126_2025_02_05_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250210_171826_0033390_001_572_2025_02_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250210_171826_0033390_001_572_2025_02_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250210_171826_0033390_001_572_2025_02_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250211_085253_0033140_001_61_2025_02_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250211_085253_0033140_001_61_2025_02_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250211_085253_0033140_001_61_2025_02_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250212_131533_0033630_253_99_2025_02_12"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250212_131533_0033630_253_99_2025_02_12_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-12"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250212_131533_0033630_253_99_2025_02_12_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250214_115742_0033220_251_106_2025_02_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250214_115742_0033220_251_106_2025_02_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250214_115742_0033220_251_106_2025_02_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250214_173214_0034710_272_220_2025_02_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250214_173214_0034710_272_220_2025_02_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250214_173214_0034710_272_220_2025_02_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250214_190215_0033140_001_822_2025_02_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250214_190215_0033140_001_822_2025_02_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250214_190215_0033140_001_822_2025_02_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250214_190337_0033140_001_823_2025_02_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250214_190337_0033140_001_823_2025_02_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250214_190337_0033140_001_823_2025_02_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250217_190205_4167190_1_4033_2025_02_17"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250217_190205_4167190_1_4033_2025_02_17_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-17"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250217_190205_4167190_1_4033_2025_02_17_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250217_190937_0033140_001_935_2025_02_17"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250217_190937_0033140_001_935_2025_02_17_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-17"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250217_190937_0033140_001_935_2025_02_17_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250219_173539_0033140_252_154_2025_02_19"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250219_173539_0033140_252_154_2025_02_19_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-19"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250219_173539_0033140_252_154_2025_02_19_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250222_133954_0033140_001_398_2025_02_22"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250222_133954_0033140_001_398_2025_02_22_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-22"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250222_133954_0033140_001_398_2025_02_22_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250222_165731_0033140_001_650_2025_02_22"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250222_165731_0033140_001_650_2025_02_22_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-22"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250222_165731_0033140_001_650_2025_02_22_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250223_082549_0033115_260_35_2025_02_23"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250223_082549_0033115_260_35_2025_02_23_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-23"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250223_082549_0033115_260_35_2025_02_23_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250223_111612_0025340_081_238_2025_02_23"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250223_111612_0025340_081_238_2025_02_23_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-23"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250223_111612_0025340_081_238_2025_02_23_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250226_185407_0033140_001_898_2025_02_26"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250226_185407_0033140_001_898_2025_02_26_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-02-26"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250226_185407_0033140_001_898_2025_02_26_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250302_193525_0033115_002_697_2025_03_02"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250302_193525_0033115_002_697_2025_03_02_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-02"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250302_193525_0033115_002_697_2025_03_02_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250303_192131_0033140_001_921_2025_03_03"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250303_192131_0033140_001_921_2025_03_03_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-03"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250303_192131_0033140_001_921_2025_03_03_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250305_151322_0150397_001_404_2025_03_05"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250305_151322_0150397_001_404_2025_03_05_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-05"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250305_151322_0150397_001_404_2025_03_05_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250310_172614_0033140_251_204_2025_03_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250310_172614_0033140_251_204_2025_03_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250310_172614_0033140_251_204_2025_03_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250311_085056_0033140_001_81_2025_03_11"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250311_085056_0033140_001_81_2025_03_11_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-11"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250311_085056_0033140_001_81_2025_03_11_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250312_172410_0033220_001_551_2025_03_12"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250312_172410_0033220_001_551_2025_03_12_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-12"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250312_172410_0033220_001_551_2025_03_12_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250314_160743_0033140_001_715_2025_03_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250314_160743_0033140_001_715_2025_03_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250314_160743_0033140_001_715_2025_03_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250316_113339_0034530_003_124_2025_03_16"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250316_113339_0034530_003_124_2025_03_16_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-16"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250316_113339_0034530_003_124_2025_03_16_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250317_170728_0033220_254_182_2025_03_17"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250317_170728_0033220_254_182_2025_03_17_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-17"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250317_170728_0033220_254_182_2025_03_17_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250318_114818_0033140_253_59_2025_03_18"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250318_114818_0033140_253_59_2025_03_18_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-18"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250318_114818_0033140_253_59_2025_03_18_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250322_093746_4167190_2_5228_2025_03_22"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250322_093746_4167190_2_5228_2025_03_22_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-22"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250322_093746_4167190_2_5228_2025_03_22_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250325_084422_0033140_254_6_2025_03_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250325_084422_0033140_254_6_2025_03_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250325_084422_0033140_254_6_2025_03_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250326_094200_4020000_899_3233_2025_03_26"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250326_094200_4020000_899_3233_2025_03_26_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-26"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250326_094200_4020000_899_3233_2025_03_26_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250327_185356_0033091_001_590_2025_03_27"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250327_185356_0033091_001_590_2025_03_27_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-27"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250327_185356_0033091_001_590_2025_03_27_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250329_161918_0033140_001_571_2025_03_29"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250329_161918_0033140_001_571_2025_03_29_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-03-29"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250329_161918_0033140_001_571_2025_03_29_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250401_155053_0033140_254_55_2025_04_01"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250401_155053_0033140_254_55_2025_04_01_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-01"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250401_155053_0033140_254_55_2025_04_01_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250404_092802_0033140_254_10_2025_04_04"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250404_092802_0033140_254_10_2025_04_04_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-04"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250404_092802_0033140_254_10_2025_04_04_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250408_175104_0033140_001_662_2025_04_08"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250408_175104_0033140_001_662_2025_04_08_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-08"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250408_175104_0033140_001_662_2025_04_08_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250410_175928_0033140_001_706_2025_04_10"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250410_175928_0033140_001_706_2025_04_10_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-10"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250410_175928_0033140_001_706_2025_04_10_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250414_120100_4020000_899_1356_2025_04_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250414_120100_4020000_899_1356_2025_04_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250414_120100_4020000_899_1356_2025_04_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250416_173250_0033140_001_636_2025_04_16"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250416_173250_0033140_001_636_2025_04_16_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-16"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250416_173250_0033140_001_636_2025_04_16_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250417_100836_0034440_253_49_2025_04_17"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250417_100836_0034440_253_49_2025_04_17_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-17"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250417_100836_0034440_253_49_2025_04_17_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250420_124504_0034530_004_100_2025_04_20"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250420_124504_0034530_004_100_2025_04_20_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-20"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250420_124504_0034530_004_100_2025_04_20_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250422_174451_0033140_253_213_2025_04_22"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250422_174451_0033140_253_213_2025_04_22_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-22"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250422_174451_0033140_253_213_2025_04_22_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250425_204913_0033091_001_645_2025_04_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250425_204913_0033091_001_645_2025_04_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250425_204913_0033091_001_645_2025_04_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250425_211544_4167190_1_1596_2025_04_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250425_211544_4167190_1_1596_2025_04_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250425_211544_4167190_1_1596_2025_04_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250430_172025_0033140_001_623_2025_04_30"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250430_172025_0033140_001_623_2025_04_30_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-30"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250430_172025_0033140_001_623_2025_04_30_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250430_172046_0033140_001_624_2025_04_30"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250430_172046_0033140_001_624_2025_04_30_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-04-30"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250430_172046_0033140_001_624_2025_04_30_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250502_132226_0034530_272_107_2025_05_02"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250502_132226_0034530_272_107_2025_05_02_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-02"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250502_132226_0034530_272_107_2025_05_02_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250505_095348_0036410_004_16_2025_05_05"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250505_095348_0036410_004_16_2025_05_05_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-05"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250505_095348_0036410_004_16_2025_05_05_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250505_095429_0036410_004_17_2025_05_05"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250505_095429_0036410_004_17_2025_05_05_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-05"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250505_095429_0036410_004_17_2025_05_05_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250505_104837_0033140_253_33_2025_05_05"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250505_104837_0033140_253_33_2025_05_05_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-05"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250505_104837_0033140_253_33_2025_05_05_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250505_191826_0033140_257_80_2025_05_05"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250505_191826_0033140_257_80_2025_05_05_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-05"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250505_191826_0033140_257_80_2025_05_05_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250506_114428_0033140_256_16_2025_05_06"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250506_114428_0033140_256_16_2025_05_06_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-06"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250506_114428_0033140_256_16_2025_05_06_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250507_153132_0033390_251_121_2025_05_07"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250507_153132_0033390_251_121_2025_05_07_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-07"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250507_153132_0033390_251_121_2025_05_07_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250512_163023_0033140_001_651_2025_05_12"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250512_163023_0033140_001_651_2025_05_12_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-12"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250512_163023_0033140_001_651_2025_05_12_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250513_114715_0033140_257_25_2025_05_13"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250513_114715_0033140_257_25_2025_05_13_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-13"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250513_114715_0033140_257_25_2025_05_13_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250514_164134_0034710_010_526_2025_05_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250514_164134_0034710_010_526_2025_05_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250514_164134_0034710_010_526_2025_05_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250514_183402_0033140_257_65_2025_05_14"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250514_183402_0033140_257_65_2025_05_14_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-14"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250514_183402_0033140_257_65_2025_05_14_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250515_111147_0034530_267_26_2025_05_15"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250515_111147_0034530_267_26_2025_05_15_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-15"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250515_111147_0034530_267_26_2025_05_15_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250519_192011_0033140_257_114_2025_05_19"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250519_192011_0033140_257_114_2025_05_19_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-19"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250519_192011_0033140_257_114_2025_05_19_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250519_200053_0033140_253_288_2025_05_19"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250519_200053_0033140_253_288_2025_05_19_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-19"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250519_200053_0033140_253_288_2025_05_19_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250520_085154_4167190_2_1043_2025_05_20"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250520_085154_4167190_2_1043_2025_05_20_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-20"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250520_085154_4167190_2_1043_2025_05_20_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250520_185318_0033220_001_1005_2025_05_20"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250520_185318_0033220_001_1005_2025_05_20_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-20"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250520_185318_0033220_001_1005_2025_05_20_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250521_183105_0033140_002_70_2025_05_21"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250521_183105_0033140_002_70_2025_05_21_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-21"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250521_183105_0033140_002_70_2025_05_21_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250526_171812_0033220_256_194_2025_05_26"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250526_171812_0033220_256_194_2025_05_26_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-26"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250526_171812_0033220_256_194_2025_05_26_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250527_115146_0033140_254_29_2025_05_27"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250527_115146_0033140_254_29_2025_05_27_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-05-27"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250527_115146_0033140_254_29_2025_05_27_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250602_164836_0033220_001_709_2025_06_02"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250602_164836_0033220_001_709_2025_06_02_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-02"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250602_164836_0033220_001_709_2025_06_02_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250603_114235_0033140_257_20_2025_06_03"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250603_114235_0033140_257_20_2025_06_03_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-03"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250603_114235_0033140_257_20_2025_06_03_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250604_183330_0033140_001_926_2025_06_04"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250604_183330_0033140_001_926_2025_06_04_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-04"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250604_183330_0033140_001_926_2025_06_04_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250607_165926_0033140_001_703_2025_06_07"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250607_165926_0033140_001_703_2025_06_07_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-07"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250607_165926_0033140_001_703_2025_06_07_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250608_160106_0034530_004_506_2025_06_08"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250608_160106_0034530_004_506_2025_06_08_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-08"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250608_160106_0034530_004_506_2025_06_08_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250616_170549_0034360_256_192_2025_06_16"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250616_170549_0034360_256_192_2025_06_16_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-16"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250616_170549_0034360_256_192_2025_06_16_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250616_193513_0033140_001_1135_2025_06_16"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250616_193513_0033140_001_1135_2025_06_16_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-16"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250616_193513_0033140_001_1135_2025_06_16_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250619_101323_0033140_251_38_2025_06_19"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250619_101323_0033140_251_38_2025_06_19_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-19"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250619_101323_0033140_251_38_2025_06_19_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250622_151046_4167190_2_464_2025_06_22"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250622_151046_4167190_2_464_2025_06_22_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-22"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250622_151046_4167190_2_464_2025_06_22_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250625_163413_0034710_271_105_2025_06_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250625_163413_0034710_271_105_2025_06_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250625_163413_0034710_271_105_2025_06_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250625_173257_0033140_001_871_2025_06_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250625_173257_0033140_001_871_2025_06_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250625_173257_0033140_001_871_2025_06_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250625_173504_0033140_257_63_2025_06_25"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250625_173504_0033140_257_63_2025_06_25_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-25"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250625_173504_0033140_257_63_2025_06_25_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250627_184626_0033091_251_260_2025_06_27"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250627_184626_0033091_251_260_2025_06_27_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-27"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250627_184626_0033091_251_260_2025_06_27_receipt"
+				}
+			},
+			{
+				"transaction": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/tx/Receipt_20250627_193645_0033091_251_279_2025_06_27"
+				},
+				"amount": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/ma/Receipt_20250627_193645_0033091_251_279_2025_06_27_amount"
+				},
+				"card": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/card/PaymentCard_4731042107549834"
+				},
+				"date": {
+					"datatype": "http://www.w3.org/2001/XMLSchema#date",
+					"type": "literal",
+					"value": "2025-06-27"
+				},
+				"receipt": {
+					"type": "uri",
+					"value": "https://static.rwpz.net/spendcast/receipt/Receipt_20250627_193645_0033091_251_279_2025_06_27_receipt"
+				}
+			}
+		]
+	}
+}
