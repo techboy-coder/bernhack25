@@ -3,6 +3,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { ModeWatcher } from 'mode-watcher';
 	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
+	import { Toaster } from '$lib/components/ui/sonner';
 
 	let { children } = $props();
 
@@ -29,5 +30,6 @@
 				{@render children?.()}
 			</Sidebar.Inset>
 		</Sidebar.Provider>
+		<Toaster />
 	</div>
 </QueryClientProvider>

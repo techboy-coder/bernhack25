@@ -41,18 +41,18 @@
 	}
 
 	function getMessageWidth(message: Message): string {
-		// User messages: 30% width
+		// User messages: fit content with reasonable max width
 		if (message.isUser) {
-			return 'max-w-[30%]';
+			return 'max-w-[70%] w-fit';
 		}
 
-		// AI component responses: 80% width
+		// AI component responses: wider for components but still fit content
 		if (message.aiDecision?.type === 'component') {
 			return 'max-w-[80%]';
 		}
 
-		// Generic AI responses: 30% width
-		return 'max-w-[50%]';
+		// Generic AI responses: fit content with reasonable max width
+		return 'max-w-[70%] w-fit';
 	}
 
 	function shouldShowComponent(message: Message): boolean {

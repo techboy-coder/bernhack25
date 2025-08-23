@@ -18,6 +18,30 @@
 	let messages: Message[] = $state([]);
 	let inputValue = $state('');
 	let isLoading = $state(false);
+	let messagesContainerRef: HTMLElement | null = $state(null);
+
+	// Auto-scroll to bottom when messages change
+	$effect(() => {
+		if (messagesContainerRef && messages.length > 0) {
+			// Use setTimeout to ensure DOM has updated
+			setTimeout(() => {
+				if (messagesContainerRef) {
+					messagesContainerRef.scrollTop = messagesContainerRef.scrollHeight;
+				}
+			}, 100);
+		}
+	});
+
+	// Also auto-scroll when loading state changes (for smooth transition when AI responds)
+	$effect(() => {
+		if (messagesContainerRef && !isLoading && messages.length > 0) {
+			setTimeout(() => {
+				if (messagesContainerRef) {
+					messagesContainerRef.scrollTop = messagesContainerRef.scrollHeight;
+				}
+			}, 100);
+		}
+	});
 
 	async function handleSend(message: string) {
 		const newMessage: Message = {
@@ -123,6 +147,7 @@
 		<!-- Messages Area -->
 		<div
 			class="flex-1 h-[70vh] overflow-y-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:'none']"
+			bind:this={messagesContainerRef}
 		>
 			<ChatMessages {messages} {isLoading} />
 		</div>

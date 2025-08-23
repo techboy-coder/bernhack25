@@ -434,10 +434,6 @@ const api = new Hono()
     return proxy(`http://${OCR_HOSTNAME}:${OCR_PORT}/receipt-ocr`, c.req); });
 
 const app = new Hono()
-  .route("/api", api)
-  .route("/ai", ai_hono)
-  .get("/", (c) => c.text("Banking API Server"))
-  // Enable CORS for frontend communication
   .use(
     "/*",
     cors({
@@ -451,7 +447,10 @@ const app = new Hono()
       allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       credentials: true,
     })
-  );
+  )
+  .route("/api", api)
+  .route("/ai", ai_hono)
+  .get("/", (c) => c.text("Banking API Server"));
 
 export default app;
 
