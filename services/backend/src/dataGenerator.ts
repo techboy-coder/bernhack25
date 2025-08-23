@@ -1025,8 +1025,8 @@ class RealisticDataGenerator {
         amount: 1550, // Adjusted for inflation over 5 years
         name: "Rent",
         category: ExpenseCategory.HOUSING,
-        frequency: "monthly",
-        startDate: "2025-09-01T00:00:00.000Z",
+        frequency: "monthly" as const,
+        startDate: "2020-08-01T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1034,8 +1034,8 @@ class RealisticDataGenerator {
         amount: 105,
         name: "Internet & Phone",
         category: ExpenseCategory.UTILITIES,
-        frequency: "monthly",
-        startDate: "2025-08-28T00:00:00.000Z",
+        frequency: "monthly" as const,
+        startDate: "2020-08-15T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1043,8 +1043,8 @@ class RealisticDataGenerator {
         amount: 250,
         name: "Health Insurance",
         category: ExpenseCategory.HEALTHCARE,
-        frequency: "monthly",
-        startDate: "2025-09-01T00:00:00.000Z",
+        frequency: "monthly" as const,
+        startDate: "2020-09-01T00:00:00.000Z",
         autoPay: false,
       },
       {
@@ -1052,8 +1052,8 @@ class RealisticDataGenerator {
         amount: 95,
         name: "Mobile Phone",
         category: ExpenseCategory.UTILITIES,
-        frequency: "monthly",
-        startDate: "2025-08-25T00:00:00.000Z",
+        frequency: "monthly" as const,
+        startDate: "2020-08-25T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1061,8 +1061,8 @@ class RealisticDataGenerator {
         amount: 55,
         name: "Gym Membership",
         category: ExpenseCategory.ENTERTAINMENT,
-        frequency: "monthly",
-        startDate: "2025-09-15T00:00:00.000Z",
+        frequency: "monthly" as const,
+        startDate: "2020-09-15T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1070,8 +1070,8 @@ class RealisticDataGenerator {
         amount: 450,
         name: "Retirement Contribution",
         category: ExpenseCategory.OTHER,
-        frequency: "monthly",
-        startDate: "2025-08-30T00:00:00.000Z",
+        frequency: "monthly" as const,
+        startDate: "2020-08-30T00:00:00.000Z",
         autoPay: true,
       },
       {
@@ -1079,8 +1079,8 @@ class RealisticDataGenerator {
         amount: 350,
         name: "Marriage Fund Transfer",
         category: ExpenseCategory.OTHER,
-        frequency: "monthly",
-        startDate: "2025-08-25T00:00:00.000Z",
+        frequency: "monthly" as const,
+        startDate: "2022-08-25T00:00:00.000Z", // Started 2 years later for marriage savings
         autoPay: true,
       },
     ];
