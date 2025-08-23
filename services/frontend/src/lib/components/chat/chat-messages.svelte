@@ -1,6 +1,13 @@
 <script lang="ts">
 	import { Avatar, AvatarImage, AvatarFallback } from '$lib/components/ui/avatar/index.js';
 	import { cn } from '$lib/utils.js';
+	import { Loader2 } from 'lucide-svelte';
+	import type { AIDecision } from '$lib/api.js';
+	import ComponentRegistry from '../ai/component-registry.svelte';
+
+	// Import components dynamically
+	import AccountsOverview from '$lib/blocks/AccountsOverview.svelte';
+	import SavingsProfiles from '$lib/blocks/SavingsProfiles.svelte';
 
 	interface Message {
 		id: string;
@@ -11,14 +18,17 @@
 		};
 		timestamp: Date;
 		isUser: boolean;
+		aiDecision?: AIDecision;
 	}
 
 	let {
 		messages = [],
+		isLoading = false,
 		class: className,
 		...restProps
 	}: {
 		messages: Message[];
+		isLoading?: boolean;
 		class?: string;
 	} = $props();
 
@@ -29,14 +39,37 @@
 			hour12: false
 		}).format(date);
 	}
+
+	function getMessageWidth(message: Message): string {
+		// User messages: 30% width
+		if (message.isUser) {
+			return 'max-w-[50%]';
+		}
+
+		// AI component responses: 80% width
+		if (message.aiDecision?.type === 'component') {
+			return 'max-w-[80%]';
+		}
+
+		// Generic AI responses: 30% width
+		return 'max-w-[50%]';
+	}
+
+	function shouldShowComponent(message: Message): boolean {
+		return !message.isUser && message.aiDecision?.type === 'component';
+	}
+
+	function getComponentName(message: Message): string {
+		return message.aiDecision?.content || '';
+	}
 </script>
 
 <div class={cn('flex flex-col gap-4 p-4', className)} {...restProps}>
 	{#if messages.length === 0}
 		<div class="text-muted-foreground flex flex-col items-center justify-center py-16 text-center">
 			<div class="mb-4 text-6xl">💬</div>
-			<h3 class="mb-2 text-lg font-medium">Start a conversation</h3>
-			<p class="text-sm">Type a message below to get started. Use / for commands.</p>
+			<h3 class="mb-2 text-lg font-medium">Start a conversation with Ueli</h3>
+			<p class="text-sm">Ask about your finances, transactions, or savings goals.</p>
 		</div>
 	{:else}
 		{#each messages as message (message.id)}
@@ -44,7 +77,7 @@
 				<Avatar class="size-8 shrink-0">
 					<AvatarImage src={message.author.avatar} alt={message.author.name} />
 					<AvatarFallback class="bg-primary text-primary-foreground text-xs">
-						{message.author.name.slice(0, 2).toUpperCase()}
+						{message.author.name === 'Ueli' ? '🤖' : message.author.name.slice(0, 2).toUpperCase()}
 					</AvatarFallback>
 				</Avatar>
 
@@ -55,16 +88,55 @@
 						</span>
 					</div>
 
-					<div
-						class={cn(
-							'max-w-[80%] rounded-lg border border-input/75 p-3 text-sm shadow-sm',
-							message.isUser ? 'bg-background/30 text-foreground ml-auto' : 'bg-background/20'
-						)}
-					>
-						{message.content}
-					</div>
+					<!-- Regular message content -->
+					{#if !shouldShowComponent(message)}
+						<div
+							class={cn(
+								'rounded-lg border border-input/75 p-3 text-sm shadow-sm',
+								getMessageWidth(message),
+								message.isUser ? 'bg-background/30 text-foreground ml-auto' : 'bg-background/20'
+							)}
+						>
+							{message.content}
+						</div>
+					{:else}
+						<!-- Component rendering -->
+						<div
+							class={cn('rounded-lg border border-input/75 shadow-sm', getMessageWidth(message))}
+						>
+							<!-- Component header with explanation -->
+							<div class="bg-background/20 p-3 border-b border-input/50">
+								<p class="text-sm text-foreground">{message.content}</p>
+							</div>
+
+							<!-- Component content -->
+							<ComponentRegistry componentName={getComponentName(message)} />
+						</div>
+					{/if}
 				</div>
 			</div>
 		{/each}
+	{/if}
+
+	<!-- Loading indicator -->
+	{#if isLoading}
+		<div class="flex gap-3">
+			<Avatar class="size-8 shrink-0">
+				<AvatarFallback class="bg-primary text-primary-foreground text-xs">🤖</AvatarFallback>
+			</Avatar>
+			<div class="flex-1 space-y-1">
+				<div class="flex items-center gap-2">
+					<span class="text-foreground text-sm font-medium pr-1">Ueli</span>
+				</div>
+				<div
+					class="max-w-[30%] rounded-lg border border-input/75 p-3 text-sm shadow-sm bg-background/20"
+				>
+					<div class="flex items-center gap-2">
+						<Loader2 class="size-4 animate-spin" />
+						<span>Thinking...</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	{/if}
 </div>

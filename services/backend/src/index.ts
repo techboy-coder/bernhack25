@@ -427,22 +427,20 @@ const api = new Hono()
     }
   });
 
-const app = new Hono();
-
-// Enable CORS for frontend communication
-app.use(
-  "/*",
-  cors({
-    origin: ["*", "http://localhost:3000", "http://localhost:5173"],
-    allowHeaders: ["Content-Type"],
-    allowMethods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
-
-app
+const app = new Hono()
   .route("/api", api)
   .route("/ai", ai_hono)
   .get("/", (c) => c.text("Banking API Server"));
+// .use(
+//   "/*",
+//   cors({
+//     origin: ["*", "http://localhost:3000", "http://localhost:5173"],
+//     allowHeaders: ["Content-Type"],
+//     allowMethods: ["GET", "POST", "PUT", "DELETE"],
+//   })
+// )
 
 export default app;
-export type ApiRoutes = typeof api;
+
+// Export only the main app type for RPC client
+export type AppRoutes = typeof app;
