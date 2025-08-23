@@ -74,6 +74,7 @@ export const RecurrentPaymentSchema = z.object({
   startDate: DateSchema,
   endDate: DateSchema.optional(),
   autoPay: z.boolean().default(false),
+  savingsProfile: UUIDSchema.optional()
 });
 
 // Bank account schema - contains transactions and recurrent payments
