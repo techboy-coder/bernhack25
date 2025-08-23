@@ -240,7 +240,6 @@
 					// Auto-submit if we have text and should auto-submit
 					if (shouldAutoSubmit && value.trim()) {
 						console.log('🚀 Auto-submitting transcribed message:', value.trim());
-						toast.success('Message sent automatically!');
 
 						// Small delay to ensure UI updates properly
 						setTimeout(() => {
@@ -248,7 +247,6 @@
 						}, 100);
 					} else if (shouldAutoSubmit) {
 						console.log('ℹ️ No text to auto-submit');
-						toast.info('No speech was transcribed');
 					}
 
 					shouldAutoSubmit = false; // Reset auto-submit flag
@@ -364,7 +362,7 @@
 			// Stop recording - this will trigger onend and potentially auto-submit
 			console.log('🛑 Stopping speech recognition...');
 			recognition.stop();
-			toast.info('Processing speech...');
+			// toast.info('Processing speech...');
 		} else {
 			// Start recording
 			try {

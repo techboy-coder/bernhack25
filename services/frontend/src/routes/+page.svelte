@@ -19,6 +19,33 @@
 	let inputValue = $state('');
 	let isLoading = $state(false);
 	let messagesContainerRef: HTMLElement | null = $state(null);
+	let ttsEnabled = $state(true);
+	let isSpeaking = $state(false);
+
+	// Track TTS state from ChatMessages component
+	function handleTTSStateChange(speaking: boolean) {
+		isSpeaking = speaking;
+	}
+
+	function toggleTTS() {
+		ttsEnabled = !ttsEnabled;
+	}
+
+	function stopTTS() {
+		if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+			window.speechSynthesis.cancel();
+			isSpeaking = false;
+		}
+	}
+
+	function testTTS() {
+		if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+			const utterance = new SpeechSynthesisUtterance(
+				'This is a test of the text-to-speech functionality.'
+			);
+			window.speechSynthesis.speak(utterance);
+		}
+	}
 
 	// Auto-scroll to bottom when messages change
 	$effect(() => {
@@ -139,8 +166,36 @@
 					<p class="text-muted-foreground text-xs">Your AI-powered financial companion</p>
 				</div>
 			</div>
-			<div class="text-muted-foreground text-xs">
-				{messages.length} messages
+
+			<div class="flex items-center gap-3">
+				<!-- TTS Controls -->
+				<div class="flex items-center gap-2">
+					<button
+						onclick={toggleTTS}
+						class="flex items-center gap-1 px-2 py-1 text-xs rounded-md transition-colors hover:bg-accent"
+						class:text-primary={ttsEnabled}
+						class:text-muted-foreground={!ttsEnabled}
+						title={ttsEnabled ? 'Disable text-to-speech' : 'Enable text-to-speech'}
+					>
+						<span class="text-sm">{ttsEnabled ? '🔊' : '🔇'}</span>
+						<span>TTS</span>
+					</button>
+
+					{#if isSpeaking}
+						<button
+							onclick={stopTTS}
+							class="flex items-center gap-1 px-2 py-1 text-xs rounded-md transition-colors hover:bg-accent text-red-500"
+							title="Stop speaking"
+						>
+							<span class="text-sm">⏹️</span>
+							<span>Stop</span>
+						</button>
+					{/if}
+				</div>
+
+				<div class="text-muted-foreground text-xs">
+					{messages.length} messages
+				</div>
 			</div>
 		</header>
 
@@ -149,7 +204,7 @@
 			class="flex-1 h-[70vh] overflow-y-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:'none']"
 			bind:this={messagesContainerRef}
 		>
-			<ChatMessages {messages} {isLoading} />
+			<ChatMessages {messages} {isLoading} {ttsEnabled} onTTSStateChange={handleTTSStateChange} />
 		</div>
 
 		<!-- Chat Input Area -->
