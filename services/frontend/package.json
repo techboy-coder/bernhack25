@@ -47,6 +47,7 @@
 	"dependencies": {
 		"@animotion/core": "^1.1.8",
 		"@tanstack/svelte-query": "^5.85.5",
+		"apexcharts": "^5.3.4",
 		"hono": "^4.9.4",
 		"lucide-svelte": "^0.541.0"
 	}

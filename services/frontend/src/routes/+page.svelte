@@ -287,12 +287,7 @@
 	<div class="mx-auto flex h-full flex-col">
 		<!-- Header -->
 		<header class="border-border flex items-center justify-between border-b px-6 py-4">
-			<div class="flex items-center gap-3">
-				<div
-					class="bg-primary flex size-8 items-center justify-center rounded-lg text-primary-foreground"
-				>
-					<span class="text-sm font-semibold">🤖</span>
-				</div>
+			<div class="flex items-center gap-3 pb-[4px]">
 				<div>
 					<h1 class="text-foreground text-lg font-semibold">Ueli - Banking Assistant</h1>
 					<p class="text-muted-foreground text-xs">Your AI-powered financial companion</p>
