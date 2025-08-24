@@ -1,0 +1,12 @@
+digraph G {
+    receiptocr[label="receipt-ocr"];
+    jsonquery[label="json-query"];
+
+    frontend -> backend;
+    backend -> ocr;
+    backend -> ollama;
+    backend -> litellm;
+    backend -> jsonquery;
+    ocr -> ollama;
+    ocr -> receiptocr;
+}
