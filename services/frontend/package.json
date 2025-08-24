@@ -54,6 +54,8 @@
 		"d3-shape": "^3.2.0",
 		"hono": "^4.9.4",
 		"lucide-svelte": "^0.541.0",
-		"svelte-confetti": "^2.3.2"
+		"svelte-confetti": "^2.3.2",
+		"@types/three": "0.150.0",
+		"three": "0.150.0"
 	}
 }
