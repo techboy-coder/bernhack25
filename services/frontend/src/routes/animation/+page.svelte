@@ -7,13 +7,44 @@
 	import TrendingUpIcon from 'lucide-svelte/icons/trending-up';
 	import * as Chart from '$lib/components/ui/chart/index.js';
 	import * as Card from '$lib/components/ui/card/index.js';
+	import { onMount, onDestroy } from 'svelte';
 
 	import { Confetti } from 'svelte-confetti';
+
+	// Audio player reference
+	let audioPlayer: HTMLAudioElement;
+	let audioTimeout: ReturnType<typeof setTimeout>;
 
 	// Basic presentation state
 	let currentSlide = $state(0);
 	let totalSlides = 11;
 	let isTransitioning = $state(false);
+
+	// Audio setup and cleanup
+	onMount(() => {
+		// Create audio element
+		audioPlayer = new Audio('/spendcastwrappedaudio.mp3');
+
+		// Start playing after 2 seconds delay
+		audioTimeout = setTimeout(() => {
+			audioPlayer.play().catch((err) => {
+				console.error('Error playing audio:', err);
+			});
+		}, 2000);
+	});
+
+	onDestroy(() => {
+		// Clean up audio when component unmounts
+		if (audioPlayer) {
+			audioPlayer.pause();
+			audioPlayer.currentTime = 0;
+		}
+
+		// Clear timeout if component is destroyed before audio starts
+		if (audioTimeout) {
+			clearTimeout(audioTimeout);
+		}
+	});
 
 	// Mock data since we're not importing API functions
 	let mockData = $state({
