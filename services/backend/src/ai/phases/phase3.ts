@@ -1,18 +1,18 @@
 import type { Phase3Decision, AnalysisContext, RetryConfig } from "../types.js";
 import {
-  LITELLM_BASE_URL,
-  LITELLM_API_KEY,
-  AI_MODEL,
-  AVAILABLE_COMPONENTS,
-  type ComponentKey,
+    LITELLM_BASE_URL,
+    LITELLM_API_KEY,
+    AI_MODEL,
+    AVAILABLE_COMPONENTS,
+    type ComponentKey,
 } from "../config.js";
 
 export async function executePhase3(
-  context: AnalysisContext,
-  accountScope: string,
-  retryConfig: RetryConfig = { maxRetries: 3, currentRetry: 0 }
+    context: AnalysisContext,
+    accountScope: string,
+    retryConfig: RetryConfig = { maxRetries: 3, currentRetry: 0 }
 ): Promise<Phase3Decision> {
-  const systemPrompt = `You are a banking assistant for "Spendcast" called Ueli, an AI deciding between showing a component or performing a query.
+    const systemPrompt = `You are a banking assistant for "Spendcast" called Ueli, an AI deciding between showing a component or performing a query.
 
 Account scope: ${accountScope}
 Available components: ${AVAILABLE_COMPONENTS.join(", ")}
@@ -52,8 +52,8 @@ For query:
 }
 
 For "component" type, content MUST be exactly one of or an array of: ${AVAILABLE_COMPONENTS.join(
-    ", "
-  )}
+        ", "
+    )}
 For "query" type, content should be the natural language question to search the financial data.
 
 Use "query" for questions like:
@@ -78,7 +78,7 @@ Component descriptions:
 - "savings-profiles": Personal savings GOALS and financial targets (vacation fund, emergency fund, etc.) - NOT bank account balances
 - "savings-analysis": Analysis of savings performance and goal achievement
 - "recurrent-payment-stats": Recurring payments and subscriptions overview
-- "recurrent-payment-grid": Grid view of all recurring payments
+- "recurrent-payment-grid": Grid view of all recurring payments. abilty to add new recurring payments here only!
 - "recurrent-payment-categories": Categorized breakdown of recurring payments
 - "upcoming-payments": Calendar view of upcoming recurring payments
 
@@ -110,142 +110,152 @@ ${context.conversationContext}
 
 New User Prompt: ${context.newPrompt}`;
 
-  try {
-    const response = await fetch(`${LITELLM_BASE_URL}/v1/chat/completions`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${LITELLM_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: AI_MODEL,
-        messages: [
-          {
-            role: "system",
-            content: systemPrompt,
-          },
-          {
-            role: "user",
-            content: context.newPrompt,
-          },
-        ],
-        temperature: 0.2,
-        max_tokens: 300,
-      }),
-    });
+    try {
+        const response = await fetch(
+            `${LITELLM_BASE_URL}/v1/chat/completions`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${LITELLM_API_KEY}`,
+                },
+                body: JSON.stringify({
+                    model: AI_MODEL,
+                    messages: [
+                        {
+                            role: "system",
+                            content: systemPrompt,
+                        },
+                        {
+                            role: "user",
+                            content: context.newPrompt,
+                        },
+                    ],
+                    temperature: 0.2,
+                    max_tokens: 300,
+                }),
+            }
+        );
 
-    if (!response.ok) {
-      throw new Error(
-        `LiteLLM API error: ${response.status} ${response.statusText}`
-      );
-    }
-
-    const data = await response.json();
-    const responseText = data.choices?.[0]?.message?.content?.trim();
-
-    if (!responseText) {
-      throw new Error("No response content from LiteLLM");
-    }
-
-    const jsonMatch = responseText.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      throw new Error("No valid JSON found in response");
-    }
-
-    const decision = JSON.parse(jsonMatch[0]) as Phase3Decision;
-
-    // Validate the decision
-    if (!["component", "query"].includes(decision.type)) {
-      throw new Error(`Invalid phase3 decision type: ${decision.type}`);
-    }
-
-    if (decision.type === "component") {
-      // Handle both single component and array of components
-      const components = Array.isArray(decision.content)
-        ? decision.content
-        : [decision.content];
-
-      // Limit to maximum 2 components
-      if (components.length > 2) {
-        components.splice(2);
-        decision.content = components as ComponentKey | ComponentKey[];
-      }
-
-      // Validate each component
-      for (const component of components) {
-        if (!AVAILABLE_COMPONENTS.includes(component as ComponentKey)) {
-          throw new Error(`Invalid component key: ${component}`);
+        if (!response.ok) {
+            throw new Error(
+                `LiteLLM API error: ${response.status} ${response.statusText}`
+            );
         }
-      }
 
-      // Update content back to single item if only one component
-      if (components.length === 1) {
-        decision.content = components[0] as ComponentKey;
-      } else {
-        decision.content = components as ComponentKey[];
-      }
-    } else if (decision.type === "query") {
-      // For query type, we'll execute the query and return the human response
-      try {
-        const queryResponse = await fetch("http://127.0.0.1:3000/api/query", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ query: decision.content }),
-        });
+        const data = await response.json();
+        const responseText = data.choices?.[0]?.message?.content?.trim();
 
-        if (queryResponse.ok) {
-          const queryResult = await queryResponse.json();
-
-          // Check if we got a meaningful response
-          if (
-            queryResult.success &&
-            queryResult.humanResponse &&
-            !queryResult.humanResponse.includes("I couldn't find") &&
-            !queryResult.humanResponse.includes("I didn't find any results") &&
-            !queryResult.humanResponse.includes(
-              "I'm not quite sure how to interpret"
-            )
-          ) {
-            // We got a good response, use it
-            decision.content = queryResult.humanResponse;
-          } else {
-            // Query didn't return useful data, provide a helpful response as Ueli
-            decision.content = `I looked through your financial data but couldn't find specific information about "${decision.content}". This might be because the data isn't available for that particular query, or it might be phrased in a way that's hard to search. Could you try asking about it differently, or would you like me to show you a relevant overview instead?`;
-          }
-        } else {
-          // Fallback response if query service fails
-          decision.content = `I'm having trouble accessing your financial data right now to answer "${decision.content}". The analysis service might be temporarily unavailable. Could you try asking again in a moment?`;
+        if (!responseText) {
+            throw new Error("No response content from LiteLLM");
         }
-      } catch (error) {
-        console.error("Error executing financial query:", error);
-        // Provide a helpful response as Ueli rather than a technical error
-        decision.content = `I encountered an issue while searching for information about "${decision.content}". This might be a temporary technical problem. In the meantime, is there something else I can help you with regarding your finances?`;
-      }
+
+        const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+        if (!jsonMatch) {
+            throw new Error("No valid JSON found in response");
+        }
+
+        const decision = JSON.parse(jsonMatch[0]) as Phase3Decision;
+
+        // Validate the decision
+        if (!["component", "query"].includes(decision.type)) {
+            throw new Error(`Invalid phase3 decision type: ${decision.type}`);
+        }
+
+        if (decision.type === "component") {
+            // Handle both single component and array of components
+            const components = Array.isArray(decision.content)
+                ? decision.content
+                : [decision.content];
+
+            // Limit to maximum 2 components
+            if (components.length > 2) {
+                components.splice(2);
+                decision.content = components as ComponentKey | ComponentKey[];
+            }
+
+            // Validate each component
+            for (const component of components) {
+                if (!AVAILABLE_COMPONENTS.includes(component as ComponentKey)) {
+                    throw new Error(`Invalid component key: ${component}`);
+                }
+            }
+
+            // Update content back to single item if only one component
+            if (components.length === 1) {
+                decision.content = components[0] as ComponentKey;
+            } else {
+                decision.content = components as ComponentKey[];
+            }
+        } else if (decision.type === "query") {
+            // For query type, we'll execute the query and return the human response
+            try {
+                const queryResponse = await fetch(
+                    "http://127.0.0.1:3000/api/query",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ query: decision.content }),
+                    }
+                );
+
+                if (queryResponse.ok) {
+                    const queryResult = await queryResponse.json();
+
+                    // Check if we got a meaningful response
+                    if (
+                        queryResult.success &&
+                        queryResult.humanResponse &&
+                        !queryResult.humanResponse.includes(
+                            "I couldn't find"
+                        ) &&
+                        !queryResult.humanResponse.includes(
+                            "I didn't find any results"
+                        ) &&
+                        !queryResult.humanResponse.includes(
+                            "I'm not quite sure how to interpret"
+                        )
+                    ) {
+                        // We got a good response, use it
+                        decision.content = queryResult.humanResponse;
+                    } else {
+                        // Query didn't return useful data, provide a helpful response as Ueli
+                        decision.content = `I looked through your financial data but couldn't find specific information about "${decision.content}". This might be because the data isn't available for that particular query, or it might be phrased in a way that's hard to search. Could you try asking about it differently, or would you like me to show you a relevant overview instead?`;
+                    }
+                } else {
+                    // Fallback response if query service fails
+                    decision.content = `I'm having trouble accessing your financial data right now to answer "${decision.content}". The analysis service might be temporarily unavailable. Could you try asking again in a moment?`;
+                }
+            } catch (error) {
+                console.error("Error executing financial query:", error);
+                // Provide a helpful response as Ueli rather than a technical error
+                decision.content = `I encountered an issue while searching for information about "${decision.content}". This might be a temporary technical problem. In the meantime, is there something else I can help you with regarding your finances?`;
+            }
+        }
+
+        return decision;
+    } catch (error) {
+        console.error(
+            `Phase 3 analysis error (attempt ${retryConfig.currentRetry + 1}):`,
+            error
+        );
+
+        if (retryConfig.currentRetry < retryConfig.maxRetries) {
+            return executePhase3(context, accountScope, {
+                ...retryConfig,
+                currentRetry: retryConfig.currentRetry + 1,
+            });
+        }
+
+        // Final fallback - try to be helpful rather than just showing accounts-overview
+        return {
+            type: "query",
+            content:
+                "I'm having some technical difficulties right now, but I'm here to help with your banking questions. Could you try asking me again about what you'd like to know?",
+            reasoning:
+                "Error occurred during phase 3 analysis, providing helpful fallback response",
+        };
     }
-
-    return decision;
-  } catch (error) {
-    console.error(
-      `Phase 3 analysis error (attempt ${retryConfig.currentRetry + 1}):`,
-      error
-    );
-
-    if (retryConfig.currentRetry < retryConfig.maxRetries) {
-      return executePhase3(context, accountScope, {
-        ...retryConfig,
-        currentRetry: retryConfig.currentRetry + 1,
-      });
-    }
-
-    // Final fallback - try to be helpful rather than just showing accounts-overview
-    return {
-      type: "query",
-      content:
-        "I'm having some technical difficulties right now, but I'm here to help with your banking questions. Could you try asking me again about what you'd like to know?",
-      reasoning:
-        "Error occurred during phase 3 analysis, providing helpful fallback response",
-    };
-  }
 }
