@@ -10,6 +10,8 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	import { Confetti } from 'svelte-confetti';
+	import Globe from '$lib/blocks/Globe.svelte';
+	import { GLOBE_DATA } from './globe-data';
 
 	// Audio player reference
 	let audioPlayer: HTMLAudioElement;
@@ -69,6 +71,36 @@
 			Healthcare: 875.0,
 			Education: 500.0
 		},
+		internationalSpending: [
+			{
+				country: '🇺🇸 USA',
+				amount: 4758.50
+			},
+			{
+				country: '🇨🇳 China',
+				amount: 231.20
+			},
+			{
+				country: '🇬🇧 UK',
+				amount: 513.50
+			},
+			{
+				country: '🇩🇪 Germany',
+				amount: 694.00
+			},
+			{
+				country: '🇫🇷 France',
+				amount: 123.70
+			},
+			{
+				country: '🇮🇹 Italy',
+				amount: 98.30
+			},
+			{
+				country: '🇦🇹 Austria',
+				amount: 312.60
+			},
+		],
 		accounts: [
 			{
 				account: {
@@ -396,7 +428,42 @@
 				</div>
 			</div>
 		{:else if currentSlide === 4}
-			<!-- Slide 5: Biggest Expense -->
+			<div class="max-w-4xl w-full p-8">
+				<div class="animate-fade-in-up">
+					<h2 class="text-4xl font-bold mb-2 text-center text-primary">Spending by Country</h2>
+					<p class="text-xl text-gray-400 mb-12 text-center">
+						Your money travelled the world in 2024
+					</p>
+
+					<div class="bg-card p-8 rounded-xl shadow-xl backdrop-blur-sm border border-border">
+						<div class="flex flex-col md:flex-row gap-8 items-center justify-center -mt-10 globe-container">
+							<Globe width={384} height={384} connections={GLOBE_DATA} />
+						</div>
+
+						<div class="space-y-6">
+							<h3 class="text-2xl font-bold text-white">Your Top 5 Countries</h3>
+
+							{#each mockData.internationalSpending.toSorted((a, b) => b.amount - a.amount).slice(0, 5) as spending}
+								{@const totalSpent = mockData.internationalSpending.reduce((acc, spending) => acc + spending.amount, 0)}
+								{@const percentage = (spending.amount / totalSpent) * 100}
+
+								<div>
+									<div class="flex justify-between mb-1">
+										<span class="text-gray-200">{spending.country}</span>
+										<span class="text-gray-300"
+											>{formatCurrency(spending.amount)} ({percentage.toFixed(1)}%)</span
+										>
+									</div>
+									<div class="h-3 w-full bg-background/50 rounded-full overflow-hidden">
+										<div class="h-full bg-primary" style="width: {percentage}%"></div>
+									</div>
+								</div>
+							{/each}
+						</div>
+					</div>
+				</div>
+			</div>
+		{:else if currentSlide === 5}
 			<div class="max-w-4xl w-full p-8">
 				<div class="animate-fade-in-up">
 					<h2 class="text-4xl font-bold mb-2 text-center text-primary">Biggest Single Expense</h2>
@@ -437,11 +504,11 @@
 					</div>
 				</div>
 			</div>
-		{:else if currentSlide === 5}
+		{:else if currentSlide === 6}
 			<!-- Slide 6: Income vs Expenses -->
 			<div class="max-w-4xl w-full p-8">
 				<div class="animate-fade-in-up">
-					<h2 class="text-4xl font-bold mb-2 text-center text-yellow-300">Income vs Expenses</h2>
+					<h2 class="text-4xl font-bold mb-2 text-center text-primary">Income vs Expenses</h2>
 					<p class="text-xl text-gray-400 mb-12 text-center">How much you earned and spent</p>
 
 					<Card.Root class="border-border bg-card/60 backdrop-blur-sm">
@@ -529,7 +596,7 @@
 					</Card.Root>
 				</div>
 			</div>
-		{:else if currentSlide === 6}
+		{:else if currentSlide === 7}
 			<!-- Slide 7: Accounts Overview -->
 			<div class="max-w-4xl w-full p-8">
 				<div class="animate-fade-in-up">
@@ -574,7 +641,7 @@
 					</div>
 				</div>
 			</div>
-		{:else if currentSlide === 7}
+		{:else if currentSlide === 8}
 			<!-- Slide 8: Savings Goals -->
 			<div class="max-w-4xl w-full p-8">
 				<div class="animate-fade-in-up">
@@ -640,7 +707,7 @@
 					</div>
 				</div>
 			</div>
-		{:else if currentSlide === 8}
+		{:else if currentSlide === 9}
 			<!-- Slide 10: Financial Health -->
 			<div class="max-w-4xl w-full p-8">
 				<div class="animate-fade-in-up">
@@ -717,11 +784,11 @@
 					</div>
 				</div>
 			</div>
-		{:else if currentSlide === 9}
+		{:else if currentSlide === 10}
 			<!-- Slide 11: Recommendations -->
 			<div class="max-w-4xl w-full p-8">
 				<div class="animate-fade-in-up">
-					<h2 class="text-4xl font-bold mb-2 text-center text-yellow-300">Recommendations</h2>
+					<h2 class="text-4xl font-bold mb-2 text-center text-primary">Recommendations</h2>
 					<p class="text-xl text-gray-400 mb-12 text-center">
 						Suggestions to improve your finances
 					</p>
@@ -799,7 +866,7 @@
 					</div>
 				</div>
 			</div>
-		{:else if currentSlide === 10}
+		{:else if currentSlide === 11}
 			<!-- Slide 12: Conclusion -->
 			<div class="max-w-4xl w-full p-8">
 				<div class="animate-fade-in-up text-center">
@@ -869,5 +936,23 @@
 
 	.animate-pulse {
 		animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+
+		20% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.globe-container {
+		animation: fadeIn 2s linear;
 	}
 </style>
