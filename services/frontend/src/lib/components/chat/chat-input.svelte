@@ -35,13 +35,28 @@
 	} = $props();
 
 	const commands: Command[] = [
-		{ name: 'help', description: 'Show available commands', icon: '❓' },
-		{ name: 'clear', description: 'Clear the chat history', icon: '🗑️' },
-		{ name: 'model', description: 'Switch AI model', icon: '🤖' },
-		{ name: 'system', description: 'Set system prompt', icon: '⚙️' },
-		{ name: 'export', description: 'Export conversation', icon: '💾' },
-		{ name: 'image', description: 'Generate an image', icon: '🖼️' },
-		{ name: 'code', description: 'Generate code snippet', icon: '💻' }
+		// Account component commands
+		{ name: 'cmd.accounts', description: 'Show all accounts overview', icon: '🏦' },
+		{ name: 'cmd.personal', description: 'Show personal checking account', icon: '💳' },
+		{ name: 'cmd.savings', description: 'Show savings account details', icon: '💰' },
+		{ name: 'cmd.retirement', description: 'Show retirement account', icon: '🏛️' },
+		{ name: 'cmd.marriage', description: 'Show marriage fund account', icon: '💍' },
+
+		// Transaction component commands
+		{ name: 'cmd.transactions', description: 'Show transaction table', icon: '📊' },
+		{ name: 'cmd.txstats', description: 'Show transaction statistics', icon: '📈' },
+		{ name: 'cmd.txcharts', description: 'Show transaction charts', icon: '📊' },
+		{ name: 'cmd.txoverview', description: 'Show transaction overview', icon: '📋' },
+
+		// Savings component commands
+		{ name: 'cmd.savings-goals', description: 'Show savings profiles/goals', icon: '🎯' },
+		{ name: 'cmd.savings-analysis', description: 'Show savings analysis', icon: '📊' },
+
+		// Recurring payment component commands
+		{ name: 'cmd.recurring', description: 'Show recurring payments grid', icon: '🔁' },
+		{ name: 'cmd.recurring-stats', description: 'Show recurring payment stats', icon: '📊' },
+		{ name: 'cmd.recurring-cats', description: 'Show recurring payment categories', icon: '📁' },
+		{ name: 'cmd.upcoming', description: 'Show upcoming payments', icon: '📅' }
 	];
 
 	let showCommands = $state(false);

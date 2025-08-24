@@ -71,6 +71,12 @@
 	});
 
 	async function handleSend(message: string) {
+		// Check if this is a component command
+		if (message.startsWith('/cmd.')) {
+			handleComponentCommand(message);
+			return;
+		}
+
 		const newMessage: Message = {
 			id: crypto.randomUUID(),
 			content: message,
@@ -132,6 +138,132 @@
 		} finally {
 			isLoading = false;
 		}
+	}
+
+	function handleComponentCommand(command: string) {
+		const userMessage: Message = {
+			id: crypto.randomUUID(),
+			content: command,
+			author: {
+				name: 'You',
+				avatar: undefined
+			},
+			timestamp: new Date(),
+			isUser: true
+		};
+
+		// Map command to component and account type
+		let componentName: string;
+		let accountType: string | undefined;
+		let confirmationText: string;
+
+		switch (command) {
+			case '/cmd.accounts':
+				componentName = 'accounts-overview';
+				confirmationText = "Here's an overview of all your bank accounts:";
+				break;
+			case '/cmd.personal':
+				componentName = 'account-header';
+				accountType = 'personal';
+				confirmationText = 'Here are the details for your personal checking account:';
+				break;
+			case '/cmd.savings':
+				componentName = 'account-header';
+				accountType = 'savings';
+				confirmationText = 'Here are the details for your savings account:';
+				break;
+			case '/cmd.retirement':
+				componentName = 'account-header';
+				accountType = 'retirement';
+				confirmationText = 'Here are the details for your retirement account:';
+				break;
+			case '/cmd.marriage':
+				componentName = 'account-header';
+				accountType = 'marriage';
+				confirmationText = 'Here are the details for your marriage fund account:';
+				break;
+			case '/cmd.transactions':
+				componentName = 'transaction-table';
+				accountType = 'personal';
+				confirmationText = "Here's a detailed table of your transactions:";
+				break;
+			case '/cmd.txstats':
+				componentName = 'transaction-stats';
+				accountType = 'personal';
+				confirmationText = 'Here are your transaction statistics:';
+				break;
+			case '/cmd.txcharts':
+				componentName = 'transaction-charts';
+				accountType = 'personal';
+				confirmationText = 'Here are visual charts of your transaction patterns:';
+				break;
+			case '/cmd.txoverview':
+				componentName = 'transaction-overview';
+				accountType = 'personal';
+				confirmationText = "Here's an overview of your recent transactions:";
+				break;
+			case '/cmd.savings-goals':
+				componentName = 'savings-profiles';
+				confirmationText = 'Here are your savings profiles and goals:';
+				break;
+			case '/cmd.savings-analysis':
+				componentName = 'savings-analysis';
+				confirmationText = "Here's an analysis of your savings performance:";
+				break;
+			case '/cmd.recurring':
+				componentName = 'recurrent-payment-grid';
+				confirmationText = "Here's a grid view of all your recurring payments:";
+				break;
+			case '/cmd.recurring-stats':
+				componentName = 'recurrent-payment-stats';
+				confirmationText = 'Here are statistics about your recurring payments:';
+				break;
+			case '/cmd.recurring-cats':
+				componentName = 'recurrent-payment-categories';
+				confirmationText = 'Here are your recurring payments organized by category:';
+				break;
+			case '/cmd.upcoming':
+				componentName = 'upcoming-payments';
+				confirmationText = 'Here are your upcoming recurring payments:';
+				break;
+			default:
+				// Unknown command
+				const errorMessage: Message = {
+					id: crypto.randomUUID(),
+					content: `Unknown command: ${command}. Type /help to see available commands.`,
+					author: {
+						name: 'Ueli',
+						avatar: undefined
+					},
+					timestamp: new Date(),
+					isUser: false
+				};
+				messages = [...messages, userMessage, errorMessage];
+				return;
+		}
+
+		// Create AI decision for component
+		const aiDecision: AIDecision = {
+			type: 'component',
+			content: componentName,
+			accountType: accountType as any,
+			ttsText: confirmationText,
+			reasoning: 'Manual component command invoked by user'
+		};
+
+		const aiMessage: Message = {
+			id: crypto.randomUUID(),
+			content: confirmationText,
+			author: {
+				name: 'Ueli',
+				avatar: undefined
+			},
+			timestamp: new Date(),
+			isUser: false,
+			aiDecision
+		};
+
+		messages = [...messages, userMessage, aiMessage];
 	}
 
 	function handleFileUpload() {
