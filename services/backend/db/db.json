@@ -21835,15 +21835,6 @@
           "autoPay": true
         },
         {
-          "id": "92440399-f8f3-43fd-87fc-22f7d31114c5",
-          "amount": 105,
-          "name": "Internet & Phone",
-          "category": "utilities",
-          "frequency": "monthly",
-          "startDate": "2020-08-15T00:00:00.000Z",
-          "autoPay": true
-        },
-        {
           "id": "be2b87d0-780c-4a9b-a6f1-a64f94710cdb",
           "amount": 250,
           "name": "Health Insurance",
@@ -21877,15 +21868,6 @@
           "category": "other",
           "frequency": "monthly",
           "startDate": "2020-08-30T00:00:00.000Z",
-          "autoPay": true
-        },
-        {
-          "id": "41ede64c-84a6-4dd2-a535-bb439823bb1a",
-          "amount": 350,
-          "name": "Marriage Fund Transfer",
-          "category": "other",
-          "frequency": "monthly",
-          "startDate": "2022-08-25T00:00:00.000Z",
           "autoPay": true
         }
       ]
