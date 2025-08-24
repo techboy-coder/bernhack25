@@ -10,13 +10,36 @@ os.system('docker compose -f ./receipt-ocr/docker-compose.yml up -d')
 
 app = Flask(__name__)
 
-url = 'http://localhost:8000/ocr/'
+OCR_URL = 'http://localhost:8000/ocr/'
 
 OLLAMA_URL = 'http://bernhackt.runtimeoverflow.com:11434/api/generate'
 PREFIX = 'the following text was scanned with ocr from a receipt.'
 
 def strip(text):
     return text.replace('```json', '```').split('```')[1].split('```')[0]
+
+def try_get_key(obj, key):
+    res = None
+
+    try:
+        res = obj[key]
+    except:
+        True
+
+    return res
+
+def try_to_json(text):
+    print(text)
+    text = strip(text)
+    print(text)
+
+    res = None
+    try:
+        res = json.loads(text)
+    except:
+        True
+
+    return res
 
 def ollama(text):
     data = {
@@ -29,7 +52,6 @@ def ollama(text):
 
 @app.route('/receipt-ocr', methods=['POST'])
 def result():
-
     print("req")
 
     image = request.files['file']
@@ -42,7 +64,7 @@ def result():
         # 'file': image
     }
 
-    out = requests.post(url, headers=headers, files=files)
+    out = requests.post(OCR_URL, headers=headers, files=files)
     ocr_json = out.json()
     ocr_text = ocr_json['result']
 
@@ -54,36 +76,9 @@ def result():
     _list = ollama(PREFIX + 'try to list the bought items with prices only as json: ' + ocr_text)
 
     print('ai')
-    print(_date) 
-    print(_amount)
-    print(_list)
-
-    _date = strip(_date)
-    _amount = strip(_amount)
-    _list = strip(_list)
-
-    print('strip')
-    print(_date)
-    print(_amount)
-    print(_list)
-
-    d = ""
-    try:
-        d = json.loads(_date)['date']
-    except:
-        True
-
-    a = ""
-    try:
-        a = json.loads(_amount)['subtotal']
-    except:
-        True
-
-    l = ""
-    try:
-        l = json.loads(_list)
-    except:
-        True
+    d = try_get_key(try_to_json(_date), 'date')
+    a = try_get_key(try_to_json(_amount), 'subtotal')
+    l = try_to_json(_list)
 
     print(d, a, l)
     return {"date": d, "amount": a, "items": l}
