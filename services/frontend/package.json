@@ -23,6 +23,8 @@
 		"@tailwindcss/typography": "^0.5.15",
 		"@tailwindcss/vite": "^4.0.0",
 		"@tanstack/table-core": "^8.20.5",
+		"@types/d3-scale": "^4.0.9",
+		"@types/d3-shape": "^3.1.7",
 		"bits-ui": "^2.8.6",
 		"clsx": "^2.1.1",
 		"embla-carousel-svelte": "^8.6.0",
@@ -48,7 +50,10 @@
 		"@animotion/core": "^1.1.8",
 		"@tanstack/svelte-query": "^5.85.5",
 		"apexcharts": "^5.3.4",
+		"d3-scale": "^4.0.2",
+		"d3-shape": "^3.2.0",
 		"hono": "^4.9.4",
-		"lucide-svelte": "^0.541.0"
+		"lucide-svelte": "^0.541.0",
+		"svelte-confetti": "^2.3.2"
 	}
 }

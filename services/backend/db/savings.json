@@ -23,5 +23,13 @@
     "currentAmount": 90000,
     "category": "Car",
     "startDate": "2025-08-23T14:55:09.332Z"
+  },
+  {
+    "id": "acd2bb63-31f4-4da9-9ac9-894c4599568a",
+    "name": "Go to Dubai",
+    "targetAmount": 2000,
+    "currentAmount": 500,
+    "category": "Travel",
+    "startDate": "2025-08-24T07:29:39.354Z"
   }
 ]

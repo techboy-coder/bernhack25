@@ -28,10 +28,10 @@
 	--input: oklch(0.92 0 0);
 	--ring: oklch(0.78 0.12 85);
 	--chart-1: oklch(0.78 0.12 85);
-	--chart-2: oklch(0.7 0.08 95);
+	--chart-2: oklch(0.72 0.14 105);
 	--chart-3: oklch(0.65 0.06 75);
 	--chart-4: oklch(0.8 0.1 65);
-	--chart-5: oklch(0.72 0.14 105);
+	--chart-5: oklch(0.7 0.08 95);
 	/* Clean neutral sidebar */
 	--sidebar: oklch(0.98 0 0);
 	--sidebar-foreground: oklch(0.15 0 0);
