@@ -37,7 +37,7 @@ Verwendete Komponenten und Frameworks:
 - AI:
     - Ollama 3.1, gpt-oss (selfhosted)
     - GPT-4o-mini (third party)
-- Weitere Dependencies: Bun, Hono, Flask, Docker, Tesseract (OCR), ...
+- Weitere Dependencies: Bun, Hono, Flask, Docker, Tesseract (OCR), n8n, ...
 
 ### Implementation
 
@@ -50,7 +50,7 @@ Spezielles an der Implementation:
 ### Abgrenzung / Offene Punkte
 
 Welche Abgrenzungen habt ihr bewusst vorgenommen und damit nicht implementiert? Weshalb?
-- Wir haben ein Feature entwickelt mit der man aus dem Photo einer Rechnung
+- Wir haben ein Feature entwickelt, mit der man aus dem Photo einer Rechnung
   die Daten extrahieren kann und zu den anderen Transaktionen hinzufügen kann.
   Jedoch konnten wir das nicht mehr in die UI integrieren, da wir unzureichend
   Zeit hatten. Der Backend dafür ist nichtsdestotrotz schon fertiggestellt und
