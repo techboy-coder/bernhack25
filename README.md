@@ -66,7 +66,7 @@ SpendCast is an intelligent, multimodal financial assistant that uses generative
 
 ## 💬 Usage Examples
 
-![Youtube Demo](https://www.youtube.com/watch?v=8hJrAomTCUc)
+[Youtube Demo](https://www.youtube.com/watch?v=8hJrAomTCUc)
 
 ### Voice Interactions
 
